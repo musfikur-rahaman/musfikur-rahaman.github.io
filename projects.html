@@ -1,32 +1,205 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Musfikur Rahaman | Projects</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Musfikur Rahaman | Projects</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="projects.html">Projects</a>
-    <a href="publications.html">Presentations</a>
-    <a href="contact.html">Contact</a>
-</nav>
+<header class="header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">
+      <span class="name">Musfikur Rahaman</span>
+      <span class="subtitle">PhD Student • Information Science • UALR</span>
+    </a>
 
-<section>
-    <h2>Selected Projects</h2>
-    <ul>
-        <li><strong>NewsLogic (2025)</strong> – AI-powered fake news detection using BERT ensemble and LLaMA explanation engine.</li>
-        <li><strong>Image Forgery Detection</strong> – ResNet50 + U-Net segmentation with Grad-CAM (AUC 0.86).</li>
-        <li><strong>Soccer Action Recognition</strong> – TimeSformer-based classification achieving 91.13% accuracy.</li>
-        <li><strong>MLBioIGE</strong> – ML + Bioinformatics integration for pulmonary fibrosis analysis.</li>
-    </ul>
-</section>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="research.html">Research</a>
+      <a data-nav href="projects.html">Projects</a>
+      <a data-nav href="teaching.html">Teaching & Service</a>
+      <a data-nav href="training.html">Training</a>
+      <a data-nav href="contact.html">Contact</a>
+    </nav>
 
-<footer>
-    © 2026 Musfikur Rahaman
+    <div class="nav-actions">
+      <button class="icon-btn" id="navToggle" aria-expanded="false" aria-controls="mobilePanel">☰</button>
+    </div>
+  </div>
+
+  <div class="container mobile-panel" id="mobilePanel">
+    <a data-nav href="index.html">Home</a>
+    <a data-nav href="research.html">Research</a>
+    <a data-nav href="projects.html">Projects</a>
+    <a data-nav href="teaching.html">Teaching & Service</a>
+    <a data-nav href="training.html">Training</a>
+    <a data-nav href="contact.html">Contact</a>
+  </div>
+</header>
+
+<main class="main">
+  <div class="container">
+    <div class="card">
+      <p class="kicker">Projects</p>
+      <h1>Selected Research Projects & Systems</h1>
+      <p class="muted">
+        This page highlights projects that reflect my work in transformer-based modeling, explainable AI,
+        image forensics, and trustworthy decision support. Each project is summarized using an academic structure:
+        motivation → methodology → implementation → evaluation.
+      </p>
+
+      <hr class="sep"/>
+
+      <div class="block">
+        <div class="pill">Full-stack • NLP • Decision Support</div>
+        <h2>NewsLogic: AI-Powered Fake News Detection System (2025)</h2>
+
+        <p class="muted">
+          Developed and deployed a full-stack fake news detection system that analyzes text and URLs using a transformer-based ensemble
+          (BERT credibility classification, DistilBERT sentiment analysis, and rule-based source validation) and generates human-readable
+          explanations using an LLaMA-based engine.
+        </p>
+
+        <div class="two">
+          <div class="block">
+            <h3>Research Motivation</h3>
+            <ul class="list">
+              <li>Address misinformation by combining model-based predictions with transparent scoring logic.</li>
+              <li>Support user trust through explainable outputs and readable justification summaries.</li>
+            </ul>
+
+            <h3>Methodology</h3>
+            <ul class="list">
+              <li>BERT-based credibility classification for text</li>
+              <li>DistilBERT sentiment analysis as an additional signal</li>
+              <li>Rule-based source validation for URL credibility indicators</li>
+              <li>LLaMA-based explanation generation (API inference) to produce readable summaries</li>
+            </ul>
+          </div>
+
+          <div class="block">
+            <h3>Implementation</h3>
+            <ul class="list">
+              <li>FastAPI backend with secure endpoints, logging, and inference workflow</li>
+              <li>Supabase authentication + PostgreSQL logging for traceability</li>
+              <li>React/Lovable frontend for real-time credibility scoring and transparency</li>
+            </ul>
+
+            <h3>Evaluation Approach</h3>
+            <ul class="list">
+              <li>Model evaluation using classification metrics (accuracy, precision/recall, F1 as applicable)</li>
+              <li>Qualitative assessment of explanation clarity and consistency</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="block section">
+        <div class="pill">Computer Vision • Image Forensics • Explainability</div>
+        <h2>Image Forgery Detection using ResNet50 + U-Net Segmentation with XAI (2024–2025)</h2>
+
+        <p class="muted">
+          Built an explainable forensic computer vision pipeline to detect and localize manipulated image regions using
+          ResNet50 for classification and U-Net for pixel-level segmentation on the CASIA 2.0 dataset. Integrated Grad-CAM
+          heatmaps to support interpretable and trustworthy forensic analysis.
+        </p>
+
+        <div class="two">
+          <div class="block">
+            <h3>Pipeline Design</h3>
+            <ul class="list">
+              <li>Classification stage: ResNet50 predicts authentic vs forged images</li>
+              <li>Localization stage: U-Net produces pixel-level masks for forged regions</li>
+              <li>XAI: Grad-CAM highlights informative regions to support interpretation</li>
+            </ul>
+
+            <h3>Reported Metrics</h3>
+            <ul class="list">
+              <li>AUC: 0.86</li>
+              <li>Forged-image recall: 0.88</li>
+            </ul>
+          </div>
+
+          <div class="block">
+            <h3>Why It Matters</h3>
+            <ul class="list">
+              <li>Forensic tasks require both prediction and evidence for why the model decided.</li>
+              <li>Localization + explanation helps validate decisions and reduce blind trust.</li>
+              <li>Supports a trustworthy workflow for security and authenticity verification.</li>
+            </ul>
+
+            <h3>Tools</h3>
+            <ul class="list">
+              <li>PyTorch / TensorFlow (as used), OpenCV, PIL, scikit-image</li>
+              <li>Visualization: Matplotlib</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="block section">
+        <div class="pill">Video Understanding • Transformers • Action Recognition</div>
+        <h2>Soccer Action Detection using TimeSformer (May 1, 2025)</h2>
+
+        <p class="muted">
+          Conducted a transformer-based video understanding study using TimeSformer on the SoccerAct dataset to classify
+          10 fine-grained soccer actions. Implemented frame sampling and normalization pipelines, fine-tuned a Kinetics-400
+          pretrained model with AdamW and learning-rate warmup, and achieved 91.13% accuracy with confusion-matrix analysis.
+        </p>
+
+        <div class="two">
+          <div class="block">
+            <h3>Methodology</h3>
+            <ul class="list">
+              <li>Frame sampling + normalization for consistent clip representation</li>
+              <li>Fine-tuning pretrained transformer (Kinetics-400)</li>
+              <li>Optimizer: AdamW + learning rate warmup</li>
+              <li>Evaluation: accuracy + confusion-matrix analysis for difficult action pairs</li>
+            </ul>
+          </div>
+
+          <div class="block">
+            <h3>Key Outcome</h3>
+            <ul class="list">
+              <li>Achieved 91.13% classification accuracy</li>
+              <li>Used confusion matrices to understand ambiguous classes and improve interpretation</li>
+              <li>Demonstrated the usefulness of transformer attention for spatiotemporal signals</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="block section">
+        <div class="pill">ML + Bioinformatics • Healthcare Research</div>
+        <h2>MLBioIGE: Genetic Impact of SARS-CoV-2 on Pulmonary Fibrosis (2020–2021)</h2>
+        <p class="muted">
+          Collaborated on a project integrating machine learning and bioinformatics to analyze genomic data and identify
+          genetic factors contributing to pulmonary fibrosis in COVID-19 patients, supporting clinical understanding and
+          research insight discovery.
+        </p>
+        <ul class="list">
+          <li>Processed and analyzed health-related datasets using ML + statistical workflows</li>
+          <li>Collaborated on research integration across IT, bioinformatics, and biomedical domains</li>
+        </ul>
+      </div>
+
+      <div class="buttons section">
+        <a class="btn" href="research.html">Back to Research</a>
+        <a class="btn primary" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>© <span id="year"></span> Musfikur Rahaman</div>
+  </div>
 </footer>
 
+<script src="script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
