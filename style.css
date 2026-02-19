@@ -1,95 +1,69 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background-color: #f5f7fa;
-    color: #333;
-    line-height: 1.7;
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: white;
+    color: #111;
+    margin: 0;
+    line-height: 1.6;
 }
 
-/* Fixed Navigation */
+/* Fixed Top Nav */
 nav {
     position: fixed;
-    width: 100%;
     top: 0;
-    background: #0a192f;
-    padding: 18px 0;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
     text-align: center;
-    z-index: 1000;
 }
 
 nav a {
-    color: white;
     margin: 0 18px;
     text-decoration: none;
-    font-weight: 500;
+    color: #000;
     font-size: 15px;
 }
 
 nav a:hover {
-    color: #64ffda;
+    text-decoration: underline;
 }
 
-/* Header */
-header {
-    background: #112240;
-    color: white;
-    padding: 140px 20px 60px 20px;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 18px;
-    color: #ccd6f6;
-}
-
-/* Main Container */
+/* Content Layout */
 .container {
-    max-width: 1000px;
-    margin: 60px auto;
-    padding: 40px;
-    background: white;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-    border-radius: 10px;
+    max-width: 850px;
+    margin: 100px auto 60px auto;
+    padding: 0 20px;
 }
 
-/* Section Titles */
+h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
 h2 {
-    margin-bottom: 20px;
-    color: #0a192f;
-    border-bottom: 2px solid #eaeaea;
-    padding-bottom: 8px;
+    font-size: 22px;
+    margin-top: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 6px;
 }
 
-/* Paragraph Spacing */
+h3 {
+    font-size: 18px;
+    margin-top: 25px;
+}
+
 p {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
-/* Lists */
 ul {
     margin-left: 20px;
-    margin-bottom: 20px;
 }
 
-li {
-    margin-bottom: 8px;
-}
-
-/* Footer */
 footer {
     text-align: center;
-    padding: 25px;
-    background: #0a192f;
-    color: white;
-    margin-top: 40px;
+    font-size: 14px;
+    color: #666;
+    padding: 30px 0;
+    border-top: 1px solid #ddd;
 }
