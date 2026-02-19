@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Musfikur Rahaman | Training & Certifications</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<header class="header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">
+      <span class="name">Musfikur Rahaman</span>
+      <span class="subtitle">PhD Student • Information Science • UALR</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="research.html">Research</a>
+      <a data-nav href="projects.html">Projects</a>
+      <a data-nav href="teaching.html">Teaching & Service</a>
+      <a data-nav href="training.html">Training</a>
+      <a data-nav href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="navToggle" aria-expanded="false" aria-controls="mobilePanel">☰</button>
+    </div>
+  </div>
+
+  <div class="container mobile-panel" id="mobilePanel">
+    <a data-nav href="index.html">Home</a>
+    <a data-nav href="research.html">Research</a>
+    <a data-nav href="projects.html">Projects</a>
+    <a data-nav href="teaching.html">Teaching & Service</a>
+    <a data-nav href="training.html">Training</a>
+    <a data-nav href="contact.html">Contact</a>
+  </div>
+</header>
+
+<main class="main">
+  <div class="container">
+    <div class="card">
+      <p class="kicker">Training & Certifications</p>
+      <h1>Specialized Training in Generative AI, RAG, and Applied Machine Learning</h1>
+
+      <p class="muted">
+        I pursue structured training to strengthen my research practice in trustworthy AI, transformers, and applied ML systems.
+        The following certifications reflect learning in generative modeling, retrieval-augmented generation, prompt engineering,
+        and data science foundations.
+      </p>
+
+      <hr class="sep"/>
+
+      <div class="block">
+        <div class="pill">NVIDIA • 2025</div>
+        <h2>Generative AI & LLM Systems</h2>
+        <ul class="list">
+          <li><strong>Generative AI with Diffusion Models:</strong> diffusion-based generative modeling concepts, training workflows, and applications in image generation and analysis.</li>
+          <li><strong>Building LLM Applications with Prompt Engineering:</strong> structured prompting methods, prompt optimization strategies, and applied workflows for robust LLM outputs.</li>
+          <li><strong>Building RAG Agents with LLMs:</strong> retrieval-augmented generation architectures, vector retrieval concepts, and integrating external knowledge sources into LLM pipelines.</li>
+          <li><strong>Fundamentals of AI & Retrieval-Augmented Generation (RAG):</strong> LLM workflow foundations and core principles behind RAG-based AI systems.</li>
+        </ul>
+      </div>
+
+      <div class="two section">
+        <div class="block">
+          <div class="pill">Udacity • 2024</div>
+          <h2>Data Science and Machine Learning Bootcamp</h2>
+          <ul class="list">
+            <li>Data wrangling and cleaning for real-world datasets</li>
+            <li>Feature engineering and model training pipelines</li>
+            <li>Model evaluation and iterative improvement workflows</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <div class="pill">Udemy • April 2023</div>
+          <h2>Health Informatics Fundamentals</h2>
+          <ul class="list">
+            <li>Electronic Health Records (EHR) fundamentals</li>
+            <li>Healthcare IT systems, workflows, and standards overview</li>
+            <li>Practical framing for health data analytics contexts</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="two section">
+        <div class="block">
+          <div class="pill">Google (Coursera) • Feb 2023</div>
+          <h2>Foundations: Data, Data Everywhere</h2>
+          <ul class="list">
+            <li>Data lifecycle fundamentals: collection → cleaning → analysis → visualization</li>
+            <li>Basic analytics framing and communication of results</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <div class="pill">Coursera • Dec 2022</div>
+          <h2>Programming for Everybody (Python)</h2>
+          <ul class="list">
+            <li>Python programming foundations</li>
+            <li>Data analysis and automation mindset for applied tasks</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="buttons section">
+        <a class="btn" href="research.html">Research</a>
+        <a class="btn primary" href="projects.html">Projects</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>© <span id="year"></span> Musfikur Rahaman</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
