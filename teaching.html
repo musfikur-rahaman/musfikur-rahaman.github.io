@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Musfikur Rahaman | Teaching & Service</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<header class="header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">
+      <span class="name">Musfikur Rahaman</span>
+      <span class="subtitle">PhD Student • Information Science • UALR</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="research.html">Research</a>
+      <a data-nav href="projects.html">Projects</a>
+      <a data-nav href="teaching.html">Teaching & Service</a>
+      <a data-nav href="training.html">Training</a>
+      <a data-nav href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="navToggle" aria-expanded="false" aria-controls="mobilePanel">☰</button>
+    </div>
+  </div>
+
+  <div class="container mobile-panel" id="mobilePanel">
+    <a data-nav href="index.html">Home</a>
+    <a data-nav href="research.html">Research</a>
+    <a data-nav href="projects.html">Projects</a>
+    <a data-nav href="teaching.html">Teaching & Service</a>
+    <a data-nav href="training.html">Training</a>
+    <a data-nav href="contact.html">Contact</a>
+  </div>
+</header>
+
+<main class="main">
+  <div class="container">
+    <div class="card">
+      <p class="kicker">Teaching & Service</p>
+      <h1>Graduate Assistantships, Instruction, and Academic Support</h1>
+
+      <p class="muted">
+        I have served in graduate assistant roles supporting instruction, student mentoring, course delivery, and academic coordination.
+        My work emphasizes clear communication, structured learning support, and professional standards (including confidentiality and FERPA compliance).
+      </p>
+
+      <hr class="sep"/>
+
+      <div class="block">
+        <div class="pill">Graduate Assistant (GA) • UALR • Aug 2024 – Present</div>
+        <h2>School of Counseling, Human Performance, and Rehabilitation (CHPR)</h2>
+        <ul class="list">
+          <li><strong>Collaboration & Communication:</strong> Coordinate long-term, multi-layered projects; maintain availability to students and colleagues through email and scheduled appointments; communicate with supervisors and relevant administrators when needed.</li>
+          <li><strong>Organization & Record Keeping:</strong> Manage multiple responsibilities simultaneously; prepare materials as required; maintain accurate records and meet deadlines set by administration.</li>
+          <li><strong>Confidentiality & Compliance:</strong> Follow FERPA-related requirements and maintain privacy for all students and stakeholders.</li>
+          <li><strong>Additional Duties:</strong> Provide operational support as assigned by the chair, graduate coordinator, or supervisor.</li>
+        </ul>
+      </div>
+
+      <div class="block section">
+        <div class="pill">Graduate Assistant (GA) • ATU • Aug 2022 – May 2024</div>
+        <h2>Division of Computing Sciences — Instructional Support</h2>
+        <ul class="list">
+          <li><strong>Course Design & Instruction:</strong> Designed and delivered engaging lab sessions for Data Communication and Networking, aligning hands-on exercises with course learning goals.</li>
+          <li><strong>Student Mentoring:</strong> Provided individualized support, diagnosed learning needs, and implemented improvement strategies to support academic success.</li>
+          <li><strong>Grading & Evaluation:</strong> Graded assignments and exams consistently and promptly using established rubrics and standards.</li>
+          <li><strong>Collaboration:</strong> Supported grading and standardization for Software Development and Data Structures in collaboration with faculty.</li>
+        </ul>
+      </div>
+
+      <div class="block section">
+        <div class="pill">Research Assistant (RA) • UITS • Jan 2020 – Apr 2021</div>
+        <h2>Department of Information Technology — Research Collaboration</h2>
+        <ul class="list">
+          <li>Collaborated on MLBioIGE: integration of machine learning and bioinformatics to study SARS-CoV-2 genetic effects on pulmonary fibrosis.</li>
+          <li>Supported data processing and analysis using machine learning and statistical methods for health-related datasets.</li>
+          <li>Contributed to research teamwork across technical and biomedical domains.</li>
+        </ul>
+      </div>
+
+      <div class="buttons section">
+        <a class="btn" href="projects.html">See Projects</a>
+        <a class="btn primary" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>© <span id="year"></span> Musfikur Rahaman</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
