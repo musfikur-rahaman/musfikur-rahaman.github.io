@@ -1,29 +1,92 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Musfikur Rahaman | Contact</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Musfikur Rahaman | Contact</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="projects.html">Projects</a>
-    <a href="publications.html">Presentations</a>
-    <a href="contact.html">Contact</a>
-</nav>
+<header class="header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">
+      <span class="name">Musfikur Rahaman</span>
+      <span class="subtitle">PhD Student • Information Science • UALR</span>
+    </a>
 
-<section>
-    <h2>Contact</h2>
-    <p>Email: shuvo.musfikur@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/musfikur-rahaman">github.com/musfikur-rahaman</a></p>
-    <p>Location: Arkansas, USA</p>
-</section>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="research.html">Research</a>
+      <a data-nav href="projects.html">Projects</a>
+      <a data-nav href="teaching.html">Teaching & Service</a>
+      <a data-nav href="training.html">Training</a>
+      <a data-nav href="contact.html">Contact</a>
+    </nav>
 
-<footer>
-    © 2026 Musfikur Rahaman
+    <div class="nav-actions">
+      <button class="icon-btn" id="navToggle" aria-expanded="false" aria-controls="mobilePanel">☰</button>
+    </div>
+  </div>
+
+  <div class="container mobile-panel" id="mobilePanel">
+    <a data-nav href="index.html">Home</a>
+    <a data-nav href="research.html">Research</a>
+    <a data-nav href="projects.html">Projects</a>
+    <a data-nav href="teaching.html">Teaching & Service</a>
+    <a data-nav href="training.html">Training</a>
+    <a data-nav href="contact.html">Contact</a>
+  </div>
+</header>
+
+<main class="main">
+  <div class="container">
+    <div class="card">
+      <p class="kicker">Contact</p>
+      <h1>Get in Touch</h1>
+      <p class="muted">
+        For research collaboration, academic opportunities, or project discussions, feel free to contact me using the information below.
+      </p>
+
+      <div class="two section">
+        <div class="block">
+          <h2>Direct Contact</h2>
+          <div class="meta">
+            <div><strong>Email:</strong> <a href="mailto:shuvo.musfikur@gmail.com">shuvo.musfikur@gmail.com</a></div>
+            <div><strong>Phone:</strong> <a href="tel:+15014300134">(501) 430-0134</a></div>
+            <div><strong>Location:</strong> Benton, AR (USA)</div>
+          </div>
+          <p class="faint">
+            (Optional) Add links here later: Google Scholar, ORCID, LinkedIn, GitHub.
+          </p>
+        </div>
+
+        <div class="block">
+          <h2>Suggested Email Topics</h2>
+          <ul class="list">
+            <li>Research collaboration (trustworthy AI, healthcare informatics, explainability, transformers)</li>
+            <li>Conference / paper coordination and academic networking</li>
+            <li>Project demos (NewsLogic, image forensics, video understanding)</li>
+            <li>Teaching support or academic service coordination</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="buttons section">
+        <a class="btn" href="index.html">Home</a>
+        <a class="btn primary" href="projects.html">Projects</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>© <span id="year"></span> Musfikur Rahaman</div>
+  </div>
 </footer>
 
+<script src="script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
