@@ -1,34 +1,152 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Musfikur Rahaman | Research</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Musfikur Rahaman | Research</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="projects.html">Projects</a>
-    <a href="publications.html">Presentations</a>
-    <a href="contact.html">Contact</a>
-</nav>
+<header class="header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">
+      <span class="name">Musfikur Rahaman</span>
+      <span class="subtitle">PhD Student • Information Science • UALR</span>
+    </a>
 
-<section>
-    <h2>Research Interests</h2>
-    <ul>
-        <li>Explainable Artificial Intelligence (XAI)</li>
-        <li>Machine Learning in Healthcare Informatics</li>
-        <li>Computer Vision & Image Forensics</li>
-        <li>Transformer-based Video Action Recognition</li>
-        <li>Bioinformatics & Genomic Data Analysis</li>
-        <li>Information Quality & Data Governance</li>
-    </ul>
-</section>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="research.html">Research</a>
+      <a data-nav href="projects.html">Projects</a>
+      <a data-nav href="teaching.html">Teaching & Service</a>
+      <a data-nav href="training.html">Training</a>
+      <a data-nav href="contact.html">Contact</a>
+    </nav>
 
-<footer>
-    © 2026 Musfikur Rahaman
+    <div class="nav-actions">
+      <button class="icon-btn" id="navToggle" aria-expanded="false" aria-controls="mobilePanel">☰</button>
+    </div>
+  </div>
+
+  <div class="container mobile-panel" id="mobilePanel">
+    <a data-nav href="index.html">Home</a>
+    <a data-nav href="research.html">Research</a>
+    <a data-nav href="projects.html">Projects</a>
+    <a data-nav href="teaching.html">Teaching & Service</a>
+    <a data-nav href="training.html">Training</a>
+    <a data-nav href="contact.html">Contact</a>
+  </div>
+</header>
+
+<main class="main">
+  <div class="container">
+    <div class="card">
+      <p class="kicker">Research</p>
+      <h1>Research Themes & Technical Direction</h1>
+
+      <p class="muted">
+        My research focuses on building AI systems that combine strong predictive performance with transparency and reliability.
+        I am especially interested in the intersection of <strong>transformer-based learning</strong>, <strong>explainable AI</strong>,
+        and real-world decision contexts such as <strong>healthcare informatics</strong>, <strong>image forensics</strong>,
+        and <strong>information credibility assessment</strong>.
+      </p>
+
+      <hr class="sep"/>
+
+      <div class="two">
+        <div class="block">
+          <h2>Theme 1: Trustworthy AI & Explainability</h2>
+          <p class="muted">
+            I work on interpretability and trust-building methods that help users understand what a model learned,
+            why it made a prediction, and where it can fail.
+          </p>
+          <ul class="list">
+            <li><strong>Explainability:</strong> Grad-CAM and visual attribution for CNN-based forensic pipelines.</li>
+            <li><strong>Confidence-aware analysis:</strong> analyzing uncertainty, decision thresholds, and error types.</li>
+            <li><strong>Reliability:</strong> evaluation under class imbalance and real-world distribution shifts.</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h2>Theme 2: Transformers for Text, Vision & Video</h2>
+          <p class="muted">
+            Transformer architectures provide powerful sequence modeling for text, images, and video. I use them for
+            classification, representation learning, and spatiotemporal understanding.
+          </p>
+          <ul class="list">
+            <li><strong>NLP:</strong> BERT-family models for credibility and sentiment tasks.</li>
+            <li><strong>Video:</strong> TimeSformer-style modeling for fine-grained soccer action recognition.</li>
+            <li><strong>Training:</strong> fine-tuning pretrained models with controlled optimization and evaluation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="two section">
+        <div class="block">
+          <h2>Theme 3: Healthcare Informatics & Biomedical AI</h2>
+          <p class="muted">
+            I apply machine learning and data-driven methods to biomedical and health-related datasets to support improved
+            understanding of disease mechanisms and inform clinical research workflows.
+          </p>
+          <ul class="list">
+            <li>Biomedical data preprocessing, feature engineering, and analysis.</li>
+            <li>Integrating ML approaches with bioinformatics tools and statistical workflows.</li>
+            <li>Emphasis on explainability and responsible AI in health contexts.</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h2>Theme 4: Information Quality, Credibility & Governance</h2>
+          <p class="muted">
+            I study credibility assessment in information systems by combining model-based signals with transparent validation logic.
+            This includes fake news detection and source credibility analysis.
+          </p>
+          <ul class="list">
+            <li>Credibility classification and explainable decision support outputs.</li>
+            <li>Rule-based validation + model inference for transparent scoring.</li>
+            <li>Data governance themes: privacy, accountability, and ethical compliance.</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="sep"/>
+
+      <h2>Technical Competencies (Research-Oriented)</h2>
+      <div class="two">
+        <div class="block">
+          <h3>Modeling & Evaluation</h3>
+          <ul class="list">
+            <li>Supervised & unsupervised learning; transfer learning; hyperparameter tuning</li>
+            <li>Class imbalance handling and metric-driven evaluation (AUC, recall, accuracy)</li>
+            <li>Experiment tracking mindset: baselines → ablations → error analysis</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h3>Systems & Deployment (Academic Prototyping)</h3>
+          <ul class="list">
+            <li>FastAPI REST services for inference + logging</li>
+            <li>Supabase authentication and PostgreSQL-backed storage</li>
+            <li>Cloud deployment workflows (e.g., Render) for research demos</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="buttons section">
+        <a class="btn primary" href="projects.html">See Projects</a>
+        <a class="btn" href="training.html">Training & Certifications</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>© <span id="year"></span> Musfikur Rahaman</div>
+  </div>
 </footer>
 
+<script src="script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
