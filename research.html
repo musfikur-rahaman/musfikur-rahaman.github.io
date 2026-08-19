@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="Research, publications, and selected research projects by Musfikur Rahaman."/>
   <title>Musfikur Rahaman | Research</title>
   <link rel="stylesheet" href="styles.css"/>
 </head>
@@ -11,74 +12,108 @@
   <div class="container navbar">
     <a class="brand" href="index.html"><span class="name">Musfikur Rahaman</span><span class="subtitle">PhD Student • Information Science • UALR</span></a>
     <nav class="nav-links" aria-label="Primary navigation">
-      <a data-nav href="index.html">Home</a><a data-nav href="research.html">Research</a><a data-nav href="projects.html">Projects</a><a data-nav href="publications.html">Publications</a><a data-nav href="teaching.html">Teaching & Service</a><a data-nav href="training.html">Training</a><a data-nav href="contact.html">Contact</a>
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="research.html">Research</a>
+      <a data-nav href="experience.html">Experience</a>
+      <a data-nav href="training.html">Training & Awards</a>
+      <a data-nav href="contact.html">Contact</a>
     </nav>
     <div class="nav-actions"><button class="icon-btn" id="navToggle" aria-expanded="false" aria-controls="mobilePanel">☰</button></div>
   </div>
-  <div class="container mobile-panel" id="mobilePanel"><a data-nav href="index.html">Home</a><a data-nav href="research.html">Research</a><a data-nav href="projects.html">Projects</a><a data-nav href="publications.html">Publications</a><a data-nav href="teaching.html">Teaching & Service</a><a data-nav href="training.html">Training</a><a data-nav href="contact.html">Contact</a></div>
+  <div class="container mobile-panel" id="mobilePanel">
+    <a data-nav href="index.html">Home</a><a data-nav href="research.html">Research</a><a data-nav href="experience.html">Experience</a><a data-nav href="training.html">Training & Awards</a><a data-nav href="contact.html">Contact</a>
+  </div>
 </header>
 
 <main class="main"><div class="container"><div class="card">
   <p class="kicker">Research</p>
-  <h1>Research Themes & Technical Direction</h1>
-  <p class="muted">My research focuses on Explainable AI (XAI), multimodal AI systems, computer vision, and transformer-based deep learning. I am particularly interested in building AI systems that are not only accurate, but also reliable, interpretable, and suitable for high-stakes or complex real-world settings.</p>
+  <h1>Research Work, Projects & Publications</h1>
+  <p class="muted">My research focuses on Explainable AI, multimodal AI systems, computer vision, transformer-based deep learning, trustworthy AI, healthcare AI, and video understanding.</p>
+
   <hr class="sep"/>
-
-  <div class="two">
-    <div class="block">
-      <h2>Theme 1: Explainable & Trustworthy AI</h2>
-      <p class="muted">I study how AI systems can provide explanations that are faithful to model behavior rather than simply plausible to users.</p>
-      <ul class="list">
-        <li><strong>Explanation faithfulness:</strong> evaluating whether explanations reflect the evidence actually used by the model.</li>
-        <li><strong>Hallucination detection:</strong> identifying unsupported or clinically inaccurate content in model-generated outputs.</li>
-        <li><strong>Visual interpretability:</strong> saliency-based approaches such as Grad-CAM for understanding model attention.</li>
-        <li><strong>Reliability:</strong> error analysis, confidence-aware evaluation, and robustness under difficult cases.</li>
-      </ul>
-    </div>
-    <div class="block">
-      <h2>Theme 2: Multimodal & Medical AI</h2>
-      <p class="muted">My ongoing work examines trustworthy multimodal AI through medical image report generation, where systems must align visual evidence with generated clinical language.</p>
-      <ul class="list">
-        <li>Medical vision-language models for chest X-ray report generation.</li>
-        <li>Connecting visual saliency, model reasoning, and clinical correctness.</li>
-        <li>Evaluating hallucinations and explanation faithfulness in generated reports.</li>
-        <li>Developing unified evaluation frameworks for trustworthy medical AI.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="two section">
-    <div class="block">
-      <h2>Theme 3: Transformers for Video Understanding</h2>
-      <p class="muted">I use transformer architectures to model long-range spatiotemporal relationships in video and improve fine-grained action recognition.</p>
-      <ul class="list">
-        <li><strong>TimeSformer:</strong> transformer-based soccer action recognition using divided space-time attention.</li>
-        <li><strong>Temporal context:</strong> studying ambiguous actions that depend on what occurs before and after an event.</li>
-        <li><strong>Sports analytics:</strong> automated recognition of fine-grained actions in broadcast soccer video.</li>
-        <li><strong>Generalization:</strong> evaluating robustness across visually similar classes and changing broadcast conditions.</li>
-      </ul>
-    </div>
-    <div class="block">
-      <h2>Theme 4: Applied AI, Forensics & Information Quality</h2>
-      <p class="muted">I also develop applied AI systems in image forensics, misinformation detection, and biomedical analysis.</p>
-      <ul class="list">
-        <li>Image manipulation detection and localization using ResNet50, U-Net, and Grad-CAM.</li>
-        <li>Transformer-based fake news classification with transparent explanation generation.</li>
-        <li>Machine learning and bioinformatics for biomedical insight discovery.</li>
-        <li>Responsible deployment through interpretable outputs and traceable system design.</li>
-      </ul>
-    </div>
+  <h2>Current Research</h2>
+  <div class="block">
+    <div class="pill">Ongoing • Medical AI • XAI • Multimodal Systems</div>
+    <h3>Beyond the Output: Faithful XAI for Medical Image Report Generation</h3>
+    <p class="muted">Investigating hallucination detection and explanation faithfulness in medical vision-language models using chest X-ray report generation as a testbed.</p>
+    <ul class="list">
+      <li>Studying whether generated clinical reports are grounded in visual evidence.</li>
+      <li>Identifying hallucinated or unsupported statements in generated reports.</li>
+      <li>Linking visual saliency, model reasoning, and clinical correctness in a unified evaluation framework.</li>
+      <li>Technologies: PyTorch, TensorFlow, Vision Transformers, Medical Imaging, XAI.</li>
+    </ul>
   </div>
 
   <hr class="sep"/>
-  <h2>Research-Oriented Technical Competencies</h2>
-  <div class="two">
-    <div class="block"><h3>Modeling & Evaluation</h3><ul class="list"><li>PyTorch, TensorFlow, Keras, HuggingFace Transformers, scikit-learn</li><li>ViT, TimeSformer, BERT, DistilBERT, LLaMA, ResNet50, U-Net</li><li>Transfer learning, fine-tuning, ablation thinking, error analysis, and metric-driven evaluation</li><li>Accuracy, recall, AUC, confusion matrices, and qualitative explanation assessment</li></ul></div>
-    <div class="block"><h3>Systems & Research Prototyping</h3><ul class="list"><li>FastAPI and REST APIs for model inference</li><li>Git/GitHub, Jupyter Notebook, VS Code</li><li>Supabase/PostgreSQL, MySQL, MongoDB, SQL Server</li><li>Render and lightweight web deployment for research demos</li></ul></div>
+  <h2>Selected Research Projects</h2>
+
+  <div class="block">
+    <div class="pill">2026 • Video Understanding • Transformers</div>
+    <h3>Soccer Action Detection Using TimeSformer</h3>
+    <p class="muted">Fine-tuned a pretrained TimeSformer on approximately 3,600 annotated SoccerAct10 clips for fine-grained soccer action recognition.</p>
+    <ul class="list">
+      <li>Achieved 91.13% Top-1 validation accuracy.</li>
+      <li>Modeled long-range spatiotemporal dependencies using divided space-time attention.</li>
+      <li>Analyzed difficult class distinctions including fouls, short passes, and long passes.</li>
+    </ul>
   </div>
 
-  <div class="buttons section"><a class="btn primary" href="projects.html">See Projects</a><a class="btn" href="publications.html">Publications</a></div>
+  <div class="block section">
+    <div class="pill">Computer Vision • Image Forensics • Explainability</div>
+    <h3>Image Forgery Detection: ResNet50 + U-Net + Grad-CAM</h3>
+    <p class="muted">Built an explainable computer vision pipeline for detecting and localizing image manipulation using the CASIA 2.0 dataset.</p>
+    <ul class="list"><li>ResNet50 for classification and U-Net for pixel-level localization.</li><li>Grad-CAM for interpretable visual evidence.</li><li>Reported AUC: 0.86 and recall: 0.88.</li></ul>
+  </div>
+
+  <div class="block section">
+    <div class="pill">NLP • Full-Stack AI • Explainable Decision Support</div>
+    <h3>NewsLogic: AI-Powered Fake News Detection System</h3>
+    <p class="muted">Designed and deployed a full-stack AI system combining transformer-based classification, rule-based validation, and explanation generation for transparent misinformation analysis.</p>
+    <ul class="list"><li>BERT and DistilBERT for multi-signal text analysis.</li><li>LLaMA-based explanation generation.</li><li>FastAPI backend with Supabase-backed authentication and storage.</li></ul>
+  </div>
+
+  <div class="block section">
+    <div class="pill">ML + Bioinformatics • Healthcare Research</div>
+    <h3>MLBioIGE</h3>
+    <p class="muted">Collaborated on a peer-reviewed study integrating machine learning and bioinformatics to identify genetic factors associated with idiopathic pulmonary fibrosis in the context of SARS-CoV-2.</p>
+  </div>
+
+  <hr class="sep"/>
+  <h2>Peer-Reviewed Publications</h2>
+
+  <div class="block">
+    <div class="pill">2026 • Journal Article • ACM Digital Library</div>
+    <h3>Soccer Action Detection Using TimeSformer: A Transformer-Based Approach to Video Understanding</h3>
+    <p class="muted"><em>Journal of Computing Sciences in Colleges</em>, 41(10), 72–81, 2026.</p>
+    <div class="buttons"><a class="btn" href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">View Publication</a></div>
+  </div>
+
+  <div class="block section">
+    <div class="pill">2023 • Conference Publication • IEEE</div>
+    <h3>Enhancing the Programming Sequence for Undergraduate Computer Science Students: A Program for Improving Learning Outcomes</h3>
+    <p class="muted"><em>2023 5th International Congress on Human-Computer Interaction, Optimization and Robotic Applications (HORA)</em>.</p>
+    <div class="buttons"><a class="btn" href="https://doi.org/10.1109/HORA58378.2023.10156793" target="_blank" rel="noopener">DOI</a></div>
+  </div>
+
+  <div class="block section">
+    <div class="pill">2022 • Journal Article</div>
+    <h3>MLBioIGE: Integration and interplay of machine learning and bioinformatics to identify the genetic effect of SARS-CoV-2 on idiopathic pulmonary fibrosis patients</h3>
+    <p class="muted"><em>Biology Methods and Protocols</em>, 7(1), 2022.</p>
+    <div class="buttons"><a class="btn" href="https://doi.org/10.1093/biomethods/bpac013" target="_blank" rel="noopener">DOI</a></div>
+  </div>
+
+  <hr class="sep"/>
+  <h2>Research Presentations</h2>
+  <div class="block">
+    <h3>Enhancing Disease Detection in South Asian Freshwater Fish Aquaculture Through Convolutional Neural Networks</h3>
+    <p class="muted">ATU Scholars Symposium, April 2024.</p>
+  </div>
+  <div class="block section">
+    <h3>League of Learning: Deep Learning for Soccer Action Video Classification</h3>
+    <p class="muted">ATU Scholars Symposium, April 2024.</p>
+  </div>
 </div></div></main>
+
 <footer class="footer"><div class="container"><div>© <span id="year"></span> Musfikur Rahaman</div></div></footer>
 <script src="script.js"></script><script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body></html>
