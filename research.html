@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="description" content="Research, publications, and selected research projects by Musfikur Rahaman."/>
+  <meta name="description" content="Research, publications, and future research directions by Musfikur Rahaman in soccer action detection, video understanding, explainable AI, and multimodal systems."/>
   <title>Musfikur Rahaman | Research</title>
   <link rel="stylesheet" href="styles.css?v=20260819-light"/>
 </head>
@@ -25,11 +25,63 @@
 
 <main class="main"><div class="container"><div class="card">
   <p class="kicker">Research</p>
-  <h1>Research Work, Projects & Publications</h1>
-  <p class="muted">My research focuses on Explainable AI, multimodal AI systems, computer vision, transformer-based deep learning, trustworthy AI, healthcare AI, and video understanding.</p>
+  <h1>Research Work, Future Directions & Publications</h1>
+  <p class="muted">My research centers on computer vision and video understanding, with a major focus on soccer action detection and sports analytics. I am also interested in Explainable AI, multimodal AI systems, transformer-based deep learning, trustworthy AI, healthcare AI, and human activity recognition.</p>
 
   <hr class="sep"/>
-  <h2>Current Research</h2>
+  <h2>Major Research Area: Soccer Action Detection & Sports Video Understanding</h2>
+  <div class="block">
+    <div class="pill">Computer Vision • Sports Analytics • Transformers • Video Understanding</div>
+    <h3>From Deep Learning to Transformer-Based Soccer Action Recognition</h3>
+    <p class="muted">Soccer action detection is one of the central directions of my research. My work began with <em>League of Learning: Deep Learning for Soccer Action Video Classification</em>, where I used ConvLSTM and LRCN models to study how deep learning can recognize actions in soccer video. That work motivated me to investigate newer transformer-based approaches for modeling complex temporal relationships in video.</p>
+    <p class="muted">This progression led to my 2026 publication, <em>Soccer Action Detection Using TimeSformer: A Transformer-Based Approach to Video Understanding</em>. Using the SoccerAct10 dataset, the TimeSformer model achieved 91.13% validation accuracy. The study also showed that visually similar actions such as fouls, short passes, and long passes remain challenging because their meaning often depends on temporal and contextual information beyond a short clip.</p>
+    <ul class="list">
+      <li>Fine-grained soccer action recognition using deep learning and transformer-based video models.</li>
+      <li>Temporal reasoning for actions whose meaning depends on what happens before and after an event.</li>
+      <li>Sports analytics applications including event recognition, video indexing, highlight generation, and performance analysis.</li>
+      <li>Broader relevance to human activity recognition and complex video understanding.</li>
+    </ul>
+    <div class="buttons"><a class="btn" href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">View TimeSformer Publication</a></div>
+  </div>
+
+  <hr class="sep"/>
+  <h2>Future Research Direction: Soccer Video Understanding</h2>
+  <p class="muted">Over the next several years, I plan to continue building on this line of research by addressing the limitations identified in my earlier soccer-action studies and by developing more context-aware, robust, efficient, and interpretable video-understanding methods.</p>
+
+  <div class="two">
+    <div class="block">
+      <h3>Longer Temporal Context</h3>
+      <p class="muted">Many soccer actions cannot be interpreted reliably from only a few frames. I plan to study models that can use longer video sequences so that events such as fouls and different types of passes can be interpreted using what happens before, during, and after the action.</p>
+    </div>
+    <div class="block">
+      <h3>Multimodal & Contextual Information</h3>
+      <p class="muted">I plan to investigate how transformer-based video models can be combined with contextual signals such as player pose, player movement, optical flow, field position, and potentially broadcast audio to improve recognition of ambiguous actions.</p>
+    </div>
+  </div>
+
+  <div class="two section">
+    <div class="block">
+      <h3>Robustness Across Broadcast Conditions</h3>
+      <p class="muted">Sports footage varies across camera angles, lighting, stadium settings, zoom levels, graphics, and production styles. I plan to evaluate models across broader video conditions and explore methods that improve consistency when the testing environment differs from the original training data.</p>
+    </div>
+    <div class="block">
+      <h3>Efficiency & Near-Real-Time Analysis</h3>
+      <p class="muted">Another goal is to reduce computational requirements so that advanced soccer-video models can move closer to faster or near-real-time analysis while preserving useful predictive performance.</p>
+    </div>
+  </div>
+
+  <div class="block section">
+    <h3>Explainable & Trustworthy Sports AI</h3>
+    <p class="muted">My work in explainable and trustworthy AI also informs this research direction. I plan to examine methods that reveal which frames, players, movements, or visual regions most strongly influence a model's prediction. This can help diagnose errors, understand model behavior, and improve reliability rather than treating classification accuracy as the only measure of success.</p>
+  </div>
+
+  <div class="block section">
+    <h3>Broader Research Goal</h3>
+    <p class="muted">Soccer will remain an important application of my research, but I view it as a practical environment for studying broader computer vision problems involving temporal reasoning, multimodal information, human activity recognition, reliability, and explainability. Methods developed through this work may therefore extend to other kinds of video where complex activities unfold over time.</p>
+  </div>
+
+  <hr class="sep"/>
+  <h2>Current Research in Explainable & Multimodal AI</h2>
   <div class="block">
     <div class="pill">Ongoing • Medical AI • XAI • Multimodal Systems</div>
     <h3>Beyond the Output: Faithful XAI for Medical Image Report Generation</h3>
@@ -44,18 +96,8 @@
 
   <hr class="sep"/>
   <h2>Selected Research Projects</h2>
-  <div class="block">
-    <div class="pill">2026 • Video Understanding • Transformers</div>
-    <h3>Soccer Action Detection Using TimeSformer</h3>
-    <p class="muted">Fine-tuned a pretrained TimeSformer on approximately 3,600 annotated SoccerAct10 clips for fine-grained soccer action recognition.</p>
-    <ul class="list">
-      <li>Achieved 91.13% Top-1 validation accuracy.</li>
-      <li>Modeled long-range spatiotemporal dependencies using divided space-time attention.</li>
-      <li>Analyzed difficult class distinctions including fouls, short passes, and long passes.</li>
-    </ul>
-  </div>
 
-  <div class="block section">
+  <div class="block">
     <div class="pill">Computer Vision • Image Forensics • Explainability</div>
     <h3>Image Forgery Detection: ResNet50 + U-Net + Grad-CAM</h3>
     <p class="muted">Built an explainable computer vision pipeline for detecting and localizing image manipulation using the CASIA 2.0 dataset.</p>
