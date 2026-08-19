@@ -7,7 +7,7 @@
   <title>Musfikur Rahaman | Research</title>
   <link rel="stylesheet" href="styles.css?v=20260819-light"/>
 </head>
-<body>
+<body class="research-page">
 <header class="header">
   <div class="container navbar">
     <a class="brand" href="index.html"><span class="name">Musfikur Rahaman</span><span class="subtitle">PhD Student • Information Science • UALR</span></a>
@@ -23,128 +23,130 @@
   <div class="container mobile-panel" id="mobilePanel"><a data-nav href="index.html">Home</a><a data-nav href="research.html">Research</a><a data-nav href="experience.html">Experience</a><a data-nav href="training.html">Training & Awards</a><a data-nav href="contact.html">Contact</a></div>
 </header>
 
-<main class="main"><div class="container"><div class="card">
-  <p class="kicker">Research</p>
-  <h1>Research Work, Future Directions & Publications</h1>
-  <p class="muted">My research centers on computer vision and video understanding, with a major focus on soccer action detection and sports analytics. I am also interested in Explainable AI, multimodal AI systems, transformer-based deep learning, trustworthy AI, healthcare AI, and human activity recognition.</p>
+<main class="main">
+  <div class="container">
+    <div class="card research-shell">
+      <p class="kicker">Research</p>
+      <h1>Research & Publications</h1>
+      <p class="muted research-intro">My research focuses on computer vision, video understanding, Explainable AI, and multimodal systems, with major work in soccer action detection and faithful AI for medical image report generation. I am especially interested in models that are accurate, context-aware, interpretable, and reliable in real-world settings.</p>
 
-  <hr class="sep"/>
-  <h2>Major Research Area: Soccer Action Detection & Sports Video Understanding</h2>
-  <div class="block">
-    <div class="pill">Computer Vision • Sports Analytics • Transformers • Video Understanding</div>
-    <h3>From Deep Learning to Transformer-Based Soccer Action Recognition</h3>
-    <p class="muted">Soccer action detection is one of the central directions of my research. My work began with <em>League of Learning: Deep Learning for Soccer Action Video Classification</em>, where I used ConvLSTM and LRCN models to study how deep learning can recognize actions in soccer video. That work motivated me to investigate newer transformer-based approaches for modeling complex temporal relationships in video.</p>
-    <p class="muted">This progression led to my 2026 publication, <em>Soccer Action Detection Using TimeSformer: A Transformer-Based Approach to Video Understanding</em>. Using the SoccerAct10 dataset, the TimeSformer model achieved 91.13% validation accuracy. The study also showed that visually similar actions such as fouls, short passes, and long passes remain challenging because their meaning often depends on temporal and contextual information beyond a short clip.</p>
-    <ul class="list">
-      <li>Fine-grained soccer action recognition using deep learning and transformer-based video models.</li>
-      <li>Temporal reasoning for actions whose meaning depends on what happens before and after an event.</li>
-      <li>Sports analytics applications including event recognition, video indexing, highlight generation, and performance analysis.</li>
-      <li>Broader relevance to human activity recognition and complex video understanding.</li>
-    </ul>
-    <div class="buttons"><a class="btn" href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">View TimeSformer Publication</a></div>
-  </div>
+      <section class="research-section">
+        <h2>Soccer Action Detection & Sports Video Understanding</h2>
+        <div class="block research-feature">
+          <div class="pill">Computer Vision • Sports Analytics • Transformers</div>
+          <h3>Transformer-Based Soccer Action Recognition</h3>
+          <p class="muted">My soccer-video research began with <em>League of Learning: Deep Learning for Soccer Action Video Classification</em> using ConvLSTM and LRCN models and later progressed to transformer-based video understanding.</p>
+          <p class="muted">In my 2026 publication, <em>Soccer Action Detection Using TimeSformer: A Transformer-Based Approach to Video Understanding</em>, the TimeSformer model achieved 91.13% validation accuracy on SoccerAct10. The results also highlighted challenges in distinguishing context-dependent actions such as fouls, short passes, and long passes.</p>
+          <ul class="list compact-list">
+            <li>Fine-grained soccer action recognition and temporal reasoning.</li>
+            <li>Sports-video event understanding, indexing, and performance analysis.</li>
+            <li>Broader applications in human activity recognition and complex video understanding.</li>
+          </ul>
+          <div class="buttons"><a class="btn" href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">View TimeSformer Publication</a></div>
+        </div>
+      </section>
 
-  <hr class="sep"/>
-  <h2>Future Research Direction: Soccer Video Understanding</h2>
-  <p class="muted">Over the next several years, I plan to continue building on this line of research by addressing the limitations identified in my earlier soccer-action studies and by developing more context-aware, robust, efficient, and interpretable video-understanding methods.</p>
+      <section class="research-section">
+        <h2>Explainable & Multimodal AI</h2>
+        <div class="block research-feature">
+          <div class="pill">Ongoing • Medical AI • XAI • Multimodal Systems</div>
+          <h3>Beyond the Output: Faithful XAI for Medical Image Report Generation</h3>
+          <p class="muted">This work investigates hallucination detection and explanation faithfulness in medical vision-language models using chest X-ray report generation as a testbed.</p>
+          <ul class="list compact-list">
+            <li>Evaluate whether generated clinical findings are grounded in visual evidence.</li>
+            <li>Identify hallucinated or unsupported statements in generated reports.</li>
+            <li>Connect visual saliency, model reasoning, and clinical correctness in a unified evaluation framework.</li>
+          </ul>
+        </div>
+      </section>
 
-  <div class="two">
-    <div class="block">
-      <h3>Longer Temporal Context</h3>
-      <p class="muted">Many soccer actions cannot be interpreted reliably from only a few frames. I plan to study models that can use longer video sequences so that events such as fouls and different types of passes can be interpreted using what happens before, during, and after the action.</p>
+      <section class="research-section">
+        <h2>Future Research Directions</h2>
+        <div class="research-grid">
+          <div class="block compact-block">
+            <h3>Longer Temporal Context</h3>
+            <p class="muted">Study longer video sequences and sequence-aware models so actions can be interpreted using what occurs before, during, and after an event.</p>
+          </div>
+          <div class="block compact-block">
+            <h3>Multimodal Context</h3>
+            <p class="muted">Combine video with player movement, pose, field position, audio, commentary, and other contextual information to improve recognition of ambiguous actions.</p>
+          </div>
+          <div class="block compact-block">
+            <h3>Robustness & Generalization</h3>
+            <p class="muted">Evaluate models across different camera angles, lighting, stadium settings, zoom levels, graphics, and broadcast production styles.</p>
+          </div>
+          <div class="block compact-block">
+            <h3>Explainability & Efficiency</h3>
+            <p class="muted">Develop interpretable and more efficient video models that support error analysis, trustworthy predictions, and faster or near-real-time analysis.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="research-section">
+        <h2>Selected Research Projects</h2>
+        <div class="research-grid project-grid">
+          <div class="block compact-block">
+            <div class="pill">Computer Vision • XAI</div>
+            <h3>Image Forgery Detection</h3>
+            <p class="muted">ResNet50 + U-Net + Grad-CAM pipeline for detecting and localizing image manipulation on CASIA 2.0, with reported AUC 0.86 and recall 0.88.</p>
+          </div>
+          <div class="block compact-block">
+            <div class="pill">NLP • Full-Stack AI</div>
+            <h3>NewsLogic</h3>
+            <p class="muted">AI-powered fake-news detection system combining transformer-based classification, rule-based validation, and explanation generation through a FastAPI backend.</p>
+          </div>
+          <div class="block compact-block">
+            <div class="pill">Bioinformatics • Healthcare</div>
+            <h3>MLBioIGE</h3>
+            <p class="muted">Peer-reviewed research integrating machine learning and bioinformatics to study genetic factors associated with idiopathic pulmonary fibrosis in the context of SARS-CoV-2.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="research-section">
+        <h2>Peer-Reviewed Publications</h2>
+        <div class="publication-list">
+          <div class="block publication-item">
+            <div class="pill">2026 • ACM Digital Library</div>
+            <h3>Soccer Action Detection Using TimeSformer: A Transformer-Based Approach to Video Understanding</h3>
+            <p class="muted"><em>Journal of Computing Sciences in Colleges</em>, 41(10), 72–81, 2026. DOI: 10.5555/3820620.3820634.</p>
+            <div class="buttons"><a class="btn" href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">View Publication</a></div>
+          </div>
+
+          <div class="block publication-item">
+            <div class="pill">2023 • IEEE</div>
+            <h3>Enhancing the Programming Sequence for Undergraduate Computer Science Students: A Program for Improving Learning Outcomes</h3>
+            <p class="muted">Proceedings of the 5th HCIRA International Congress, June 2023. Vol. 7, Issue 1. DOI: 10.1109/HORA58378.2023.10156793.</p>
+            <div class="buttons"><a class="btn" href="https://doi.org/10.1109/HORA58378.2023.10156793" target="_blank" rel="noopener">DOI</a></div>
+          </div>
+
+          <div class="block publication-item">
+            <div class="pill">2022 • Journal Article</div>
+            <h3>MLBioIGE: Integration and interplay of machine learning and bioinformatics to identify the genetic effect of SARS-CoV-2 on idiopathic pulmonary fibrosis patients</h3>
+            <p class="muted"><em>Biology Methods and Protocols</em>, May 2022. DOI: 10.1093/biomethods/bpac013.</p>
+            <div class="buttons"><a class="btn" href="https://doi.org/10.1093/biomethods/bpac013" target="_blank" rel="noopener">DOI</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="research-section">
+        <h2>Research Presentations</h2>
+        <div class="research-grid presentation-grid">
+          <div class="block compact-block">
+            <h3>Enhancing Disease Detection in South Asian Freshwater Fish Aquaculture Through Convolutional Neural Networks</h3>
+            <p class="muted">ATU Scholars Symposium, April 2024.</p>
+            <div class="buttons"><a class="btn" href="https://orc.library.atu.edu/atu_rs/2024/2024/27" target="_blank" rel="noopener">View Presentation</a></div>
+          </div>
+          <div class="block compact-block">
+            <h3>League of Learning: Deep Learning for Soccer Action Video Classification</h3>
+            <p class="muted">ATU Scholars Symposium, April 2024.</p>
+            <div class="buttons"><a class="btn" href="https://orc.library.atu.edu/atu_rs/2024/2024/17" target="_blank" rel="noopener">View Presentation</a></div>
+          </div>
+        </div>
+      </section>
     </div>
-    <div class="block">
-      <h3>Multimodal & Contextual Information</h3>
-      <p class="muted">I plan to investigate how transformer-based video models can be combined with contextual signals such as player pose, player movement, optical flow, field position, and potentially broadcast audio to improve recognition of ambiguous actions.</p>
-    </div>
   </div>
-
-  <div class="two section">
-    <div class="block">
-      <h3>Robustness Across Broadcast Conditions</h3>
-      <p class="muted">Sports footage varies across camera angles, lighting, stadium settings, zoom levels, graphics, and production styles. I plan to evaluate models across broader video conditions and explore methods that improve consistency when the testing environment differs from the original training data.</p>
-    </div>
-    <div class="block">
-      <h3>Efficiency & Near-Real-Time Analysis</h3>
-      <p class="muted">Another goal is to reduce computational requirements so that advanced soccer-video models can move closer to faster or near-real-time analysis while preserving useful predictive performance.</p>
-    </div>
-  </div>
-
-  <div class="block section">
-    <h3>Explainable & Trustworthy Sports AI</h3>
-    <p class="muted">My work in explainable and trustworthy AI also informs this research direction. I plan to examine methods that reveal which frames, players, movements, or visual regions most strongly influence a model's prediction. This can help diagnose errors, understand model behavior, and improve reliability rather than treating classification accuracy as the only measure of success.</p>
-  </div>
-
-  <div class="block section">
-    <h3>Broader Research Goal</h3>
-    <p class="muted">Soccer will remain an important application of my research, but I view it as a practical environment for studying broader computer vision problems involving temporal reasoning, multimodal information, human activity recognition, reliability, and explainability. Methods developed through this work may therefore extend to other kinds of video where complex activities unfold over time.</p>
-  </div>
-
-  <hr class="sep"/>
-  <h2>Current Research in Explainable & Multimodal AI</h2>
-  <div class="block">
-    <div class="pill">Ongoing • Medical AI • XAI • Multimodal Systems</div>
-    <h3>Beyond the Output: Faithful XAI for Medical Image Report Generation</h3>
-    <p class="muted">Investigating hallucination detection and explanation faithfulness in medical vision-language models using chest X-ray report generation as a testbed.</p>
-    <ul class="list">
-      <li>Studying whether generated clinical reports are grounded in visual evidence.</li>
-      <li>Identifying hallucinated or unsupported statements in generated reports.</li>
-      <li>Linking visual saliency, model reasoning, and clinical correctness in a unified evaluation framework.</li>
-      <li>Technologies: PyTorch, TensorFlow, Vision Transformers, Medical Imaging, XAI.</li>
-    </ul>
-  </div>
-
-  <hr class="sep"/>
-  <h2>Selected Research Projects</h2>
-
-  <div class="block">
-    <div class="pill">Computer Vision • Image Forensics • Explainability</div>
-    <h3>Image Forgery Detection: ResNet50 + U-Net + Grad-CAM</h3>
-    <p class="muted">Built an explainable computer vision pipeline for detecting and localizing image manipulation using the CASIA 2.0 dataset.</p>
-    <ul class="list"><li>ResNet50 for classification and U-Net for pixel-level localization.</li><li>Grad-CAM for interpretable visual evidence.</li><li>Reported AUC: 0.86 and recall: 0.88.</li></ul>
-  </div>
-
-  <div class="block section">
-    <div class="pill">NLP • Full-Stack AI • Explainable Decision Support</div>
-    <h3>NewsLogic: AI-Powered Fake News Detection System</h3>
-    <p class="muted">Designed and deployed a full-stack AI system combining transformer-based classification, rule-based validation, and explanation generation for transparent misinformation analysis.</p>
-    <ul class="list"><li>BERT and DistilBERT for multi-signal text analysis.</li><li>LLaMA-based explanation generation.</li><li>FastAPI backend with Supabase-backed authentication and storage.</li></ul>
-  </div>
-
-  <div class="block section">
-    <div class="pill">ML + Bioinformatics • Healthcare Research</div>
-    <h3>MLBioIGE</h3>
-    <p class="muted">Collaborated on a peer-reviewed study integrating machine learning and bioinformatics to identify genetic factors associated with idiopathic pulmonary fibrosis in the context of SARS-CoV-2.</p>
-  </div>
-
-  <hr class="sep"/>
-  <h2>Peer-Reviewed Publications</h2>
-  <div class="block">
-    <div class="pill">2026 • Journal Article • ACM Digital Library</div>
-    <h3>Soccer Action Detection Using TimeSformer: A Transformer-Based Approach to Video Understanding</h3>
-    <p class="muted"><em>Journal of Computing Sciences in Colleges</em>, 41(10), 72–81, 2026. ACM Digital Library. DOI: 10.5555/3820620.3820634.</p>
-    <div class="buttons"><a class="btn" href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">View Publication</a></div>
-  </div>
-
-  <div class="block section">
-    <div class="pill">2023 • Conference Publication • IEEE</div>
-    <h3>Enhancing the Programming Sequence for Undergraduate Computer Science Students: A Program for Improving Learning Outcomes</h3>
-    <p class="muted">Proceedings of the 5th HCIRA International Congress, June 2023. Vol. 7, Issue 1. DOI: 10.1109/HORA58378.2023.10156793.</p>
-    <div class="buttons"><a class="btn" href="https://doi.org/10.1109/HORA58378.2023.10156793" target="_blank" rel="noopener">DOI</a></div>
-  </div>
-
-  <div class="block section">
-    <div class="pill">2022 • Journal Article</div>
-    <h3>MLBioIGE: Integration and interplay of machine learning and bioinformatics to identify the genetic effect of SARS-CoV-2 on idiopathic pulmonary fibrosis patients</h3>
-    <p class="muted"><em>Biology Methods and Protocols</em>, May 2022. DOI: 10.1093/biomethods/bpac013.</p>
-    <div class="buttons"><a class="btn" href="https://doi.org/10.1093/biomethods/bpac013" target="_blank" rel="noopener">DOI</a></div>
-  </div>
-
-  <hr class="sep"/>
-  <h2>Research Presentations</h2>
-  <div class="block"><h3>Enhancing Disease Detection in South Asian Freshwater Fish Aquaculture Through Convolutional Neural Networks</h3><p class="muted">ATU Scholars Symposium, April 2024.</p><div class="buttons"><a class="btn" href="https://orc.library.atu.edu/atu_rs/2024/2024/27" target="_blank" rel="noopener">View Presentation</a></div></div>
-  <div class="block section"><h3>League of Learning: Deep Learning for Soccer Action Video Classification</h3><p class="muted">ATU Scholars Symposium, April 2024.</p><div class="buttons"><a class="btn" href="https://orc.library.atu.edu/atu_rs/2024/2024/17" target="_blank" rel="noopener">View Presentation</a></div></div>
-</div></div></main>
+</main>
 
 <footer class="footer">
   <div class="container footer-inner">
