@@ -1,33 +1,101 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Musfikur Rahaman | Presentations</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="Peer-reviewed publications and research presentations by Musfikur Rahaman."/>
+  <title>Musfikur Rahaman | Publications</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+<header class="header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">
+      <span class="name">Musfikur Rahaman</span>
+      <span class="subtitle">PhD Student • Information Science • UALR</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="research.html">Research</a>
+      <a data-nav href="projects.html">Projects</a>
+      <a data-nav href="publications.html">Publications</a>
+      <a data-nav href="teaching.html">Teaching & Service</a>
+      <a data-nav href="training.html">Training</a>
+      <a data-nav href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="navToggle" aria-expanded="false" aria-controls="mobilePanel">☰</button>
+    </div>
+  </div>
+  <div class="container mobile-panel" id="mobilePanel">
+    <a data-nav href="index.html">Home</a>
+    <a data-nav href="research.html">Research</a>
+    <a data-nav href="projects.html">Projects</a>
+    <a data-nav href="publications.html">Publications</a>
+    <a data-nav href="teaching.html">Teaching & Service</a>
+    <a data-nav href="training.html">Training</a>
+    <a data-nav href="contact.html">Contact</a>
+  </div>
+</header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="projects.html">Projects</a>
-    <a href="publications.html">Presentations</a>
-    <a href="contact.html">Contact</a>
-</nav>
+<main class="main">
+  <div class="container">
+    <div class="card">
+      <p class="kicker">Publications</p>
+      <h1>Peer-Reviewed Publications & Research Presentations</h1>
+      <p class="muted">My published work spans bioinformatics, computing education, and transformer-based video understanding.</p>
 
-<section>
-    <h2>Research Presentations & Awards</h2>
-    <ul>
-        <li>5th International Congress on HCI (2023)</li>
-        <li>ATU Research Symposium – 2nd Place</li>
-        <li>Arkansas Academy of Science – 1st Place Poster</li>
-        <li>LSUS Regional Scholars Forum</li>
-        <li>STEM at Arkansas State Capitol (2023, 2024)</li>
-    </ul>
-</section>
+      <hr class="sep"/>
+      <h2>Peer-Reviewed Publications</h2>
 
-<footer>
-    © 2026 Musfikur Rahaman
-</footer>
+      <div class="block">
+        <div class="pill">2026 • Journal Article • ACM Digital Library</div>
+        <h3>Soccer Action Detection Using TimeSformer: A Transformer-Based Approach to Video Understanding</h3>
+        <p class="muted"><em>Journal of Computing Sciences in Colleges</em>, 41(10), 72–81, 2026.</p>
+        <div class="buttons"><a class="btn primary" href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">ACM Digital Library</a></div>
+      </div>
 
+      <div class="block section">
+        <div class="pill">2023 • Conference Publication • IEEE</div>
+        <h3>Enhancing the Programming Sequence for Undergraduate Computer Science Students: A Program for Improving Learning Outcomes</h3>
+        <p class="muted"><em>2023 5th International Congress on Human-Computer Interaction, Optimization and Robotic Applications (HORA)</em>.</p>
+        <div class="buttons"><a class="btn" href="https://doi.org/10.1109/HORA58378.2023.10156793" target="_blank" rel="noopener">DOI</a></div>
+      </div>
+
+      <div class="block section">
+        <div class="pill">2022 • Journal Article • Oxford Academic</div>
+        <h3>MLBioIGE: Integration and interplay of machine learning and bioinformatics to identify the genetic effect of SARS-CoV-2 on idiopathic pulmonary fibrosis patients</h3>
+        <p class="muted"><em>Biology Methods and Protocols</em>, 7(1), 2022.</p>
+        <div class="buttons"><a class="btn" href="https://doi.org/10.1093/biomethods/bpac013" target="_blank" rel="noopener">DOI</a></div>
+      </div>
+
+      <hr class="sep"/>
+      <h2>Research Presentations</h2>
+
+      <div class="block">
+        <h3>Enhancing Disease Detection in South Asian Freshwater Fish Aquaculture Through Convolutional Neural Networks</h3>
+        <p class="muted">ATU Scholars Symposium, April 2024.</p>
+        <div class="buttons"><a class="btn" href="https://orc.library.atu.edu/atu_rs/2024/2024/27" target="_blank" rel="noopener">View Record</a></div>
+      </div>
+
+      <div class="block section">
+        <h3>League of Learning: Deep Learning for Soccer Action Video Classification</h3>
+        <p class="muted">ATU Scholars Symposium, April 2024.</p>
+        <div class="buttons"><a class="btn" href="https://orc.library.atu.edu/atu_rs/2024/2024/17" target="_blank" rel="noopener">View Record</a></div>
+      </div>
+
+      <hr class="sep"/>
+      <h2>Awards Connected to Research</h2>
+      <ul class="list">
+        <li><strong>2nd Place, Graduate Oral Presentation</strong> — ATU Research Symposium, 2024. Project: <em>League of Learning: Deep Learning for Soccer Action Video Classification</em>.</li>
+        <li><strong>1st Place, Graduate Poster Presentation</strong> — Arkansas Academy of Science, 2023. Project: <em>League of Learning: Deep Learning for Soccer Action Video Classification</em>.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="footer"><div class="container"><div>© <span id="year"></span> Musfikur Rahaman</div></div></footer>
+<script src="script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
