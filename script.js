@@ -1,4 +1,13 @@
 (function () {
+  // Load the softer, lower-glare academic color layer across every page.
+  if (!document.querySelector('link[data-comfort-theme]')) {
+    const comfortTheme = document.createElement('link');
+    comfortTheme.rel = 'stylesheet';
+    comfortTheme.href = 'comfort-theme.css?v=20260819-soft';
+    comfortTheme.setAttribute('data-comfort-theme', 'true');
+    document.head.appendChild(comfortTheme);
+  }
+
   const navToggle = document.getElementById("navToggle");
   const mobilePanel = document.getElementById("mobilePanel");
 
