@@ -7,86 +7,23 @@
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-
 <header class="header">
   <div class="container navbar">
-    <a class="brand" href="index.html">
-      <span class="name">Musfikur Rahaman</span>
-      <span class="subtitle">PhD Student • Information Science • UALR</span>
-    </a>
-
-    <nav class="nav-links" aria-label="Primary navigation">
-      <a data-nav href="index.html">Home</a>
-      <a data-nav href="research.html">Research</a>
-      <a data-nav href="projects.html">Projects</a>
-      <a data-nav href="teaching.html">Teaching & Service</a>
-      <a data-nav href="training.html">Training</a>
-      <a data-nav href="contact.html">Contact</a>
-    </nav>
-
-    <div class="nav-actions">
-      <button class="icon-btn" id="navToggle" aria-expanded="false" aria-controls="mobilePanel">☰</button>
-    </div>
+    <a class="brand" href="index.html"><span class="name">Musfikur Rahaman</span><span class="subtitle">PhD Student • Information Science • UALR</span></a>
+    <nav class="nav-links" aria-label="Primary navigation"><a data-nav href="index.html">Home</a><a data-nav href="research.html">Research</a><a data-nav href="projects.html">Projects</a><a data-nav href="publications.html">Publications</a><a data-nav href="teaching.html">Teaching & Service</a><a data-nav href="training.html">Training</a><a data-nav href="contact.html">Contact</a></nav>
+    <div class="nav-actions"><button class="icon-btn" id="navToggle" aria-expanded="false" aria-controls="mobilePanel">☰</button></div>
   </div>
-
-  <div class="container mobile-panel" id="mobilePanel">
-    <a data-nav href="index.html">Home</a>
-    <a data-nav href="research.html">Research</a>
-    <a data-nav href="projects.html">Projects</a>
-    <a data-nav href="teaching.html">Teaching & Service</a>
-    <a data-nav href="training.html">Training</a>
-    <a data-nav href="contact.html">Contact</a>
-  </div>
+  <div class="container mobile-panel" id="mobilePanel"><a data-nav href="index.html">Home</a><a data-nav href="research.html">Research</a><a data-nav href="projects.html">Projects</a><a data-nav href="publications.html">Publications</a><a data-nav href="teaching.html">Teaching & Service</a><a data-nav href="training.html">Training</a><a data-nav href="contact.html">Contact</a></div>
 </header>
-
-<main class="main">
-  <div class="container">
-    <div class="card">
-      <p class="kicker">Contact</p>
-      <h1>Get in Touch</h1>
-      <p class="muted">
-        For research collaboration, academic opportunities, or project discussions, feel free to contact me using the information below.
-      </p>
-
-      <div class="two section">
-        <div class="block">
-          <h2>Direct Contact</h2>
-          <div class="meta">
-            <div><strong>Email:</strong> <a href="mailto:shuvo.musfikur@gmail.com">shuvo.musfikur@gmail.com</a></div>
-            <div><strong>Phone:</strong> <a href="tel:+15014300134">(501) 430-0134</a></div>
-            <div><strong>Location:</strong> Benton, AR (USA)</div>
-          </div>
-          <p class="faint">
-            (Optional) Add links here later: Google Scholar, ORCID, LinkedIn, GitHub.
-          </p>
-        </div>
-
-        <div class="block">
-          <h2>Suggested Email Topics</h2>
-          <ul class="list">
-            <li>Research collaboration (trustworthy AI, healthcare informatics, explainability, transformers)</li>
-            <li>Conference / paper coordination and academic networking</li>
-            <li>Project demos (NewsLogic, image forensics, video understanding)</li>
-            <li>Teaching support or academic service coordination</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="buttons section">
-        <a class="btn" href="index.html">Home</a>
-        <a class="btn primary" href="projects.html">Projects</a>
-      </div>
-    </div>
+<main class="main"><div class="container"><div class="card">
+  <p class="kicker">Contact</p><h1>Get in Touch</h1>
+  <p class="muted">For research collaboration, academic opportunities, or project discussions related to explainable AI, multimodal AI, computer vision, transformer-based learning, or trustworthy AI, feel free to contact me.</p>
+  <div class="two section">
+    <div class="block"><h2>Direct Contact</h2><div class="meta"><div><strong>Email:</strong> <a href="mailto:shuvo.musfikur@gmail.com">shuvo.musfikur@gmail.com</a></div><div><strong>Phone:</strong> <a href="tel:+15014300134">(501) 430-0134</a></div><div><strong>Location:</strong> Little Rock, Arkansas (USA)</div></div></div>
+    <div class="block"><h2>Research Interests</h2><ul class="list"><li>Explainable and Trustworthy AI</li><li>Medical vision-language models and hallucination detection</li><li>Computer vision and transformer-based video understanding</li><li>Image forensics and information credibility</li></ul></div>
   </div>
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <div>© <span id="year"></span> Musfikur Rahaman</div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-</body>
-</html>
+  <div class="buttons section"><a class="btn" href="research.html">Research</a><a class="btn" href="projects.html">Projects</a><a class="btn primary" href="publications.html">Publications</a></div>
+</div></div></main>
+<footer class="footer"><div class="container"><div>© <span id="year"></span> Musfikur Rahaman</div></div></footer>
+<script src="script.js"></script><script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body></html>
