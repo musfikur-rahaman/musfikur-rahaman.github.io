@@ -39,6 +39,33 @@
     footerLinks.prepend(footerResumeLink);
   }
 
+  // On the Resume page, link the original uploaded PDF.
+  const path = window.location.pathname.split("/").pop() || "index.html";
+  if (path === "resume.html") {
+    const resumeCard = document.querySelector("main .card");
+    const contactLine = resumeCard ? resumeCard.querySelector("h1 + p") : null;
+    if (contactLine && !document.querySelector(".resume-pdf-actions")) {
+      const actions = document.createElement("div");
+      actions.className = "buttons resume-pdf-actions";
+
+      const viewPdf = document.createElement("a");
+      viewPdf.className = "btn primary";
+      viewPdf.href = "Resume_Musfikur_Rahaman_PhD_Research.pdf";
+      viewPdf.target = "_blank";
+      viewPdf.rel = "noopener";
+      viewPdf.textContent = "View Resume PDF";
+
+      const downloadPdf = document.createElement("a");
+      downloadPdf.className = "btn";
+      downloadPdf.href = "Resume_Musfikur_Rahaman_PhD_Research.pdf";
+      downloadPdf.setAttribute("download", "Musfikur_Rahaman_Resume.pdf");
+      downloadPdf.textContent = "Download PDF";
+
+      actions.append(viewPdf, downloadPdf);
+      contactLine.insertAdjacentElement("afterend", actions);
+    }
+  }
+
   // Mobile menu toggle
   if (navToggle && mobilePanel) {
     navToggle.addEventListener("click", () => {
@@ -56,7 +83,6 @@
   }
 
   // Active link by current page
-  const path = window.location.pathname.split("/").pop() || "index.html";
   const allLinks = document.querySelectorAll('a[data-nav]');
   allLinks.forEach(link => {
     const href = link.getAttribute("href");
