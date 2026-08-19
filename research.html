@@ -7,146 +7,78 @@
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-
 <header class="header">
   <div class="container navbar">
-    <a class="brand" href="index.html">
-      <span class="name">Musfikur Rahaman</span>
-      <span class="subtitle">PhD Student • Information Science • UALR</span>
-    </a>
-
+    <a class="brand" href="index.html"><span class="name">Musfikur Rahaman</span><span class="subtitle">PhD Student • Information Science • UALR</span></a>
     <nav class="nav-links" aria-label="Primary navigation">
-      <a data-nav href="index.html">Home</a>
-      <a data-nav href="research.html">Research</a>
-      <a data-nav href="projects.html">Projects</a>
-      <a data-nav href="teaching.html">Teaching & Service</a>
-      <a data-nav href="training.html">Training</a>
-      <a data-nav href="contact.html">Contact</a>
+      <a data-nav href="index.html">Home</a><a data-nav href="research.html">Research</a><a data-nav href="projects.html">Projects</a><a data-nav href="publications.html">Publications</a><a data-nav href="teaching.html">Teaching & Service</a><a data-nav href="training.html">Training</a><a data-nav href="contact.html">Contact</a>
     </nav>
-
-    <div class="nav-actions">
-      <button class="icon-btn" id="navToggle" aria-expanded="false" aria-controls="mobilePanel">☰</button>
-    </div>
+    <div class="nav-actions"><button class="icon-btn" id="navToggle" aria-expanded="false" aria-controls="mobilePanel">☰</button></div>
   </div>
-
-  <div class="container mobile-panel" id="mobilePanel">
-    <a data-nav href="index.html">Home</a>
-    <a data-nav href="research.html">Research</a>
-    <a data-nav href="projects.html">Projects</a>
-    <a data-nav href="teaching.html">Teaching & Service</a>
-    <a data-nav href="training.html">Training</a>
-    <a data-nav href="contact.html">Contact</a>
-  </div>
+  <div class="container mobile-panel" id="mobilePanel"><a data-nav href="index.html">Home</a><a data-nav href="research.html">Research</a><a data-nav href="projects.html">Projects</a><a data-nav href="publications.html">Publications</a><a data-nav href="teaching.html">Teaching & Service</a><a data-nav href="training.html">Training</a><a data-nav href="contact.html">Contact</a></div>
 </header>
 
-<main class="main">
-  <div class="container">
-    <div class="card">
-      <p class="kicker">Research</p>
-      <h1>Research Themes & Technical Direction</h1>
+<main class="main"><div class="container"><div class="card">
+  <p class="kicker">Research</p>
+  <h1>Research Themes & Technical Direction</h1>
+  <p class="muted">My research focuses on Explainable AI (XAI), multimodal AI systems, computer vision, and transformer-based deep learning. I am particularly interested in building AI systems that are not only accurate, but also reliable, interpretable, and suitable for high-stakes or complex real-world settings.</p>
+  <hr class="sep"/>
 
-      <p class="muted">
-        My research focuses on building AI systems that combine strong predictive performance with transparency and reliability.
-        I am especially interested in the intersection of <strong>transformer-based learning</strong>, <strong>explainable AI</strong>,
-        and real-world decision contexts such as <strong>healthcare informatics</strong>, <strong>image forensics</strong>,
-        and <strong>information credibility assessment</strong>.
-      </p>
-
-      <hr class="sep"/>
-
-      <div class="two">
-        <div class="block">
-          <h2>Theme 1: Trustworthy AI & Explainability</h2>
-          <p class="muted">
-            I work on interpretability and trust-building methods that help users understand what a model learned,
-            why it made a prediction, and where it can fail.
-          </p>
-          <ul class="list">
-            <li><strong>Explainability:</strong> Grad-CAM and visual attribution for CNN-based forensic pipelines.</li>
-            <li><strong>Confidence-aware analysis:</strong> analyzing uncertainty, decision thresholds, and error types.</li>
-            <li><strong>Reliability:</strong> evaluation under class imbalance and real-world distribution shifts.</li>
-          </ul>
-        </div>
-
-        <div class="block">
-          <h2>Theme 2: Transformers for Text, Vision & Video</h2>
-          <p class="muted">
-            Transformer architectures provide powerful sequence modeling for text, images, and video. I use them for
-            classification, representation learning, and spatiotemporal understanding.
-          </p>
-          <ul class="list">
-            <li><strong>NLP:</strong> BERT-family models for credibility and sentiment tasks.</li>
-            <li><strong>Video:</strong> TimeSformer-style modeling for fine-grained soccer action recognition.</li>
-            <li><strong>Training:</strong> fine-tuning pretrained models with controlled optimization and evaluation.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="two section">
-        <div class="block">
-          <h2>Theme 3: Healthcare Informatics & Biomedical AI</h2>
-          <p class="muted">
-            I apply machine learning and data-driven methods to biomedical and health-related datasets to support improved
-            understanding of disease mechanisms and inform clinical research workflows.
-          </p>
-          <ul class="list">
-            <li>Biomedical data preprocessing, feature engineering, and analysis.</li>
-            <li>Integrating ML approaches with bioinformatics tools and statistical workflows.</li>
-            <li>Emphasis on explainability and responsible AI in health contexts.</li>
-          </ul>
-        </div>
-
-        <div class="block">
-          <h2>Theme 4: Information Quality, Credibility & Governance</h2>
-          <p class="muted">
-            I study credibility assessment in information systems by combining model-based signals with transparent validation logic.
-            This includes fake news detection and source credibility analysis.
-          </p>
-          <ul class="list">
-            <li>Credibility classification and explainable decision support outputs.</li>
-            <li>Rule-based validation + model inference for transparent scoring.</li>
-            <li>Data governance themes: privacy, accountability, and ethical compliance.</li>
-          </ul>
-        </div>
-      </div>
-
-      <hr class="sep"/>
-
-      <h2>Technical Competencies (Research-Oriented)</h2>
-      <div class="two">
-        <div class="block">
-          <h3>Modeling & Evaluation</h3>
-          <ul class="list">
-            <li>Supervised & unsupervised learning; transfer learning; hyperparameter tuning</li>
-            <li>Class imbalance handling and metric-driven evaluation (AUC, recall, accuracy)</li>
-            <li>Experiment tracking mindset: baselines → ablations → error analysis</li>
-          </ul>
-        </div>
-        <div class="block">
-          <h3>Systems & Deployment (Academic Prototyping)</h3>
-          <ul class="list">
-            <li>FastAPI REST services for inference + logging</li>
-            <li>Supabase authentication and PostgreSQL-backed storage</li>
-            <li>Cloud deployment workflows (e.g., Render) for research demos</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="buttons section">
-        <a class="btn primary" href="projects.html">See Projects</a>
-        <a class="btn" href="training.html">Training & Certifications</a>
-      </div>
+  <div class="two">
+    <div class="block">
+      <h2>Theme 1: Explainable & Trustworthy AI</h2>
+      <p class="muted">I study how AI systems can provide explanations that are faithful to model behavior rather than simply plausible to users.</p>
+      <ul class="list">
+        <li><strong>Explanation faithfulness:</strong> evaluating whether explanations reflect the evidence actually used by the model.</li>
+        <li><strong>Hallucination detection:</strong> identifying unsupported or clinically inaccurate content in model-generated outputs.</li>
+        <li><strong>Visual interpretability:</strong> saliency-based approaches such as Grad-CAM for understanding model attention.</li>
+        <li><strong>Reliability:</strong> error analysis, confidence-aware evaluation, and robustness under difficult cases.</li>
+      </ul>
+    </div>
+    <div class="block">
+      <h2>Theme 2: Multimodal & Medical AI</h2>
+      <p class="muted">My ongoing work examines trustworthy multimodal AI through medical image report generation, where systems must align visual evidence with generated clinical language.</p>
+      <ul class="list">
+        <li>Medical vision-language models for chest X-ray report generation.</li>
+        <li>Connecting visual saliency, model reasoning, and clinical correctness.</li>
+        <li>Evaluating hallucinations and explanation faithfulness in generated reports.</li>
+        <li>Developing unified evaluation frameworks for trustworthy medical AI.</li>
+      </ul>
     </div>
   </div>
-</main>
 
-<footer class="footer">
-  <div class="container">
-    <div>© <span id="year"></span> Musfikur Rahaman</div>
+  <div class="two section">
+    <div class="block">
+      <h2>Theme 3: Transformers for Video Understanding</h2>
+      <p class="muted">I use transformer architectures to model long-range spatiotemporal relationships in video and improve fine-grained action recognition.</p>
+      <ul class="list">
+        <li><strong>TimeSformer:</strong> transformer-based soccer action recognition using divided space-time attention.</li>
+        <li><strong>Temporal context:</strong> studying ambiguous actions that depend on what occurs before and after an event.</li>
+        <li><strong>Sports analytics:</strong> automated recognition of fine-grained actions in broadcast soccer video.</li>
+        <li><strong>Generalization:</strong> evaluating robustness across visually similar classes and changing broadcast conditions.</li>
+      </ul>
+    </div>
+    <div class="block">
+      <h2>Theme 4: Applied AI, Forensics & Information Quality</h2>
+      <p class="muted">I also develop applied AI systems in image forensics, misinformation detection, and biomedical analysis.</p>
+      <ul class="list">
+        <li>Image manipulation detection and localization using ResNet50, U-Net, and Grad-CAM.</li>
+        <li>Transformer-based fake news classification with transparent explanation generation.</li>
+        <li>Machine learning and bioinformatics for biomedical insight discovery.</li>
+        <li>Responsible deployment through interpretable outputs and traceable system design.</li>
+      </ul>
+    </div>
   </div>
-</footer>
 
-<script src="script.js"></script>
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-</body>
-</html>
+  <hr class="sep"/>
+  <h2>Research-Oriented Technical Competencies</h2>
+  <div class="two">
+    <div class="block"><h3>Modeling & Evaluation</h3><ul class="list"><li>PyTorch, TensorFlow, Keras, HuggingFace Transformers, scikit-learn</li><li>ViT, TimeSformer, BERT, DistilBERT, LLaMA, ResNet50, U-Net</li><li>Transfer learning, fine-tuning, ablation thinking, error analysis, and metric-driven evaluation</li><li>Accuracy, recall, AUC, confusion matrices, and qualitative explanation assessment</li></ul></div>
+    <div class="block"><h3>Systems & Research Prototyping</h3><ul class="list"><li>FastAPI and REST APIs for model inference</li><li>Git/GitHub, Jupyter Notebook, VS Code</li><li>Supabase/PostgreSQL, MySQL, MongoDB, SQL Server</li><li>Render and lightweight web deployment for research demos</li></ul></div>
+  </div>
+
+  <div class="buttons section"><a class="btn primary" href="projects.html">See Projects</a><a class="btn" href="publications.html">Publications</a></div>
+</div></div></main>
+<footer class="footer"><div class="container"><div>© <span id="year"></span> Musfikur Rahaman</div></div></footer>
+<script src="script.js"></script><script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body></html>
