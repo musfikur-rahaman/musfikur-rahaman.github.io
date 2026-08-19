@@ -243,6 +243,57 @@ h3{
   font-size: .7rem;
 }
 
+/* ====== Contact Page / Google Form ====== */
+.contact-page .main{
+  padding-top: 2rem;
+}
+
+.contact-shell{
+  padding: clamp(1.35rem, 2.2vw, 1.85rem);
+}
+
+.contact-info-block{
+  max-width: 760px;
+}
+
+.contact-form-section{
+  margin-top: 2rem;
+  padding-top: 1.55rem;
+  border-top: 1px solid var(--border);
+}
+
+.contact-form-heading{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap: 1rem;
+  margin-bottom: .9rem;
+}
+
+.contact-form-heading > div{
+  max-width: 760px;
+}
+
+.contact-form-heading h2{
+  margin-bottom: .25rem;
+}
+
+.google-form-wrap{
+  overflow:hidden;
+  border:1px solid var(--border-strong);
+  border-radius:12px;
+  background:#eef1f3;
+  box-shadow:var(--shadow-soft);
+}
+
+.google-form-frame{
+  display:block;
+  width:100%;
+  min-height:1500px;
+  border:0;
+  background:#eef1f3;
+}
+
 @media (max-width: 900px){
   .project-grid{
     grid-template-columns: 1fr 1fr;
@@ -258,5 +309,14 @@ h3{
   .research-section{
     margin-top: 1.65rem;
     padding-top: 1.25rem;
+  }
+
+  .contact-form-heading{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .google-form-frame{
+    min-height:1650px;
   }
 }
