@@ -1,0 +1,156 @@
+/* Zoho Web-to-Case form styling for the Contact page */
+.contact-form-section{
+  margin-top:2rem;
+  padding-top:1.55rem;
+  border-top:1px solid var(--border);
+}
+
+.contact-form-heading{
+  margin-bottom:.9rem;
+}
+
+.contact-form-heading > div{
+  max-width:760px;
+}
+
+.contact-form-heading h2{
+  margin-bottom:.25rem;
+}
+
+.required-mark{
+  color:#b33a2d;
+  font-weight:700;
+}
+
+.zoho-webform-wrap{
+  max-width:860px;
+  padding:1.15rem;
+  border:1px solid var(--border-strong);
+  border-radius:12px;
+  background:linear-gradient(180deg, #f3f5f6, #eceff1);
+  box-shadow:var(--shadow-soft);
+}
+
+.zoho-contact-form{
+  width:100%;
+  margin:0;
+}
+
+.zoho-contact-form input[type="hidden"]{
+  display:none;
+}
+
+.zoho-form-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:.9rem 1rem;
+}
+
+.form-field{
+  min-width:0;
+}
+
+.form-field-full{
+  grid-column:1 / -1;
+}
+
+.form-field label{
+  display:block;
+  margin-bottom:.34rem;
+  color:var(--text);
+  font-size:.84rem;
+  font-weight:680;
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select{
+  display:block;
+  width:100%;
+  box-sizing:border-box;
+  border:1px solid var(--border-strong);
+  border-radius:8px;
+  background:#f8f9fa;
+  color:var(--text);
+  font:inherit;
+  font-size:.92rem;
+  line-height:1.45;
+  padding:.67rem .72rem;
+  outline:none;
+  transition:border-color .16s ease, box-shadow .16s ease, background .16s ease;
+}
+
+.form-field textarea{
+  min-height:150px;
+  resize:vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus{
+  border-color:#6989a4;
+  background:#fff;
+  box-shadow:0 0 0 3px rgba(24,63,99,.09);
+}
+
+.form-help{
+  margin-top:.32rem;
+  color:var(--faint);
+  font-size:.74rem;
+}
+
+.zoho-form-actions{
+  display:flex;
+  align-items:center;
+  gap:.55rem;
+  margin-top:1rem;
+}
+
+.zoho-form-actions .btn{
+  cursor:pointer;
+  font-family:inherit;
+}
+
+.zoho-form-actions .btn:disabled{
+  cursor:not-allowed;
+  opacity:.58;
+}
+
+.zoho-powered-by{
+  display:flex;
+  justify-content:flex-end;
+  gap:.3rem;
+  margin-top:.8rem;
+  color:var(--faint);
+  font-size:.72rem;
+}
+
+.zoho-powered-by a{
+  color:var(--accent);
+  font-weight:650;
+}
+
+@media (max-width:700px){
+  .zoho-webform-wrap{
+    padding:.9rem;
+  }
+
+  .zoho-form-grid{
+    grid-template-columns:1fr;
+    gap:.8rem;
+  }
+
+  .form-field-full{
+    grid-column:auto;
+  }
+
+  .zoho-form-actions{
+    align-items:stretch;
+    flex-direction:column;
+  }
+
+  .zoho-form-actions .btn{
+    width:100%;
+    justify-content:center;
+  }
+}
