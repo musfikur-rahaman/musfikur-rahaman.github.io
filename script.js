@@ -39,8 +39,18 @@
     footerLinks.prepend(footerResumeLink);
   }
 
-  // On the Resume page, link the original uploaded PDF.
   const path = window.location.pathname.split("/").pop() || "index.html";
+
+  // Load the dedicated Zoho contact-form styling only on the Contact page.
+  if (path === "contact.html" && !document.querySelector('link[data-contact-form-theme]')) {
+    const contactFormTheme = document.createElement("link");
+    contactFormTheme.rel = "stylesheet";
+    contactFormTheme.href = "contact-form.css?v=20260820-zoho";
+    contactFormTheme.setAttribute("data-contact-form-theme", "true");
+    document.head.appendChild(contactFormTheme);
+  }
+
+  // On the Resume page, link the original uploaded PDF.
   if (path === "resume.html") {
     const resumeCard = document.querySelector("main .card");
     const contactLine = resumeCard ? resumeCard.querySelector("h1 + p") : null;
