@@ -22,7 +22,7 @@
     <div class="card contact-shell">
       <p class="kicker">Contact</p>
       <h1>Get in Touch</h1>
-      <p class="muted">For research collaboration, academic opportunities, or professional communication, feel free to contact me directly or use the form below.</p>
+      <p class="muted">For research collaboration, academic opportunities, project inquiries, or professional communication, feel free to contact me directly or send a message using the form below.</p>
 
       <div class="block section contact-info-block">
         <h2>Contact Information</h2>
@@ -36,21 +36,67 @@
       <section class="contact-form-section section" aria-labelledby="contactFormTitle">
         <div class="contact-form-heading">
           <div>
-            <h2 id="contactFormTitle">Contact Form</h2>
-            <p class="muted">You can use this form for research collaboration, academic opportunities, project inquiries, or other professional communication.</p>
+            <h2 id="contactFormTitle">Contact Me</h2>
+            <p class="muted">Complete the form below to send your message. Fields marked with <span class="required-mark">*</span> are required.</p>
           </div>
-          <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfFnGW4FUYiQONX1h6esx1SdjIuR0bk0UKVBm5P1yG3huQMbA/viewform?usp=publish-editor" target="_blank" rel="noopener">Open Form in New Tab</a>
         </div>
 
-        <div class="google-form-wrap">
-          <iframe
-            class="google-form-frame"
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfFnGW4FUYiQONX1h6esx1SdjIuR0bk0UKVBm5P1yG3huQMbA/viewform?embedded=true"
-            title="Contact Musfikur Rahaman"
-            loading="lazy"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0">Loading…</iframe>
+        <div id="zohoSupportWebToCase" class="zoho-webform-wrap">
+          <form
+            name="zsWebToCase_1448119000000424003"
+            id="zsWebToCase_1448119000000424003"
+            class="zoho-contact-form"
+            action="https://desk.zoho.com/support/WebToCase"
+            method="POST"
+            onsubmit="return zsValidateMandatoryFields()"
+            enctype="multipart/form-data">
+
+            <input type="hidden" name="xnQsjsdp" value="edbsnfa6a6cebffe41f8eb4a513fab5b1aa50"/>
+            <input type="hidden" name="xmIwtLD" value="edbsn24baabec5b0fd215e505185fd83f39c0fbd06c646e25c9ff5b4476d1eb4a71cc"/>
+            <input type="hidden" name="xJdfEaS" value=""/>
+            <input type="hidden" name="actionType" value="Q2FzZXM="/>
+            <input type="hidden" id="property(module)" value="Cases"/>
+            <input type="hidden" id="dependent_field_values_Cases" value="{&quot;JSON_VALUES&quot;:{},&quot;JSON_SELECT_VALUES&quot;:{},&quot;JSON_MAP_DEP_LABELS&quot;:[]}"/>
+            <input type="hidden" name="returnURL" value="https://musfikur-rahaman.github.io/contact.html"/>
+
+            <div class="zoho-form-grid">
+              <div class="form-field">
+                <label for="zohoFirstName">First Name</label>
+                <input id="zohoFirstName" type="text" maxlength="120" name="First Name" autocomplete="given-name"/>
+              </div>
+
+              <div class="form-field">
+                <label for="zohoLastName">Last Name <span class="required-mark">*</span></label>
+                <input id="zohoLastName" type="text" maxlength="120" name="Contact Name" autocomplete="family-name" required/>
+              </div>
+
+              <div class="form-field form-field-full">
+                <label for="zohoEmail">Email <span class="required-mark">*</span></label>
+                <input id="zohoEmail" type="email" maxlength="120" name="Email" autocomplete="email" required/>
+              </div>
+
+              <div class="form-field form-field-full">
+                <label for="zohoSubject">Subject <span class="required-mark">*</span></label>
+                <input id="zohoSubject" type="text" maxlength="255" name="Subject" required/>
+              </div>
+
+              <div class="form-field form-field-full">
+                <label for="zohoDescription">Message</label>
+                <textarea id="zohoDescription" name="Description" maxlength="3000" rows="8"></textarea>
+                <div class="form-help">Maximum 3,000 characters.</div>
+              </div>
+            </div>
+
+            <div class="zoho-form-actions">
+              <button type="submit" id="zsSubmitButton_1448119000000424003" class="btn primary">Submit Message</button>
+              <button type="button" class="btn" onclick="zsResetWebForm('1448119000000424003')">Reset</button>
+            </div>
+
+            <div class="zoho-powered-by">
+              <span>Form powered by</span>
+              <a target="_blank" rel="noopener noreferrer" href="https://zoho.com/desk">Zoho Desk</a>
+            </div>
+          </form>
         </div>
       </section>
     </div>
@@ -68,5 +114,59 @@
     </div>
   </div>
 </footer>
-<script src="script.js"></script><script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-</body></html>
+
+<script>
+function zsValidateMandatoryFields() {
+  const form = document.forms['zsWebToCase_1448119000000424003'];
+  if (!form) return false;
+
+  const lastName = form.elements['Contact Name'];
+  const email = form.elements['Email'];
+  const subject = form.elements['Subject'];
+  const submitButton = document.getElementById('zsSubmitButton_1448119000000424003');
+
+  if (!lastName.value.trim()) {
+    alert('Last Name cannot be empty');
+    lastName.focus();
+    return false;
+  }
+
+  if (!email.value.trim()) {
+    alert('Email cannot be empty');
+    email.focus();
+    return false;
+  }
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  if (!emailPattern.test(email.value.trim())) {
+    alert('Enter a valid email address');
+    email.focus();
+    return false;
+  }
+
+  if (!subject.value.trim()) {
+    alert('Subject cannot be empty');
+    subject.focus();
+    return false;
+  }
+
+  if (submitButton) submitButton.disabled = true;
+  return true;
+}
+
+function zsResetWebForm(webFormId) {
+  const form = document.forms['zsWebToCase_' + webFormId];
+  if (form) form.reset();
+  const submitButton = document.getElementById('zsSubmitButton_1448119000000424003');
+  if (submitButton) submitButton.disabled = false;
+}
+
+window.addEventListener('pageshow', function () {
+  const submitButton = document.getElementById('zsSubmitButton_1448119000000424003');
+  if (submitButton) submitButton.disabled = false;
+});
+</script>
+<script src="script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
