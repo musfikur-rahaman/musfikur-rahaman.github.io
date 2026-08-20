@@ -3,7 +3,7 @@
   if (!document.querySelector('link[data-comfort-theme]')) {
     const comfortTheme = document.createElement('link');
     comfortTheme.rel = 'stylesheet';
-    comfortTheme.href = 'comfort-theme.css?v=20260819-featured-publications';
+    comfortTheme.href = 'comfort-theme.css?v=20260820-zoho-contact';
     comfortTheme.setAttribute('data-comfort-theme', 'true');
     document.head.appendChild(comfortTheme);
   }
