@@ -3,175 +3,174 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="description" content="Research, publications, and future research directions by Musfikur Rahaman in soccer action detection, video understanding, explainable AI, and multimodal systems."/>
+  <meta name="description" content="Research by Musfikur Rahaman: characterizing temporal change for reliable knowledge-grounded AI, explainable AI, medical vision-language models, and computer vision."/>
   <title>Musfikur Rahaman | Research</title>
   <link rel="stylesheet" href="styles.css?v=20260819-light"/>
+  <link rel="stylesheet" href="modern.css?v=20260909"/>
 </head>
-<body class="research-page">
+<body class="profile-2026 research-page">
 <header class="header">
   <div class="container navbar">
-    <a class="brand" href="index.html"><span class="name">Musfikur Rahaman</span><span class="subtitle">PhD Student • Information Science • UALR</span></a>
+    <a class="brand" href="index.html"><span class="name">Musfikur Rahaman</span><span class="subtitle">PhD Researcher • Information Science</span></a>
     <nav class="nav-links" aria-label="Primary navigation">
-      <a data-nav href="index.html">Home</a>
+      <a href="index.html">Home</a>
       <a data-nav href="research.html">Research</a>
-      <a data-nav href="experience.html">Experience</a>
-      <a data-nav href="training.html">Training & Awards</a>
-      <a data-nav href="contact.html">Contact</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
     <div class="nav-actions"><button class="icon-btn" id="navToggle" aria-expanded="false" aria-controls="mobilePanel">☰</button></div>
   </div>
-  <div class="container mobile-panel" id="mobilePanel"><a data-nav href="index.html">Home</a><a data-nav href="research.html">Research</a><a data-nav href="experience.html">Experience</a><a data-nav href="training.html">Training & Awards</a><a data-nav href="contact.html">Contact</a></div>
+  <div class="container mobile-panel" id="mobilePanel">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="index.html#publications">Publications</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
 </header>
 
 <main class="main">
   <div class="container">
-    <div class="card research-shell">
-      <p class="kicker">Research</p>
-      <h1>Research & Publications</h1>
-      <p class="muted research-intro">My research focuses on computer vision, video understanding, Explainable AI, and multimodal systems, with major work in soccer action detection and faithful AI for medical image report generation. I am especially interested in models that are accurate, context-aware, interpretable, and reliable in real-world settings.</p>
 
-      <section class="research-section" id="soccer-research">
-        <h2>Soccer Action Detection & Sports Video Understanding</h2>
-        <div class="block research-feature">
-          <div class="pill">Computer Vision • Sports Analytics • Transformers</div>
-          <h3>Transformer-Based Soccer Action Recognition</h3>
-          <p class="muted">My soccer-video research began with <em>League of Learning: Deep Learning for Soccer Action Video Classification</em> using ConvLSTM and LRCN models and later progressed to transformer-based video understanding.</p>
-          <p class="muted">In my 2026 publication, <em>Soccer Action Detection Using TimeSformer: A Transformer-Based Approach to Video Understanding</em>, the TimeSformer model achieved 91.13% validation accuracy on SoccerAct10. The results also highlighted challenges in distinguishing context-dependent actions such as fouls, short passes, and long passes.</p>
-          <ul class="list compact-list">
-            <li>Fine-grained soccer action recognition and temporal reasoning.</li>
-            <li>Sports-video event understanding, indexing, and performance analysis.</li>
-            <li>Broader applications in human activity recognition and complex video understanding.</li>
-          </ul>
-          <div class="buttons"><a class="btn" href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">View TimeSformer Publication</a></div>
+    <section class="profile-section" style="padding-top:2.5rem">
+      <h2>Research</h2>
+      <p class="section-lede">My research program centers on one question: <strong>how can AI tell whether information is still appropriate to use now?</strong> The dissertation develops a framework for characterizing temporal change in knowledge-grounded AI, supported by work in explainable AI, medical vision-language systems, and video understanding.</p>
+
+      <div class="spotlight">
+        <span class="pill">Dissertation Research · Advisor: Dr. Mihail-Eduard Tudoreanu</span>
+        <h3>Characterizing Temporal Change for Reliable Knowledge-Grounded AI</h3>
+        <p>AI systems such as large language models increasingly rely on external information to answer questions. A piece of information can still be related to a question yet no longer be appropriate for the current situation. This research treats timeliness as distinct from recency: older information may remain useful — or become useful again when conditions recur — and the newest information is not always the most appropriate.</p>
+        <p>The dissertation hypothesizes that temporal change is not a single phenomenon but may comprise several partly independent kinds — structural, semantic, distributional, and validity/volatility — and tests which detector best captures each, rather than assuming any single signal is sufficient:</p>
+        <div class="change-grid">
+          <div class="change-card">
+            <div class="change-type">Structural</div>
+            <h4>Topological Data Analysis</h4>
+            <p>Change in how information is organized relative to the environment.</p>
+          </div>
+          <div class="change-card">
+            <div class="change-type">Semantic</div>
+            <h4>Embedding Drift</h4>
+            <p>Drift in the meaning and representation of information over time.</p>
+          </div>
+          <div class="change-card">
+            <div class="change-type">Distributional</div>
+            <h4>Wasserstein / MMD</h4>
+            <p>Statistical distribution shift away from the present environment.</p>
+          </div>
+          <div class="change-card">
+            <div class="change-type">Validity / Volatility</div>
+            <h4>Validity Horizons</h4>
+            <p>Whether information is still valid at query time, and how fast it changes.</p>
+          </div>
         </div>
-      </section>
+        <p style="margin-top:1rem">Recency (age alone) is used only as a comparison baseline — newer is not assumed better. Each detector is validated independently before any combination, and signals are combined adaptively only where the evidence shows it helps.</p>
+      </div>
+    </section>
 
-      <section class="research-section" id="medical-xai">
-        <h2>Explainable & Multimodal AI</h2>
-        <div class="block research-feature">
-          <div class="pill">Ongoing • Medical AI • XAI • Multimodal Systems</div>
+    <section class="profile-section" id="research-questions">
+      <h2>Core Research Questions</h2>
+      <ul class="timeline" style="margin-top:1.2rem">
+        <li><h3>Does temporal appropriateness measurably affect LLM response reliability?</h3><p>Establishing that current, outdated, mixed, and conflicting information change model outputs.</p></li>
+        <li><h3>Are the four kinds of temporal change genuinely distinct?</h3><p>Testing whether structural, semantic, distributional, and validity/volatility change overlap or capture different phenomena.</p></li>
+        <li><h3>Which detector best captures which kind of change?</h3><p>Matching TDA, embedding drift, distribution-shift metrics, and validity modeling to change types across domains.</p></li>
+        <li><h3>Does adaptive, matched detection outperform single signals and recency?</h3><p>Comparing adaptive combination against any single detector, blind combination, and recency baselines.</p></li>
+        <li><h3>Does timeliness-aware retrieval improve accuracy and reliability?</h3><p>Testing appropriateness-aware selection against semantic retrieval, with explainability for why it helps.</p></li>
+        <li><h3>How does timeliness sensitivity differ across architectures?</h3><p>Comparing neural networks, transformers, and LLMs under the same temporal-change conditions.</p></li>
+      </ul>
+    </section>
+
+    <section class="profile-section" id="other-directions">
+      <h2>Related Research Directions</h2>
+      <div class="area-grid" style="margin-top:1.2rem">
+        <div class="area-card">
+          <span class="pill">Ongoing · Medical AI · Multimodal XAI</span>
           <h3>Beyond the Output: Faithful XAI for Medical Image Report Generation</h3>
-          <p class="muted">This work investigates hallucination detection and explanation faithfulness in medical vision-language models using chest X-ray report generation as a testbed.</p>
-          <ul class="list compact-list">
-            <li>Evaluate whether generated clinical findings are grounded in visual evidence.</li>
-            <li>Identify hallucinated or unsupported statements in generated reports.</li>
-            <li>Connect visual saliency, model reasoning, and clinical correctness in a unified evaluation framework.</li>
-          </ul>
+          <p>Investigating hallucination detection and explanation faithfulness in medical vision-language models using chest X-ray report generation as a testbed. Designing a unified evaluation framework linking visual saliency maps, model reasoning chains, and clinical correctness metrics.</p>
         </div>
-      </section>
-
-      <section class="research-section">
-        <h2>Future Research Directions</h2>
-        <div class="research-grid">
-          <div class="block compact-block">
-            <h3>Longer Temporal Context</h3>
-            <p class="muted">Study longer video sequences and sequence-aware models so actions can be interpreted using what occurs before, during, and after an event.</p>
-          </div>
-          <div class="block compact-block">
-            <h3>Multimodal Context</h3>
-            <p class="muted">Combine video with player movement, pose, field position, audio, commentary, and other contextual information to improve recognition of ambiguous actions.</p>
-          </div>
-          <div class="block compact-block">
-            <h3>Robustness & Generalization</h3>
-            <p class="muted">Evaluate models across different camera angles, lighting, stadium settings, zoom levels, graphics, and broadcast production styles.</p>
-          </div>
-          <div class="block compact-block">
-            <h3>Explainability & Efficiency</h3>
-            <p class="muted">Develop interpretable and more efficient video models that support error analysis, trustworthy predictions, and faster or near-real-time analysis.</p>
+        <div class="area-card">
+          <span class="pill">Published 2026 · Computer Vision · Sports Analytics</span>
+          <h3>Soccer Action Detection Using TimeSformer</h3>
+          <p>Transformer-based approach to video understanding achieving 91.13% validation accuracy on SoccerAct10, modeling long-range spatiotemporal dependencies with divided space-time attention. Published in the <em>Journal of Computing Sciences in Colleges</em> (ACM Digital Library).</p>
+          <div class="pub-links" style="margin-top:.6rem">
+            <a class="chip-link" href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">ACM Digital Library →</a>
           </div>
         </div>
-      </section>
-
-      <section class="research-section" id="projects">
-        <h2>Selected Research Projects</h2>
-        <div class="research-grid project-grid">
-          <div class="block compact-block">
-            <div class="pill">Computer Vision • XAI</div>
-            <h3>Image Forgery Detection</h3>
-            <p class="muted">ResNet50 + U-Net + Grad-CAM pipeline for detecting and localizing image manipulation on CASIA 2.0, with reported AUC 0.86 and recall 0.88.</p>
-          </div>
-          <div class="block compact-block">
-            <div class="pill">NLP • Full-Stack AI</div>
-            <h3>NewsLogic</h3>
-            <p class="muted">AI-powered fake-news detection system combining transformer-based classification, rule-based validation, and explanation generation through a FastAPI backend.</p>
-          </div>
-          <div class="block compact-block">
-            <div class="pill">Bioinformatics • Healthcare</div>
-            <h3>MLBioIGE</h3>
-            <p class="muted">Peer-reviewed research integrating machine learning and bioinformatics to study genetic factors associated with idiopathic pulmonary fibrosis in the context of SARS-CoV-2.</p>
-          </div>
+        <div class="area-card">
+          <span class="pill">Computer Vision · XAI · Image Forensics</span>
+          <h3>Explainable Image Forgery Detection</h3>
+          <p>ResNet50 + U-Net + Grad-CAM pipeline for detecting and localizing image manipulation (AUC 0.86, recall 0.88), with pixel-level interpretability maps for downstream forensic use.</p>
         </div>
-      </section>
+        <div class="area-card">
+          <span class="pill">NLP · Information Credibility</span>
+          <h3>NewsLogic: AI-Powered Fake News Detection</h3>
+          <p>Full-stack system combining BERT, DistilBERT, and rule-based validation for multi-signal fake news classification, with real-time explanation generation through LLaMA-based models and a FastAPI backend.</p>
+        </div>
+      </div>
+    </section>
 
-      <section class="research-section" id="publications">
-        <div class="section-heading-row publication-heading-row">
+    <section class="profile-section" id="publications">
+      <h2>Peer-Reviewed Publications</h2>
+      <p class="section-lede">Full citation history is available on <a href="https://scholar.google.com/citations?user=U2O4S48AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+      <div class="pub-list">
+        <article class="pub-item">
+          <div class="pub-year">2026</div>
           <div>
-            <h2>Peer-Reviewed Publications</h2>
-            <p class="muted section-note">Selected journal and conference publications. Full citation history is available on Google Scholar.</p>
+            <h3>Soccer Action Detection Using TimeSformer: A Transformer-Based Approach to Video Understanding</h3>
+            <p class="pub-venue"><em>Journal of Computing Sciences in Colleges</em>, 41(10), 72–81 · ACM Digital Library</p>
+            <p class="pub-doi">DOI: 10.5555/3820620.3820634</p>
+            <div class="pub-links">
+              <a class="chip-link" href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">ACM Digital Library →</a>
+            </div>
           </div>
-          <a class="btn" href="https://scholar.google.com/citations?user=U2O4S48AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-        </div>
-
-        <div class="publication-group">
-          <h3 class="publication-group-title">Journal Articles</h3>
-          <div class="publication-list">
-            <article class="block publication-card">
-              <div class="publication-year">2026</div>
-              <div class="publication-content">
-                <div class="pill">Journal Article • ACM Digital Library</div>
-                <h3>Soccer Action Detection Using TimeSformer: A Transformer-Based Approach to Video Understanding</h3>
-                <p class="publication-venue"><em>Journal of Computing Sciences in Colleges</em>, 41(10), 72–81.</p>
-                <p class="publication-doi">DOI: 10.5555/3820620.3820634</p>
-                <div class="buttons"><a class="btn" href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">ACM Digital Library</a></div>
-              </div>
-            </article>
-
-            <article class="block publication-card">
-              <div class="publication-year">2022</div>
-              <div class="publication-content">
-                <div class="pill">Journal Article • Biomedical AI</div>
-                <h3>MLBioIGE: Integration and interplay of machine learning and bioinformatics to identify the genetic effect of SARS-CoV-2 on idiopathic pulmonary fibrosis patients</h3>
-                <p class="publication-venue"><em>Biology Methods and Protocols</em>, May 2022.</p>
-                <p class="publication-doi">DOI: 10.1093/biomethods/bpac013</p>
-                <div class="buttons"><a class="btn" href="https://doi.org/10.1093/biomethods/bpac013" target="_blank" rel="noopener">View DOI</a></div>
-              </div>
-            </article>
+        </article>
+        <article class="pub-item">
+          <div class="pub-year">2023</div>
+          <div>
+            <h3>Enhancing the Programming Sequence for Undergraduate Computer Science Students: A Program for Improving Learning Outcomes</h3>
+            <p class="pub-venue">Proceedings of the 5th HCIRA International Congress, Vol. 7, Issue 1 · IEEE</p>
+            <p class="pub-doi">DOI: 10.1109/HORA58378.2023.10156793</p>
+            <div class="pub-links">
+              <a class="chip-link" href="https://doi.org/10.1109/HORA58378.2023.10156793" target="_blank" rel="noopener">View DOI →</a>
+            </div>
           </div>
-        </div>
+        </article>
+        <article class="pub-item">
+          <div class="pub-year">2022</div>
+          <div>
+            <h3>MLBioIGE: Integration and interplay of machine learning and bioinformatics to identify the genetic effect of SARS-CoV-2 on idiopathic pulmonary fibrosis patients</h3>
+            <p class="pub-venue"><em>Biology Methods and Protocols</em>, May 2022</p>
+            <p class="pub-doi">DOI: 10.1093/biomethods/bpac013</p>
+            <div class="pub-links">
+              <a class="chip-link" href="https://doi.org/10.1093/biomethods/bpac013" target="_blank" rel="noopener">View DOI →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-        <div class="publication-group">
-          <h3 class="publication-group-title">Conference Publication</h3>
-          <div class="publication-list">
-            <article class="block publication-card">
-              <div class="publication-year">2023</div>
-              <div class="publication-content">
-                <div class="pill">Conference Publication • IEEE</div>
-                <h3>Enhancing the Programming Sequence for Undergraduate Computer Science Students: A Program for Improving Learning Outcomes</h3>
-                <p class="publication-venue">Proceedings of the 5th HCIRA International Congress, June 2023. Vol. 7, Issue 1.</p>
-                <p class="publication-doi">DOI: 10.1109/HORA58378.2023.10156793</p>
-                <div class="buttons"><a class="btn" href="https://doi.org/10.1109/HORA58378.2023.10156793" target="_blank" rel="noopener">View DOI</a></div>
-              </div>
-            </article>
+    <section class="profile-section" id="presentations">
+      <h2>Research Presentations</h2>
+      <div class="area-grid" style="margin-top:1.2rem">
+        <div class="area-card">
+          <span class="pill">ATU Scholars Symposium · Apr 2024</span>
+          <h3>Enhancing Disease Detection in South Asian Freshwater Fish Aquaculture Through Convolutional Neural Networks</h3>
+          <div class="pub-links" style="margin-top:.6rem">
+            <a class="chip-link" href="https://orc.library.atu.edu/atu_rs/2024/2024/27" target="_blank" rel="noopener">View Presentation →</a>
           </div>
         </div>
-      </section>
-
-      <section class="research-section">
-        <h2>Research Presentations</h2>
-        <div class="research-grid presentation-grid">
-          <div class="block compact-block">
-            <h3>Enhancing Disease Detection in South Asian Freshwater Fish Aquaculture Through Convolutional Neural Networks</h3>
-            <p class="muted">ATU Scholars Symposium, April 2024.</p>
-            <div class="buttons"><a class="btn" href="https://orc.library.atu.edu/atu_rs/2024/2024/27" target="_blank" rel="noopener">View Presentation</a></div>
-          </div>
-          <div class="block compact-block">
-            <h3>League of Learning: Deep Learning for Soccer Action Video Classification</h3>
-            <p class="muted">ATU Scholars Symposium, April 2024.</p>
-            <div class="buttons"><a class="btn" href="https://orc.library.atu.edu/atu_rs/2024/2024/17" target="_blank" rel="noopener">View Presentation</a></div>
+        <div class="area-card">
+          <span class="pill">ATU Scholars Symposium · Apr 2024</span>
+          <h3>League of Learning: Deep Learning for Soccer Action Video Classification</h3>
+          <div class="pub-links" style="margin-top:.6rem">
+            <a class="chip-link" href="https://orc.library.atu.edu/atu_rs/2024/2024/17" target="_blank" rel="noopener">View Presentation →</a>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
   </div>
 </main>
 
@@ -181,10 +180,11 @@
     <div class="footer-links" aria-label="Academic and professional profiles">
       <a href="https://scholar.google.com/citations?user=U2O4S48AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
       <a href="https://orcid.org/0009-0005-7422-460X" target="_blank" rel="noopener">ORCID</a>
-      <a href="https://www.linkedin.com/in/musfikur-rahaman/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/musfikur-rahaman-76750b91" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://github.com/musfikur-rahaman" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
 </footer>
 <script src="script.js"></script><script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-</body></html>
+</body>
+</html>
