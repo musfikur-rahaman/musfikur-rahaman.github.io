@@ -1,89 +1,168 @@
-/* ====== Minimal classic academic profile ======
+/* ====== Portfolio hero + clean sections ======
    Loaded after styles.css on the redesigned pages.
    Scoped to .profile-2026 so the other pages keep their existing look. */
 
+/* ---------- Full-screen hero ---------- */
+.profile-2026 .hero-full{
+  position: relative;
+  min-height: calc(100vh - 73px);
+  min-height: calc(100svh - 73px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background:
+    linear-gradient(rgba(8, 18, 24, 0.62), rgba(8, 18, 24, 0.55)),
+    url("image.jpg") center 30% / cover no-repeat;
+}
+
+.profile-2026 .hero-inner{
+  max-width: 860px;
+  padding: 3rem 1.5rem 4.5rem;
+}
+
+.profile-2026 .hero-kicker{
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.82);
+  margin: 0 0 1.4rem;
+}
+
+.profile-2026 .hero-name{
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.6rem, 7vw, 4.6rem);
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 auto 1.2rem;
+  padding: 1.1rem 0;
+  border-top: 2px solid rgba(255,255,255,.75);
+  border-bottom: 2px solid rgba(255,255,255,.75);
+  display: inline-block;
+  line-height: 1.15;
+}
+
+.profile-2026 .hero-sub{
+  font-size: 1.02rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.88);
+  margin: 0 0 1rem;
+}
+
+.profile-2026 .hero-statement{
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.6;
+  color: rgba(255,255,255,.94);
+  max-width: 36rem;
+  margin: 0 auto 2.2rem;
+}
+
+.profile-2026 .hero-jump{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  justify-content: center;
+}
+
+.profile-2026 .hero-jump a{
+  display: inline-block;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.65);
+  border-radius: 2px;
+  padding: .7rem 1.3rem;
+  background: rgba(255,255,255,.06);
+  transition: 180ms ease;
+}
+
+.profile-2026 .hero-jump a:hover{
+  background: #fff;
+  color: #10262e;
+  border-color: #fff;
+  text-decoration: none;
+}
+
+/* Scroll hint */
+.profile-2026 .scroll-hint{
+  position: absolute;
+  bottom: 1.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba(255,255,255,.7);
+  border-radius: 14px;
+}
+
+.profile-2026 .scroll-hint span{
+  display: block;
+  width: 4px;
+  height: 9px;
+  margin: 7px auto 0;
+  border-radius: 2px;
+  background: rgba(255,255,255,.85);
+  animation: scrollDot 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollDot{
+  0%{ transform: translateY(0); opacity: 1; }
+  60%{ transform: translateY(10px); opacity: 0; }
+  100%{ transform: translateY(0); opacity: 0; }
+}
+
+/* ---------- Content column ---------- */
 .profile-2026 .page{
   max-width: 780px;
   margin: 0 auto;
-  padding: 2.5rem 1.25rem 4rem;
+  padding: 3rem 1.25rem 4rem;
   font-size: 1rem;
   line-height: 1.7;
   color: #2b2b2b;
 }
 
-/* ---------- Intro ---------- */
-.profile-2026 .intro{
-  display: flex;
-  gap: 1.75rem;
-  align-items: flex-start;
-  margin-bottom: 2.5rem;
-  padding-bottom: 1.75rem;
-  border-bottom: 1px solid #e2e2e2;
+.profile-2026 .page section{
+  margin-bottom: 3rem;
+  scroll-margin-top: 90px;
 }
-
-.profile-2026 .intro-photo{
-  flex: 0 0 150px;
-}
-
-.profile-2026 .intro-photo img{
-  width: 150px;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 4px;
-  border: 1px solid #d5d5d5;
-}
-
-.profile-2026 .intro h1{
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 0 0 .35rem;
-  color: #1a1a1a;
-  letter-spacing: 0;
-}
-
-.profile-2026 .intro-role{
-  font-size: .98rem;
-  color: #555;
-  margin: 0 0 .8rem;
-  line-height: 1.55;
-}
-
-.profile-2026 .intro-links{
-  font-size: .92rem;
-  margin: 0;
-}
-
-.profile-2026 .intro-links a{
-  color: #0f6b62;
-  text-decoration: none;
-}
-
-.profile-2026 .intro-links a:hover{ text-decoration: underline; }
-
-/* ---------- Sections ---------- */
-.profile-2026 .page section{ margin-bottom: 2.25rem; }
 
 .profile-2026 .page-title{
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.9rem;
   margin: 0 0 1rem;
   color: #1a1a1a;
+  text-align: center;
 }
 
+/* Centered uppercase section headings, echoing the reference style */
 .profile-2026 .page h2{
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.35rem;
+  font-family: ui-sans-serif, system-ui, "Segoe UI", Arial, sans-serif;
+  font-size: 1.25rem;
   font-weight: 700;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  text-align: center;
   color: #1a1a1a;
-  margin: 0 0 .9rem;
-  padding-bottom: .35rem;
-  border-bottom: 2px solid #0f6b62;
+  margin: 0 0 1.6rem;
 }
 
-/* Kill the old theme's decorative gold underline so only the teal rule shows */
 .profile-2026 .page h2::after{
-  display: none;
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: #0f6b62;
+  margin: .7rem auto 0;
+  border-radius: 2px;
 }
 
 .profile-2026 .page p{ margin: 0 0 .9rem; }
@@ -98,7 +177,13 @@
 .profile-2026 .note{
   font-size: .92rem;
   color: #666;
-  margin: -.3rem 0 1rem;
+  margin: -.8rem 0 1.2rem;
+  text-align: center;
+}
+
+.profile-2026 .profile-links{
+  text-align: center;
+  margin-top: 1.4rem;
 }
 
 /* ---------- Lists ---------- */
@@ -139,7 +224,10 @@
 
 /* ---------- Responsive ---------- */
 @media (max-width: 640px){
-  .profile-2026 .intro{ flex-direction: column; gap: 1.1rem; }
-  .profile-2026 .intro-photo img{ width: 130px; height: 150px; }
-  .profile-2026 .page{ padding-top: 1.75rem; }
+  .profile-2026 .hero-inner{ padding: 2.5rem 1.25rem 4rem; }
+  .profile-2026 .hero-jump a{
+    padding: .6rem 1rem;
+    letter-spacing: .16em;
+  }
+  .profile-2026 .page{ padding-top: 2.25rem; }
 }
