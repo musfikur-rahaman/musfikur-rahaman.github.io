@@ -6,12 +6,12 @@
   <meta name="description" content="Research by Musfikur Rahaman: characterizing temporal change for reliable knowledge-grounded AI, explainable AI, medical vision-language models, and computer vision."/>
   <title>Musfikur Rahaman | Research</title>
   <link rel="stylesheet" href="styles.css?v=20260819-light"/>
-  <link rel="stylesheet" href="modern.css?v=20260909"/>
+  <link rel="stylesheet" href="modern.css?v=20260909b"/>
 </head>
 <body class="profile-2026 research-page">
 <header class="header">
   <div class="container navbar">
-    <a class="brand" href="index.html"><span class="name">Musfikur Rahaman</span><span class="subtitle">PhD Researcher • Information Science</span></a>
+    <a class="brand" href="index.html"><span class="name">Musfikur Rahaman</span></a>
     <nav class="nav-links" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a data-nav href="research.html">Research</a>
@@ -32,146 +32,78 @@
   </div>
 </header>
 
-<main class="main">
-  <div class="container">
+<main class="main page">
 
-    <section class="profile-section" style="padding-top:2.5rem">
-      <h2>Research</h2>
-      <p class="section-lede">My research program centers on one question: <strong>how can AI tell whether information is still appropriate to use now?</strong> The dissertation develops a framework for characterizing temporal change in knowledge-grounded AI, supported by work in explainable AI, medical vision-language systems, and video understanding.</p>
+  <section>
+    <h1 class="page-title">Research</h1>
+    <p>My research program centers on one question: <strong>how can AI tell whether information is still appropriate to use now?</strong> My dissertation develops a framework for characterizing temporal change in knowledge-grounded AI, supported by work in explainable AI, medical vision-language systems, and video understanding.</p>
+  </section>
 
-      <div class="spotlight">
-        <span class="pill">Dissertation Research</span>
-        <h3>Characterizing Temporal Change for Reliable Knowledge-Grounded AI</h3>
-        <p>AI systems such as large language models increasingly rely on external information to answer questions. A piece of information can still be related to a question yet no longer be appropriate for the current situation. This research treats timeliness as distinct from recency: older information may remain useful — or become useful again when conditions recur — and the newest information is not always the most appropriate.</p>
-        <p>The dissertation hypothesizes that temporal change is not a single phenomenon but may comprise several partly independent kinds — structural, semantic, distributional, and validity/volatility — and tests which detector best captures each, rather than assuming any single signal is sufficient:</p>
-        <div class="change-grid">
-          <div class="change-card">
-            <div class="change-type">Structural</div>
-            <h4>Topological Data Analysis</h4>
-            <p>Change in how information is organized relative to the environment.</p>
-          </div>
-          <div class="change-card">
-            <div class="change-type">Semantic</div>
-            <h4>Embedding Drift</h4>
-            <p>Drift in the meaning and representation of information over time.</p>
-          </div>
-          <div class="change-card">
-            <div class="change-type">Distributional</div>
-            <h4>Wasserstein / MMD</h4>
-            <p>Statistical distribution shift away from the present environment.</p>
-          </div>
-          <div class="change-card">
-            <div class="change-type">Validity / Volatility</div>
-            <h4>Validity Horizons</h4>
-            <p>Whether information is still valid at query time, and how fast it changes.</p>
-          </div>
-        </div>
-        <p style="margin-top:1rem">Recency (age alone) is used only as a comparison baseline — newer is not assumed better. Each detector is validated independently before any combination, and signals are combined adaptively only where the evidence shows it helps.</p>
-      </div>
-    </section>
+  <section>
+    <h2>Dissertation Research</h2>
+    <p><strong>Characterizing Temporal Change for Reliable Knowledge-Grounded AI.</strong> AI systems such as large language models increasingly rely on external information to answer questions. A piece of information can still be related to a question yet no longer be appropriate for the current situation. This research treats timeliness as distinct from recency: older information may remain useful — or become useful again when conditions recur — and the newest information is not always the most appropriate.</p>
+    <p>The dissertation hypothesizes that temporal change is not a single phenomenon but may comprise several partly independent kinds, and tests which detector best captures each, rather than assuming any single signal is sufficient:</p>
+    <ul class="simple-list">
+      <li><strong>Structural change</strong> — detected with topological data analysis: change in how information is organized relative to the environment.</li>
+      <li><strong>Semantic change</strong> — detected with embedding drift: drift in the meaning and representation of information over time.</li>
+      <li><strong>Distributional change</strong> — detected with Wasserstein/MMD shift metrics: statistical distribution shift away from the present environment.</li>
+      <li><strong>Validity / volatility</strong> — detected with validity horizons: whether information is still valid at query time, and how fast it changes.</li>
+    </ul>
+    <p>Recency (age alone) is used only as a comparison baseline — newer is not assumed better. Each detector is validated independently before any combination, and signals are combined adaptively only where the evidence shows it helps.</p>
+  </section>
 
-    <section class="profile-section" id="research-questions">
-      <h2>Core Research Questions</h2>
-      <ul class="timeline" style="margin-top:1.2rem">
-        <li><h3>Does temporal appropriateness measurably affect LLM response reliability?</h3><p>Establishing that current, outdated, mixed, and conflicting information change model outputs.</p></li>
-        <li><h3>Are the four kinds of temporal change genuinely distinct?</h3><p>Testing whether structural, semantic, distributional, and validity/volatility change overlap or capture different phenomena.</p></li>
-        <li><h3>Which detector best captures which kind of change?</h3><p>Matching TDA, embedding drift, distribution-shift metrics, and validity modeling to change types across domains.</p></li>
-        <li><h3>Does adaptive, matched detection outperform single signals and recency?</h3><p>Comparing adaptive combination against any single detector, blind combination, and recency baselines.</p></li>
-        <li><h3>Does timeliness-aware retrieval improve accuracy and reliability?</h3><p>Testing appropriateness-aware selection against semantic retrieval, with explainability for why it helps.</p></li>
-        <li><h3>How does timeliness sensitivity differ across architectures?</h3><p>Comparing neural networks, transformers, and LLMs under the same temporal-change conditions.</p></li>
-      </ul>
-    </section>
+  <section id="research-questions">
+    <h2>Core Research Questions</h2>
+    <ol class="simple-list">
+      <li><strong>Does temporal appropriateness measurably affect LLM response reliability?</strong> Establishing that current, outdated, mixed, and conflicting information change model outputs.</li>
+      <li><strong>Are the kinds of temporal change genuinely distinct?</strong> Testing whether structural, semantic, distributional, and validity/volatility change overlap or capture different phenomena.</li>
+      <li><strong>Which detector best captures which kind of change?</strong> Matching TDA, embedding drift, distribution-shift metrics, and validity modeling to change types across domains.</li>
+      <li><strong>Does adaptive, matched detection outperform single signals and recency?</strong> Comparing adaptive combination against any single detector, blind combination, and recency baselines.</li>
+      <li><strong>Does timeliness-aware retrieval improve accuracy and reliability?</strong> Testing appropriateness-aware selection against semantic retrieval, with explainability for why it helps.</li>
+      <li><strong>How does timeliness sensitivity differ across architectures?</strong> Comparing neural networks, transformers, and LLMs under the same temporal-change conditions.</li>
+    </ol>
+  </section>
 
-    <section class="profile-section" id="other-directions">
-      <h2>Related Research Directions</h2>
-      <div class="area-grid" style="margin-top:1.2rem">
-        <div class="area-card">
-          <span class="pill">Ongoing · Medical AI · Multimodal XAI</span>
-          <h3>Beyond the Output: Faithful XAI for Medical Image Report Generation</h3>
-          <p>Investigating hallucination detection and explanation faithfulness in medical vision-language models using chest X-ray report generation as a testbed. Designing a unified evaluation framework linking visual saliency maps, model reasoning chains, and clinical correctness metrics.</p>
-        </div>
-        <div class="area-card">
-          <span class="pill">Published 2026 · Computer Vision · Sports Analytics</span>
-          <h3>Soccer Action Detection Using TimeSformer</h3>
-          <p>Transformer-based approach to video understanding achieving 91.13% validation accuracy on SoccerAct10, modeling long-range spatiotemporal dependencies with divided space-time attention. Published in the <em>Journal of Computing Sciences in Colleges</em> (ACM Digital Library).</p>
-          <div class="pub-links" style="margin-top:.6rem">
-            <a class="chip-link" href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">ACM Digital Library →</a>
-          </div>
-        </div>
-        <div class="area-card">
-          <span class="pill">Computer Vision · XAI · Image Forensics</span>
-          <h3>Explainable Image Forgery Detection</h3>
-          <p>ResNet50 + U-Net + Grad-CAM pipeline for detecting and localizing image manipulation (AUC 0.86, recall 0.88), with pixel-level interpretability maps for downstream forensic use.</p>
-        </div>
-        <div class="area-card">
-          <span class="pill">NLP · Information Credibility</span>
-          <h3>NewsLogic: AI-Powered Fake News Detection</h3>
-          <p>Full-stack system combining BERT, DistilBERT, and rule-based validation for multi-signal fake news classification, with real-time explanation generation through LLaMA-based models and a FastAPI backend.</p>
-        </div>
-      </div>
-    </section>
+  <section id="other-directions">
+    <h2>Related Research Directions</h2>
+    <ul class="simple-list">
+      <li><strong>Beyond the Output: Faithful XAI for Medical Image Report Generation.</strong> Hallucination detection and explanation faithfulness in medical vision-language models, using chest X-ray report generation as a testbed. In progress.</li>
+      <li><strong>Soccer Action Detection Using TimeSformer.</strong> Transformer-based video understanding at 91.13% on SoccerAct10. Published in the <em>Journal of Computing Sciences in Colleges</em> (ACM Digital Library), 2026. <a href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">[ACM]</a></li>
+      <li><strong>Explainable Image Forgery Detection.</strong> ResNet50 + U-Net + Grad-CAM pipeline for detecting and localizing image manipulation (AUC 0.86, recall 0.88).</li>
+      <li><strong>NewsLogic: AI-Powered Fake News Detection.</strong> BERT/DistilBERT ensemble with LLaMA-based explanations, deployed as a FastAPI service.</li>
+    </ul>
+  </section>
 
-    <section class="profile-section" id="publications">
-      <h2>Peer-Reviewed Publications</h2>
-      <p class="section-lede">Full citation history is available on <a href="https://scholar.google.com/citations?user=U2O4S48AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
-      <div class="pub-list">
-        <article class="pub-item">
-          <div class="pub-year">2026</div>
-          <div>
-            <h3>Soccer Action Detection Using TimeSformer: A Transformer-Based Approach to Video Understanding</h3>
-            <p class="pub-venue"><em>Journal of Computing Sciences in Colleges</em>, 41(10), 72–81 · ACM Digital Library</p>
-            <p class="pub-doi">DOI: 10.5555/3820620.3820634</p>
-            <div class="pub-links">
-              <a class="chip-link" href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">ACM Digital Library →</a>
-            </div>
-          </div>
-        </article>
-        <article class="pub-item">
-          <div class="pub-year">2023</div>
-          <div>
-            <h3>Enhancing the Programming Sequence for Undergraduate Computer Science Students: A Program for Improving Learning Outcomes</h3>
-            <p class="pub-venue">Proceedings of the 5th HCIRA International Congress, Vol. 7, Issue 1 · IEEE</p>
-            <p class="pub-doi">DOI: 10.1109/HORA58378.2023.10156793</p>
-            <div class="pub-links">
-              <a class="chip-link" href="https://doi.org/10.1109/HORA58378.2023.10156793" target="_blank" rel="noopener">View DOI →</a>
-            </div>
-          </div>
-        </article>
-        <article class="pub-item">
-          <div class="pub-year">2022</div>
-          <div>
-            <h3>MLBioIGE: Integration and interplay of machine learning and bioinformatics to identify the genetic effect of SARS-CoV-2 on idiopathic pulmonary fibrosis patients</h3>
-            <p class="pub-venue"><em>Biology Methods and Protocols</em>, May 2022</p>
-            <p class="pub-doi">DOI: 10.1093/biomethods/bpac013</p>
-            <div class="pub-links">
-              <a class="chip-link" href="https://doi.org/10.1093/biomethods/bpac013" target="_blank" rel="noopener">View DOI →</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
+  <section id="publications">
+    <h2>Peer-Reviewed Publications</h2>
+    <p class="note">Full citation history on <a href="https://scholar.google.com/citations?user=U2O4S48AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+    <ol class="pubs">
+      <li>
+        <strong>Soccer Action Detection Using TimeSformer: A Transformer-Based Approach to Video Understanding.</strong>
+        <em>Journal of Computing Sciences in Colleges</em>, 41(10), 72–81, 2026.
+        <a href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">[ACM]</a>
+      </li>
+      <li>
+        <strong>Enhancing the Programming Sequence for Undergraduate Computer Science Students: A Program for Improving Learning Outcomes.</strong>
+        Proceedings of the 5th HCIRA International Congress, Vol. 7, Issue 1, 2023.
+        <a href="https://doi.org/10.1109/HORA58378.2023.10156793" target="_blank" rel="noopener">[DOI]</a>
+      </li>
+      <li>
+        <strong>MLBioIGE: Integration and interplay of machine learning and bioinformatics to identify the genetic effect of SARS-CoV-2 on idiopathic pulmonary fibrosis patients.</strong>
+        <em>Biology Methods and Protocols</em>, May 2022.
+        <a href="https://doi.org/10.1093/biomethods/bpac013" target="_blank" rel="noopener">[DOI]</a>
+      </li>
+    </ol>
+  </section>
 
-    <section class="profile-section" id="presentations">
-      <h2>Research Presentations</h2>
-      <div class="area-grid" style="margin-top:1.2rem">
-        <div class="area-card">
-          <span class="pill">ATU Scholars Symposium · Apr 2024</span>
-          <h3>Enhancing Disease Detection in South Asian Freshwater Fish Aquaculture Through Convolutional Neural Networks</h3>
-          <div class="pub-links" style="margin-top:.6rem">
-            <a class="chip-link" href="https://orc.library.atu.edu/atu_rs/2024/2024/27" target="_blank" rel="noopener">View Presentation →</a>
-          </div>
-        </div>
-        <div class="area-card">
-          <span class="pill">ATU Scholars Symposium · Apr 2024</span>
-          <h3>League of Learning: Deep Learning for Soccer Action Video Classification</h3>
-          <div class="pub-links" style="margin-top:.6rem">
-            <a class="chip-link" href="https://orc.library.atu.edu/atu_rs/2024/2024/17" target="_blank" rel="noopener">View Presentation →</a>
-          </div>
-        </div>
-      </div>
-    </section>
+  <section id="presentations">
+    <h2>Research Presentations</h2>
+    <ul class="simple-list">
+      <li><strong>Enhancing Disease Detection in South Asian Freshwater Fish Aquaculture Through Convolutional Neural Networks.</strong> ATU Scholars Symposium, Apr 2024. <a href="https://orc.library.atu.edu/atu_rs/2024/2024/27" target="_blank" rel="noopener">[link]</a></li>
+      <li><strong>League of Learning: Deep Learning for Soccer Action Video Classification.</strong> ATU Scholars Symposium, Apr 2024. <a href="https://orc.library.atu.edu/atu_rs/2024/2024/17" target="_blank" rel="noopener">[link]</a></li>
+    </ul>
+  </section>
 
-  </div>
 </main>
 
 <footer class="footer">
