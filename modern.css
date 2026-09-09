@@ -12,9 +12,7 @@
   justify-content: center;
   text-align: center;
   color: #fff;
-  background:
-    linear-gradient(rgba(8, 18, 24, 0.62), rgba(8, 18, 24, 0.55)),
-    url("image.jpg") center 30% / cover no-repeat;
+  background: #14343d;
 }
 
 .profile-2026 .hero-inner{
