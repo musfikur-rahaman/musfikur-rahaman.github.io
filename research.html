@@ -46,15 +46,54 @@
 
   <section id="other-directions">
     <h2>Research Directions</h2>
-    <ul class="simple-list">
-      <li><strong>Faithful XAI for Medical Image Report Generation (in progress).</strong> A unified evaluation framework that links visual saliency maps, model reasoning chains, and clinical correctness metrics to test whether explanations from chest X-ray report-generation models are faithful to the model's actual reasoning — not just plausible-sounding. The goal is to reduce confident-but-unfaithful explanations in clinical AI.</li>
-      <li><strong>Soccer Action Detection Using TimeSformer.</strong> Transformer-based video understanding for context-dependent soccer actions (e.g., pass, shot, dribble) on the SoccerAct10 dataset, reaching 91.13% accuracy with divided space-time attention. Published in the <em>Journal of Computing Sciences in Colleges</em> (ACM Digital Library), 2026. <a href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">[ACM]</a></li>
-      <li><strong>Explainable Image Forgery Detection.</strong> A ResNet50 + U-Net + Grad-CAM pipeline that both detects manipulated images and localizes the forged regions — 80.32% accuracy and 0.88 forged recall on CASIA 2.0. A companion multi-branch EfficientNet-B3 model adds DCT frequency-domain features.</li>
-      <li><strong>NewsLogic: AI-Powered Fake News Detection.</strong> An end-to-end fake-news classifier combining a BERT-tiny + DistilBERT ensemble with LLaMA-4-Scout generated explanations — 83.1% accuracy and 0.91 AUC across 71 live-app cases, deployed as a FastAPI service.</li>
-      <li><strong>Fish Disease Detection with FishNet CNN.</strong> CNN-based 7-class disease detection for South Asian freshwater fish aquaculture, reaching ~92.5% test accuracy with a transfer-learning baseline comparison. Presented at the ATU Scholars Symposium, 2024.</li>
-      <li><strong>MLBioIGE: Machine Learning and Bioinformatics for Pulmonary Fibrosis.</strong> Integrated machine learning with DESeq2-based bioinformatics analysis to identify genetic effects of SARS-CoV-2 on idiopathic pulmonary fibrosis patients, with visualizations of differentially expressed genes. Published in <em>Biology Methods and Protocols</em>, 2022.</li>
-      <li><strong>Programming Sequence Improvement Program (PSIP).</strong> A multi-year study of retention and learning outcomes across the undergraduate computer science programming sequence, with aggregated grade data and survey instruments. Published at the IEEE HCIRA International Congress, 2023.</li>
-    </ul>
+
+    <div class="research-block">
+      <h3>Faithful XAI for Medical Image Report Generation</h3>
+      <p class="research-status">In progress</p>
+      <p>A unified evaluation framework that links visual saliency maps, model reasoning chains, and clinical correctness metrics to test whether explanations from chest X-ray report-generation models are faithful to the model's actual reasoning — not just plausible-sounding. The goal is to reduce confident-but-unfaithful explanations in clinical AI.</p>
+      <figure><img src="assets/faithful_xai_thesis.png" alt="Thesis diagram for faithful XAI in medical image report generation"/><figcaption>The core problem: a gap between what the model sees and what it reports, causing unfaithful explanations.</figcaption></figure>
+    </div>
+
+    <div class="research-block">
+      <h3>Soccer Action Detection Using TimeSformer</h3>
+      <p class="research-status">Published — <em>Journal of Computing Sciences in Colleges</em> (ACM Digital Library), 2026</p>
+      <p>Transformer-based video understanding for context-dependent soccer actions (e.g., pass, shot, dribble) on the SoccerAct10 dataset, reaching 91.13% accuracy with divided space-time attention. The work shows that actions defined by game context — not just motion — can be recognized reliably from video alone. <a href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">[ACM]</a></p>
+    </div>
+
+    <div class="research-block">
+      <h3>Explainable Image Forgery Detection</h3>
+      <p class="research-status">Research project</p>
+      <p>A ResNet50 + U-Net + Grad-CAM pipeline that both detects manipulated images and localizes the forged regions — 80.32% accuracy and 0.88 forged recall on CASIA 2.0. A companion multi-branch EfficientNet-B3 model adds DCT frequency-domain features, and Grad-CAM visualizations make every decision auditable.</p>
+    </div>
+
+    <div class="research-block">
+      <h3>NewsLogic: AI-Powered Fake News Detection</h3>
+      <p class="research-status">Deployed application</p>
+      <p>An end-to-end fake-news classifier combining a BERT-tiny + DistilBERT ensemble with LLaMA-4-Scout generated explanations — 83.1% accuracy and 0.91 AUC across 71 live-app cases, deployed as a FastAPI service. Each verdict comes with a natural-language rationale so users can see <em>why</em> an article was flagged.</p>
+    </div>
+
+    <div class="research-block">
+      <h3>Fish Disease Detection with FishNet CNN</h3>
+      <p class="research-status">Presented — ATU Scholars Symposium, 2024</p>
+      <p>CNN-based 7-class disease detection for South Asian freshwater fish aquaculture, reaching ~92.5% test accuracy with a transfer-learning baseline comparison. Early automated disease detection helps small-scale farmers intervene before outbreaks spread.</p>
+      <figure><img src="assets/fish_confusion_matrix.png" alt="FishNet confusion matrix across 7 disease classes"/><figcaption>FishNet confusion matrix: strong per-class performance across all seven disease categories.</figcaption></figure>
+      <figure><img src="assets/fish_training_curves.png" alt="FishNet training and validation curves"/><figcaption>Training and validation curves showing stable convergence.</figcaption></figure>
+    </div>
+
+    <div class="research-block">
+      <h3>MLBioIGE: Machine Learning and Bioinformatics for Pulmonary Fibrosis</h3>
+      <p class="research-status">Published — <em>Biology Methods and Protocols</em>, 2022</p>
+      <p>Integrated machine learning with DESeq2-based bioinformatics analysis to identify genetic effects of SARS-CoV-2 on idiopathic pulmonary fibrosis patients, with visualizations of differentially expressed genes. <a href="https://doi.org/10.1093/biomethods/bpac013" target="_blank" rel="noopener">[DOI]</a></p>
+      <figure><img src="assets/mlbioige_volcano_plot.png" alt="MLBioIGE volcano plot of differentially expressed genes"/><figcaption>Volcano plot of differentially expressed genes across the COVID, COPD, and IPF analyses.</figcaption></figure>
+      <figure><img src="assets/mlbioige_pca_plot.png" alt="MLBioIGE PCA plot of patient samples"/><figcaption>PCA of patient samples showing separation between condition groups.</figcaption></figure>
+    </div>
+
+    <div class="research-block">
+      <h3>Programming Sequence Improvement Program (PSIP)</h3>
+      <p class="research-status">Published — IEEE HCIRA International Congress, 2023</p>
+      <p>A multi-year study of retention and learning outcomes across the undergraduate computer science programming sequence, with aggregated grade data and survey instruments. The findings informed curriculum changes aimed at reducing early-course attrition.</p>
+      <figure><img src="assets/psip_dfwi_rates.png" alt="PSIP DFWI rates across programming courses"/><figcaption>DFWI rates across the programming sequence, before and after the intervention.</figcaption></figure>
+    </div>
   </section>
 
   <section id="publications">
