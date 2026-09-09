@@ -85,7 +85,7 @@
 
 .profile-2026 .hero-jump a:hover{
   background: #fff;
-  color: #10262e;
+  color: #14343d;
   border-color: #fff;
   text-decoration: none;
 }
@@ -158,7 +158,7 @@
   display: block;
   width: 56px;
   height: 3px;
-  background: #0f6b62;
+  background: #14343d;
   margin: .7rem auto 0;
   border-radius: 2px;
 }
@@ -166,7 +166,7 @@
 .profile-2026 .page p{ margin: 0 0 .9rem; }
 
 .profile-2026 .page a{
-  color: #0f6b62;
+  color: #14343d;
   text-decoration: none;
 }
 
