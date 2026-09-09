@@ -41,27 +41,7 @@
 
   <section>
     <h2>Dissertation Research</h2>
-    <p><strong>Characterizing Temporal Change for Reliable Knowledge-Grounded AI.</strong> AI systems such as large language models increasingly rely on external information to answer questions. A piece of information can still be related to a question yet no longer be appropriate for the current situation. This research treats timeliness as distinct from recency: older information may remain useful — or become useful again when conditions recur — and the newest information is not always the most appropriate.</p>
-    <p>The dissertation hypothesizes that temporal change is not a single phenomenon but may comprise several partly independent kinds, and tests which detector best captures each, rather than assuming any single signal is sufficient:</p>
-    <ul class="simple-list">
-      <li><strong>Structural change</strong> — detected with topological data analysis: change in how information is organized relative to the environment.</li>
-      <li><strong>Semantic change</strong> — detected with embedding drift: drift in the meaning and representation of information over time.</li>
-      <li><strong>Distributional change</strong> — detected with Wasserstein/MMD shift metrics: statistical distribution shift away from the present environment.</li>
-      <li><strong>Validity / volatility</strong> — detected with validity horizons: whether information is still valid at query time, and how fast it changes.</li>
-    </ul>
-    <p>Recency (age alone) is used only as a comparison baseline — newer is not assumed better. Each detector is validated independently before any combination, and signals are combined adaptively only where the evidence shows it helps.</p>
-  </section>
-
-  <section id="research-questions">
-    <h2>Core Research Questions</h2>
-    <ol class="simple-list">
-      <li><strong>Does temporal appropriateness measurably affect LLM response reliability?</strong> Establishing that current, outdated, mixed, and conflicting information change model outputs.</li>
-      <li><strong>Are the kinds of temporal change genuinely distinct?</strong> Testing whether structural, semantic, distributional, and validity/volatility change overlap or capture different phenomena.</li>
-      <li><strong>Which detector best captures which kind of change?</strong> Matching TDA, embedding drift, distribution-shift metrics, and validity modeling to change types across domains.</li>
-      <li><strong>Does adaptive, matched detection outperform single signals and recency?</strong> Comparing adaptive combination against any single detector, blind combination, and recency baselines.</li>
-      <li><strong>Does timeliness-aware retrieval improve accuracy and reliability?</strong> Testing appropriateness-aware selection against semantic retrieval, with explainability for why it helps.</li>
-      <li><strong>How does timeliness sensitivity differ across architectures?</strong> Comparing neural networks, transformers, and LLMs under the same temporal-change conditions.</li>
-    </ol>
+    <p><strong>Characterizing Temporal Change for Reliable Knowledge-Grounded AI.</strong> My dissertation asks how AI systems can tell whether retrieved information is still <em>appropriate</em> to use now — not merely whether it is relevant or recent. Timeliness is treated as distinct from recency: older information may remain useful, and the newest information is not always the most appropriate.</p>
   </section>
 
   <section id="other-directions">
