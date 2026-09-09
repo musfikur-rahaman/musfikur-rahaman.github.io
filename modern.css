@@ -81,6 +81,11 @@
   border-bottom: 2px solid #0f6b62;
 }
 
+/* Kill the old theme's decorative gold underline so only the teal rule shows */
+.profile-2026 .page h2::after{
+  display: none;
+}
+
 .profile-2026 .page p{ margin: 0 0 .9rem; }
 
 .profile-2026 .page a{
