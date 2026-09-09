@@ -291,6 +291,25 @@
   margin: 0 0 .7rem;
 }
 
+/* ---------- CV download button ---------- */
+.profile-2026 .btn-cv{
+  display: inline-block;
+  background: #14343d;
+  color: #fff !important;
+  font-size: .85rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  padding: .9rem 2rem;
+  border-radius: 2px;
+  margin: .8rem 0 1.2rem;
+}
+
+.profile-2026 .btn-cv:hover{
+  background: #0e262c;
+  text-decoration: none !important;
+}
+
 /* ---------- Footer spacing ---------- */
 .profile-2026 .footer{ margin-top: 0; }
 
