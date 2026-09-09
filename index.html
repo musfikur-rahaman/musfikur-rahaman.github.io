@@ -61,7 +61,7 @@
     <div class="container stat-strip">
       <div class="stat-card">
         <div class="stat"><div class="stat-num">3</div><div class="stat-label">Peer-Reviewed Publications</div></div>
-        <div class="stat"><div class="stat-num">5</div><div class="stat-label">Research Projects</div></div>
+        <div class="stat"><div class="stat-num">7</div><div class="stat-label">Research Projects</div></div>
         <div class="stat"><div class="stat-num">2</div><div class="stat-label">Research Awards</div></div>
         <div class="stat"><div class="stat-num">6+</div><div class="stat-label">Years in AI Research</div></div>
       </div>
@@ -192,31 +192,56 @@
   <section class="profile-section" id="projects">
     <div class="container">
       <h2>Selected Projects</h2>
-      <p class="section-lede">Research systems and applied AI work across vision, language, and trustworthiness.</p>
+      <p class="section-lede">Research systems and applied AI work across vision, language, and trustworthiness — all openly maintained on <a href="https://github.com/musfikur-rahaman" target="_blank" rel="noopener">GitHub</a>.</p>
       <div class="area-grid">
         <div class="area-card">
           <span class="pill">Medical AI · XAI · In Progress</span>
           <h3>Beyond the Output: Faithful XAI for Medical Image Report Generation</h3>
           <p>A unified evaluation framework linking visual saliency maps, model reasoning chains, and clinical correctness metrics to quantify and reduce unfaithful explanations in chest X-ray report generation.</p>
           <p class="pub-doi">PyTorch · Vision Transformers · Medical Imaging · XAI</p>
+          <div class="pub-links"><a class="chip-link" href="https://github.com/musfikur-rahaman/faithful-xai-medical-report-generation" target="_blank" rel="noopener">GitHub →</a></div>
         </div>
         <div class="area-card">
-          <span class="pill">Computer Vision · Image Forensics</span>
-          <h3>Explainable Image Forgery Detection</h3>
-          <p>ResNet50 + U-Net + Grad-CAM pipeline for detecting and localizing image manipulation, achieving AUC 0.86 and recall 0.88, with pixel-level interpretability maps for forensic auditing.</p>
-          <p class="pub-doi">ResNet50 · U-Net · Grad-CAM · PyTorch</p>
+          <span class="pill">Computer Vision · Published 2026</span>
+          <h3>Soccer Action Detection Using TimeSformer</h3>
+          <p>Transformer-based video understanding for recognizing complex, context-dependent soccer actions (91.13% on SoccerAct10). Full 44-cell analysis notebook, project report, and published JCSC/ACM paper.</p>
+          <p class="pub-doi">TimeSformer · PyTorch · Video Understanding</p>
+          <div class="pub-links"><a class="chip-link" href="https://github.com/musfikur-rahaman/SoccerAction_SoccerActDataset" target="_blank" rel="noopener">GitHub →</a></div>
         </div>
         <div class="area-card">
           <span class="pill">NLP · Full-Stack AI</span>
           <h3>NewsLogic: AI-Powered Fake News Detection</h3>
-          <p>Full-stack system combining BERT, DistilBERT, and rule-based validation for multi-signal fake news classification, with real-time explanation generation via LLaMA-based models.</p>
-          <p class="pub-doi">BERT · DistilBERT · LLaMA · FastAPI · Python</p>
+          <p>End-to-end fake news classifier — BERT-tiny + DistilBERT ensemble with LLaMA-4-Scout explanations — reaching 83.1% accuracy and 0.91 AUC on 71 live-app cases, deployed as a FastAPI service.</p>
+          <p class="pub-doi">BERT · DistilBERT · LLaMA · FastAPI · Supabase</p>
+          <div class="pub-links"><a class="chip-link" href="https://github.com/musfikur-rahaman/fake_news_lovable" target="_blank" rel="noopener">GitHub →</a></div>
         </div>
         <div class="area-card">
-          <span class="pill">Bioinformatics · Published</span>
+          <span class="pill">Computer Vision · Aquaculture AI</span>
+          <h3>Fish Disease Detection with FishNet CNN</h3>
+          <p>CNN-based disease detection for South Asian freshwater fish aquaculture — 7-class classification across bacterial, fungal, parasitic, and viral diseases plus healthy fish, at ~92.5% test accuracy.</p>
+          <p class="pub-doi">CNN · Transfer Learning · Aquaculture</p>
+          <div class="pub-links"><a class="chip-link" href="https://github.com/musfikur-rahaman/fish-disease-detection" target="_blank" rel="noopener">GitHub →</a></div>
+        </div>
+        <div class="area-card">
+          <span class="pill">Bioinformatics · Published 2022</span>
           <h3>MLBioIGE: ML + Bioinformatics for Pulmonary Fibrosis</h3>
-          <p>Peer-reviewed study integrating machine learning and bioinformatics to identify genetic factors influencing pulmonary fibrosis in COVID-19 patients (<em>Biology Methods and Protocols</em>, 2022).</p>
+          <p>Peer-reviewed study integrating machine learning and bioinformatics to identify genetic factors influencing pulmonary fibrosis in COVID-19 patients — with DESeq2 analysis notebooks and volcano/PCA visualizations.</p>
           <p class="pub-doi">Genomic Data Analysis · Predictive Modeling</p>
+          <div class="pub-links"><a class="chip-link" href="https://github.com/musfikur-rahaman/mlbioige" target="_blank" rel="noopener">GitHub →</a></div>
+        </div>
+        <div class="area-card">
+          <span class="pill">Computer Vision · Image Forensics</span>
+          <h3>Explainable Image Forgery Detection</h3>
+          <p>ResNet50 + U-Net + Grad-CAM pipeline for detecting and localizing image manipulation — 80.32% accuracy and 0.88 forged recall on CASIA 2.0 — with pixel-level interpretability maps for forensic auditing.</p>
+          <p class="pub-doi">ResNet50 · U-Net · Grad-CAM · PyTorch</p>
+          <div class="pub-links"><a class="chip-link" href="https://github.com/musfikur-rahaman/image-forgery-detection" target="_blank" rel="noopener">GitHub →</a></div>
+        </div>
+        <div class="area-card">
+          <span class="pill">Computing Education · Published 2023</span>
+          <h3>Programming Sequence Improvement Program (PSIP)</h3>
+          <p>Multi-year study on improving retention and learning outcomes in undergraduate CS programming courses at Arkansas Tech — IEEE HCIRA 2023 paper, poster, datasets, and survey instruments.</p>
+          <p class="pub-doi">Learning Analytics · Curriculum Design</p>
+          <div class="pub-links"><a class="chip-link" href="https://github.com/musfikur-rahaman/programming-sequence-improvement-program" target="_blank" rel="noopener">GitHub →</a></div>
         </div>
       </div>
     </div>
