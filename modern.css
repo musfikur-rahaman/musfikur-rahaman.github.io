@@ -184,6 +184,23 @@
   margin-top: 1.4rem;
 }
 
+/* ---------- About section with portrait ---------- */
+.profile-2026 .about-row{
+  display: flex;
+  gap: 1.75rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.profile-2026 .about-photo{
+  width: 150px;
+  flex: 0 0 150px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.12);
+}
+
+.profile-2026 .about-text{ flex: 1; min-width: 0; }
+
 /* ---------- Lists ---------- */
 .profile-2026 .simple-list,
 .profile-2026 .projects,
@@ -228,4 +245,6 @@
     letter-spacing: .16em;
   }
   .profile-2026 .page{ padding-top: 2.25rem; }
+  .profile-2026 .about-row{ flex-direction: column; align-items: center; }
+  .profile-2026 .about-photo{ width: 130px; flex-basis: auto; }
 }
