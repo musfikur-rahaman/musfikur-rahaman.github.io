@@ -3,132 +3,307 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="description" content="Musfikur Rahaman — PhD student in Information Science at the University of Arkansas at Little Rock with an academic background in artificial intelligence, information technology, research, and higher education."/>
-  <title>Musfikur Rahaman | Academic Portfolio</title>
+  <meta name="description" content="Musfikur Rahaman — PhD researcher in Information Science at the University of Arkansas at Little Rock. Research on temporal change in knowledge-grounded AI, explainable AI, computer vision, and multimodal systems."/>
+  <title>Musfikur Rahaman | PhD Researcher — Information Science</title>
   <link rel="stylesheet" href="styles.css?v=20260819-light"/>
+  <link rel="stylesheet" href="modern.css?v=20260909"/>
 </head>
-<body class="home-page">
+<body class="profile-2026">
 <header class="header">
   <div class="container navbar">
-    <a class="brand" href="index.html"><span class="name">Musfikur Rahaman</span><span class="subtitle">PhD Student • Information Science • UALR</span></a>
+    <a class="brand" href="index.html"><span class="name">Musfikur Rahaman</span><span class="subtitle">PhD Researcher • Information Science</span></a>
     <nav class="nav-links" aria-label="Primary navigation">
-      <a data-nav href="index.html">Home</a>
-      <a data-nav href="research.html">Research</a>
-      <a data-nav href="experience.html">Experience</a>
-      <a data-nav href="training.html">Training & Awards</a>
-      <a data-nav href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
     </nav>
     <div class="nav-actions"><button class="icon-btn" id="navToggle" aria-expanded="false" aria-controls="mobilePanel">☰</button></div>
   </div>
   <div class="container mobile-panel" id="mobilePanel">
-    <a data-nav href="index.html">Home</a>
-    <a data-nav href="research.html">Research</a>
-    <a data-nav href="experience.html">Experience</a>
-    <a data-nav href="training.html">Training & Awards</a>
-    <a data-nav href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
   </div>
 </header>
 
 <main class="main">
+
+  <!-- ============ HERO ============ -->
   <section class="hero">
-    <div class="container grid">
-      <div class="card">
-        <p class="kicker">Academic Portfolio</p>
-        <h1>Musfikur Rahaman</h1>
-
-        <p class="muted">I am a PhD student in Information Science at the University of Arkansas at Little Rock, where I continue to develop my academic work at the intersection of artificial intelligence, information technology, and applied computational research. My academic preparation includes graduate and undergraduate training in information technology, supported by experience in research, graduate assistantships, teaching support, student mentoring, and interdisciplinary academic collaboration.</p>
-
-        <p class="muted">A major direction of my research is <strong>soccer action detection and sports video understanding</strong>. I study how deep learning and transformer-based video models can recognize complex actions that unfold over time, especially when visually similar events depend on temporal context. This work connects broader problems in computer vision, human activity recognition, temporal reasoning, multimodal learning, model reliability, and explainability.</p>
-
-        <p class="muted">My scholarly background also includes peer-reviewed publications in biomedical informatics and computing education, alongside research in explainable and trustworthy AI, medical vision-language systems, image forensics, and information credibility. Across these activities, I have contributed to research design, machine learning model development, data analysis, experimental evaluation, scientific writing, and academic presentation.</p>
-
-        <p class="muted">In addition to research, I have supported university instruction and academic operations through graduate assistant roles at the University of Arkansas at Little Rock and Arkansas Tech University, as well as earlier research experience at the University of Information Technology & Sciences in Bangladesh. These experiences have helped me build a broad academic profile combining research, teaching, technical development, and service.</p>
-
-        <section class="featured-research section" aria-labelledby="featuredResearchTitle">
-          <div class="section-heading-row">
-            <div>
-              <h2 id="featuredResearchTitle">Featured Research</h2>
-              <p class="muted">Selected areas that represent my current and continuing academic research.</p>
-            </div>
-            <a class="btn" href="research.html">View All Research</a>
+    <div class="hero-band">
+      <div class="container hero-grid">
+        <div>
+          <span class="hero-kicker">PhD Researcher · Information Science</span>
+          <h1>Musfikur Rahaman</h1>
+          <p class="hero-role">University of Arkansas at Little Rock</p>
+          <p class="hero-statement">“I study whether the information AI relies on is still appropriate to use now — not just whether it is relevant.”</p>
+          <div class="hero-meta">
+            <span>Advisor: <strong>Dr. Mihail-Eduard Tudoreanu</strong></span>
+            <span>Little Rock, Arkansas</span>
           </div>
-
-          <div class="featured-research-grid">
-            <article class="block featured-research-card">
-              <div class="pill">Computer Vision • Sports Analytics</div>
-              <h3>Soccer Action Detection & Video Understanding</h3>
-              <p class="muted">Deep learning and transformer-based methods for recognizing complex soccer actions, modeling temporal context, and improving sports-video understanding.</p>
-              <a class="text-link" href="research.html#soccer-research">Explore Research →</a>
-            </article>
-
-            <article class="block featured-research-card">
-              <div class="pill">Medical AI • Multimodal XAI</div>
-              <h3>Faithful XAI for Medical Image Report Generation</h3>
-              <p class="muted">Research on hallucination detection, explanation faithfulness, visual grounding, and trustworthy medical vision-language models.</p>
-              <a class="text-link" href="research.html#medical-xai">Explore Research →</a>
-            </article>
-
-            <article class="block featured-research-card">
-              <div class="pill">Explainable AI • Computer Vision</div>
-              <h3>Explainable & Trustworthy AI</h3>
-              <p class="muted">Model interpretability, visual explanations, reliability analysis, and transparent AI evaluation across computer vision and applied AI systems.</p>
-              <a class="text-link" href="research.html#projects">Explore Projects →</a>
-            </article>
-          </div>
-        </section>
-
-        <hr class="sep"/>
-        <h2>Academic Profile</h2>
-        <div class="two">
-          <div class="block">
-            <h3>Current Study</h3>
-            <p class="muted"><strong>Ph.D. in Information Science</strong><br/>University of Arkansas at Little Rock<br/>August 2024 – Present</p>
-          </div>
-          <div class="block">
-            <h3>Scholarly Background</h3>
-            <ul class="list">
-              <li>Peer-reviewed journal and conference publications</li>
-              <li>Research in soccer action recognition, sports video understanding, AI, machine learning, computer vision, and biomedical applications</li>
-              <li>Graduate-level teaching and academic support experience</li>
-              <li>Research presentations and academic awards</li>
-            </ul>
+          <div class="hero-buttons">
+            <a class="btn btn-light" href="research.html">Explore My Research</a>
+            <a class="btn btn-ghost" href="https://scholar.google.com/citations?user=U2O4S48AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a class="btn btn-ghost" href="Resume_Musfikur_Rahaman_PhD_Research.pdf" target="_blank" rel="noopener">CV (PDF)</a>
           </div>
         </div>
-
-        <hr class="sep"/>
-        <h2>Education</h2>
-        <div class="block">
-          <ul class="list">
-            <li><strong>Ph.D. in Information Science</strong> — University of Arkansas at Little Rock, Aug 2024 – Present</li>
-            <li><strong>M.S. in Information Technology</strong> — Arkansas Tech University, Apr 2024 • GPA: 4.00/4.00</li>
-            <li><strong>B.S. in Information Technology</strong> — University of Information Technology & Sciences, Apr 2021 • GPA: 3.83/4.00</li>
-          </ul>
+        <div class="hero-photo-wrap">
+          <div class="hero-photo"><img src="image.jpg" alt="Portrait of Musfikur Rahaman"/></div>
         </div>
       </div>
-
-      <aside class="card soft">
-        <div class="photo"><img src="image.jpg" alt="Musfikur Rahaman profile photo"/></div>
-        <div class="section">
-          <h2>Current Academic Role</h2>
-          <p class="muted"><strong>PhD Student in Information Science</strong><br/>University of Arkansas at Little Rock<br/>Little Rock, Arkansas</p>
-        </div>
-        <div class="section">
-          <h2>Academic Interests</h2>
-          <p class="muted">My academic interests focus on developing intelligent systems that can understand complex visual and multimodal information while remaining accurate, explainable, and trustworthy.</p>
-          <ul class="list">
-            <li><strong>Soccer Action Detection & Sports Video Understanding</strong> — fine-grained action recognition, event understanding, sports analytics, and automated interpretation of complex soccer video.</li>
-            <li><strong>Transformer-Based Video Understanding & Temporal Reasoning</strong> — TimeSformer, long-range temporal context, sequence-aware modeling, and recognition of actions that depend on what happens before and after an event.</li>
-            <li><strong>Computer Vision & Human Activity Recognition</strong> — deep learning methods for visual recognition, spatiotemporal representation learning, and complex real-world activity understanding.</li>
-            <li><strong>Multimodal AI & Vision-Language Models</strong> — combining video, images, language, audio, and contextual information for richer and more reliable AI understanding.</li>
-            <li><strong>Explainable & Trustworthy AI</strong> — model interpretability, explanation faithfulness, visual grounding, hallucination detection, reliability, and transparent AI evaluation.</li>
-            <li><strong>Faithful XAI for Medical Image Report Generation</strong> — research related to <em>Beyond the Output: Faithful XAI for Medical Image Report Generation</em>, including medical vision-language models, chest X-ray report generation, grounded explanations, and clinically reliable AI outputs.</li>
-            <li><strong>Generative AI & Responsible AI</strong> — reliable generation, multimodal reasoning, information quality, and responsible deployment of AI systems.</li>
-            <li><strong>Applied AI in Healthcare, Bioinformatics & Information Systems</strong> — machine learning applications across medical imaging, biomedical data, information credibility, and interdisciplinary computational research.</li>
-          </ul>
-        </div>
-      </aside>
+    </div>
+    <div class="container stat-strip">
+      <div class="stat-card">
+        <div class="stat"><div class="stat-num">3</div><div class="stat-label">Peer-Reviewed Publications</div></div>
+        <div class="stat"><div class="stat-num">5</div><div class="stat-label">Research Projects</div></div>
+        <div class="stat"><div class="stat-num">2</div><div class="stat-label">Research Awards</div></div>
+        <div class="stat"><div class="stat-num">6+</div><div class="stat-label">Years in AI Research</div></div>
+      </div>
     </div>
   </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="profile-section" id="about">
+    <div class="container">
+      <h2>About</h2>
+      <p class="section-lede">I am a PhD researcher in Information Science at the University of Arkansas at Little Rock, working with Dr. Mihail-Eduard Tudoreanu. My dissertation asks a foundational question for knowledge-grounded AI: how can we tell whether retrieved information is still <em>appropriate</em> to use now? Timeliness is not simply recency — older information can remain useful, and newer information is not always the most appropriate.</p>
+      <p class="section-lede">My research characterizes temporal change across four candidate dimensions — structural, semantic, distributional, and validity/volatility — and develops detectors matched to each: topological data analysis, embedding drift, distribution-shift metrics, and validity/volatility modeling. Beyond the dissertation, my work spans explainable and trustworthy AI, medical vision-language systems, computer vision, and multimodal learning, with peer-reviewed publications in venues including the ACM Digital Library, IEEE proceedings, and <em>Biology Methods and Protocols</em>.</p>
+    </div>
+  </section>
+
+  <!-- ============ DISSERTATION SPOTLIGHT ============ -->
+  <section class="profile-section" id="dissertation">
+    <div class="container">
+      <h2>Dissertation Research</h2>
+      <p class="section-lede">The core of my PhD work — an empirically validated framework for measuring temporal appropriateness in knowledge-grounded AI.</p>
+      <div class="spotlight">
+        <span class="pill">Dissertation · In Progress</span>
+        <h3>Characterizing Temporal Change for Reliable Knowledge-Grounded AI</h3>
+        <p>AI systems increasingly rely on external information, yet retrieval emphasizes semantic relevance — sometimes adjusted for recency — while what matters is <strong>temporal appropriateness</strong>: whether a piece of information fits the environment at the time of the query. This dissertation hypothesizes that temporal change comprises several partly independent kinds, each better detected by a different class of signal, and tests whether matching detectors to kinds of change improves AI reliability.</p>
+        <div class="change-grid">
+          <div class="change-card">
+            <div class="change-type">Structural change</div>
+            <h4>Topological Data Analysis</h4>
+            <p>Detecting change in how information is organized relative to the environment.</p>
+          </div>
+          <div class="change-card">
+            <div class="change-type">Semantic change</div>
+            <h4>Embedding Drift</h4>
+            <p>Detecting drift in the meaning and representation of information.</p>
+          </div>
+          <div class="change-card">
+            <div class="change-type">Distributional change</div>
+            <h4>Shift Metrics</h4>
+            <p>Wasserstein and MMD measures for statistical distribution change.</p>
+          </div>
+          <div class="change-card">
+            <div class="change-type">Validity / volatility</div>
+            <h4>Validity Horizons</h4>
+            <p>Modeling whether information is still valid, and how fast it changes.</p>
+          </div>
+        </div>
+        <div class="hero-buttons" style="margin-top:1.2rem">
+          <a class="btn primary" href="research.html">Read the Full Research Agenda</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESEARCH AREAS ============ -->
+  <section class="profile-section" id="research-areas">
+    <div class="container">
+      <h2>Research Areas</h2>
+      <p class="section-lede">Current and continuing directions across reliable, explainable, and multimodal AI.</p>
+      <div class="area-grid">
+        <div class="area-card">
+          <span class="pill">Dissertation · Knowledge-Grounded AI</span>
+          <h3>Temporal Change & Timeliness</h3>
+          <p>Measuring whether retrieved information remains appropriate for the current environment — structural, semantic, distributional, and validity change — and building adaptive appropriateness-aware retrieval for LLMs.</p>
+        </div>
+        <div class="area-card">
+          <span class="pill">Ongoing · Medical AI · XAI</span>
+          <h3>Faithful XAI for Medical Image Report Generation</h3>
+          <p>Hallucination detection and explanation faithfulness in medical vision-language models, using chest X-ray report generation as a testbed — linking visual saliency, reasoning chains, and clinical correctness.</p>
+        </div>
+        <div class="area-card">
+          <span class="pill">Computer Vision · Transformers</span>
+          <h3>Soccer Action Detection & Video Understanding</h3>
+          <p>Transformer-based methods (TimeSformer, 91.13% on SoccerAct10) for recognizing complex, context-dependent soccer actions and modeling long-range temporal dependencies in video.</p>
+        </div>
+        <div class="area-card">
+          <span class="pill">XAI · Trustworthy AI</span>
+          <h3>Explainable & Reliable AI Systems</h3>
+          <p>Model interpretability, visual explanations (Grad-CAM), reliability analysis, image forensics, and information credibility across computer vision and applied AI systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PUBLICATIONS ============ -->
+  <section class="profile-section" id="publications">
+    <div class="container">
+      <h2>Publications</h2>
+      <p class="section-lede">Peer-reviewed journal and conference publications. Full citation history on <a href="https://scholar.google.com/citations?user=U2O4S48AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+      <div class="pub-list">
+        <article class="pub-item">
+          <div class="pub-year">2026</div>
+          <div>
+            <h3>Soccer Action Detection Using TimeSformer: A Transformer-Based Approach to Video Understanding</h3>
+            <p class="pub-venue"><em>Journal of Computing Sciences in Colleges</em>, 41(10), 72–81 · ACM Digital Library</p>
+            <p class="pub-doi">DOI: 10.5555/3820620.3820634</p>
+            <div class="pub-links">
+              <a class="chip-link" href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener">ACM Digital Library →</a>
+            </div>
+          </div>
+        </article>
+        <article class="pub-item">
+          <div class="pub-year">2023</div>
+          <div>
+            <h3>Enhancing the Programming Sequence for Undergraduate Computer Science Students: A Program for Improving Learning Outcomes</h3>
+            <p class="pub-venue">Proceedings of the 5th HCIRA International Congress, Vol. 7, Issue 1 · IEEE</p>
+            <p class="pub-doi">DOI: 10.1109/HORA58378.2023.10156793</p>
+            <div class="pub-links">
+              <a class="chip-link" href="https://doi.org/10.1109/HORA58378.2023.10156793" target="_blank" rel="noopener">View DOI →</a>
+            </div>
+          </div>
+        </article>
+        <article class="pub-item">
+          <div class="pub-year">2022</div>
+          <div>
+            <h3>MLBioIGE: Integration and interplay of machine learning and bioinformatics to identify the genetic effect of SARS-CoV-2 on idiopathic pulmonary fibrosis patients</h3>
+            <p class="pub-venue"><em>Biology Methods and Protocols</em>, May 2022</p>
+            <p class="pub-doi">DOI: 10.1093/biomethods/bpac013</p>
+            <div class="pub-links">
+              <a class="chip-link" href="https://doi.org/10.1093/biomethods/bpac013" target="_blank" rel="noopener">View DOI →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="profile-section" id="projects">
+    <div class="container">
+      <h2>Selected Projects</h2>
+      <p class="section-lede">Research systems and applied AI work across vision, language, and trustworthiness.</p>
+      <div class="area-grid">
+        <div class="area-card">
+          <span class="pill">Medical AI · XAI · In Progress</span>
+          <h3>Beyond the Output: Faithful XAI for Medical Image Report Generation</h3>
+          <p>A unified evaluation framework linking visual saliency maps, model reasoning chains, and clinical correctness metrics to quantify and reduce unfaithful explanations in chest X-ray report generation.</p>
+          <p class="pub-doi">PyTorch · Vision Transformers · Medical Imaging · XAI</p>
+        </div>
+        <div class="area-card">
+          <span class="pill">Computer Vision · Image Forensics</span>
+          <h3>Explainable Image Forgery Detection</h3>
+          <p>ResNet50 + U-Net + Grad-CAM pipeline for detecting and localizing image manipulation, achieving AUC 0.86 and recall 0.88, with pixel-level interpretability maps for forensic auditing.</p>
+          <p class="pub-doi">ResNet50 · U-Net · Grad-CAM · PyTorch</p>
+        </div>
+        <div class="area-card">
+          <span class="pill">NLP · Full-Stack AI</span>
+          <h3>NewsLogic: AI-Powered Fake News Detection</h3>
+          <p>Full-stack system combining BERT, DistilBERT, and rule-based validation for multi-signal fake news classification, with real-time explanation generation via LLaMA-based models.</p>
+          <p class="pub-doi">BERT · DistilBERT · LLaMA · FastAPI · Python</p>
+        </div>
+        <div class="area-card">
+          <span class="pill">Bioinformatics · Published</span>
+          <h3>MLBioIGE: ML + Bioinformatics for Pulmonary Fibrosis</h3>
+          <p>Peer-reviewed study integrating machine learning and bioinformatics to identify genetic factors influencing pulmonary fibrosis in COVID-19 patients (<em>Biology Methods and Protocols</em>, 2022).</p>
+          <p class="pub-doi">Genomic Data Analysis · Predictive Modeling</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE & EDUCATION ============ -->
+  <section class="profile-section" id="experience">
+    <div class="container">
+      <h2>Experience & Education</h2>
+      <p class="section-lede">Research appointments, teaching, and academic training.</p>
+      <ul class="timeline">
+        <li>
+          <div class="t-date">Aug 2024 – Present</div>
+          <h3>Graduate Assistant</h3>
+          <p class="t-org">University of Arkansas at Little Rock · School of Counseling, Human Performance & Rehabilitation</p>
+          <p>Research in computer vision and deep learning — transformer-based video understanding, explainable AI, and trustworthy multimodal AI systems. Supporting faculty research on public health disparities through literature review and study design.</p>
+        </li>
+        <li>
+          <div class="t-date">Apr 2024</div>
+          <h3>M.S. in Information Technology · GPA 4.00/4.00</h3>
+          <p class="t-org">Arkansas Tech University</p>
+        </li>
+        <li>
+          <div class="t-date">Aug 2022 – May 2024</div>
+          <h3>Graduate Assistant</h3>
+          <p class="t-org">Arkansas Tech University · Division of Computing Sciences</p>
+          <p>Designed and delivered Data Communication & Networking labs; teaching assistant for Software Development and Data Structures (30+ students/semester); one-on-one student mentoring.</p>
+        </li>
+        <li>
+          <div class="t-date">Apr 2021</div>
+          <h3>B.S. in Information Technology · GPA 3.83/4.00</h3>
+          <p class="t-org">University of Information Technology & Sciences · Dhaka, Bangladesh</p>
+        </li>
+        <li>
+          <div class="t-date">Jan 2020 – Apr 2021</div>
+          <h3>Research Assistant</h3>
+          <p class="t-org">University of Information Technology & Sciences · Department of Information Technology</p>
+          <p>Co-investigated MLBioIGE — machine learning and bioinformatics for genetic factors in pulmonary fibrosis — leading to a peer-reviewed publication.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ AWARDS ============ -->
+  <section class="profile-section" id="awards">
+    <div class="container">
+      <h2>Awards & Honors</h2>
+      <div class="award-grid" style="margin-top:1.2rem">
+        <div class="award-card">
+          <div class="award-medal">🥇</div>
+          <div>
+            <h3>1st Place, Graduate Poster Presentation</h3>
+            <p>Arkansas Academy of Science, 2023</p>
+            <p><em>League of Learning: Deep Learning for Soccer Action Video Classification</em></p>
+          </div>
+        </div>
+        <div class="award-card">
+          <div class="award-medal">🥈</div>
+          <div>
+            <h3>2nd Place, Graduate Oral Presentation</h3>
+            <p>ATU Research Symposium, 2024</p>
+            <p><em>League of Learning: Deep Learning for Soccer Action Video Classification</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="profile-section" id="contact">
+    <div class="container">
+      <div class="contact-band">
+        <div>
+          <h2>Get in Touch</h2>
+          <p>I am always open to discussing research collaborations, temporal change in AI systems, explainability, and multimodal learning. The best way to reach me is by email.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:shuvo.musfikur@gmail.com">✉️&nbsp; shuvo.musfikur@gmail.com</a>
+          <a href="https://scholar.google.com/citations?user=U2O4S48AAAAJ&hl=en" target="_blank" rel="noopener">🎓&nbsp; Google Scholar</a>
+          <a href="https://orcid.org/0009-0005-7422-460X" target="_blank" rel="noopener">🆔&nbsp; ORCID</a>
+          <a href="https://github.com/musfikur-rahaman" target="_blank" rel="noopener">💻&nbsp; GitHub</a>
+          <a href="https://www.linkedin.com/in/musfikur-rahaman-76750b91" target="_blank" rel="noopener">🔗&nbsp; LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="footer">
@@ -137,7 +312,7 @@
     <div class="footer-links" aria-label="Academic and professional profiles">
       <a href="https://scholar.google.com/citations?user=U2O4S48AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
       <a href="https://orcid.org/0009-0005-7422-460X" target="_blank" rel="noopener">ORCID</a>
-      <a href="https://www.linkedin.com/in/musfikur-rahaman/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/musfikur-rahaman-76750b91" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://github.com/musfikur-rahaman" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
