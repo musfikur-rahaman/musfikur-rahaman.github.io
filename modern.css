@@ -234,6 +234,53 @@
 
 .profile-2026 .pubs li{ margin-bottom: 1rem; }
 
+/* ---------- Research page blocks ---------- */
+.profile-2026 .research-block{
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.25rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.profile-2026 .research-block:last-child{
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.profile-2026 .research-block h3{
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  color: #1a1a1a;
+  margin: 0 0 .2rem;
+  text-align: left;
+}
+
+.profile-2026 .research-block h3::after{ display: none; }
+
+.profile-2026 .research-status{
+  font-size: .85rem;
+  font-style: italic;
+  color: #777;
+  margin: 0 0 .7rem;
+}
+
+.profile-2026 .research-block figure{
+  margin: 1.2rem 0 0;
+}
+
+.profile-2026 .research-block figure img{
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.profile-2026 .research-block figcaption{
+  font-size: .85rem;
+  color: #777;
+  margin-top: .4rem;
+}
+
 /* ---------- Footer spacing ---------- */
 .profile-2026 .footer{ margin-top: 0; }
 
