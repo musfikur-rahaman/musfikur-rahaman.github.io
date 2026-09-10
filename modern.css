@@ -2,6 +2,8 @@
    Loaded after styles.css on the redesigned pages.
    Scoped to .profile-2026 so the other pages keep their existing look. */
 
+html{ scroll-behavior: smooth; }
+
 /* ---------- Full-screen hero ---------- */
 .profile-2026 .hero-full{
   position: relative;
@@ -18,6 +20,14 @@
 .profile-2026 .hero-inner{
   max-width: 860px;
   padding: 3rem 1.5rem 4.5rem;
+}
+
+@media (prefers-reduced-motion: no-preference){
+  .profile-2026 .hero-inner{ animation: heroIn .7s ease both; }
+  @keyframes heroIn{
+    from{ opacity: 0; transform: translateY(10px); }
+    to{ opacity: 1; transform: none; }
+  }
 }
 
 .profile-2026 .hero-kicker{
@@ -47,7 +57,17 @@
   font-size: 1.15rem;
   letter-spacing: .02em;
   color: rgba(255,255,255,.88);
-  margin: 0 0 1rem;
+  margin: 0 0 1.2rem;
+}
+
+.profile-2026 .hero-tagline{
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  line-height: 1.5;
+  color: rgba(255,255,255,.96);
+  max-width: 40rem;
+  margin: 0 auto 1.8rem;
 }
 
 .profile-2026 .hero-statement{
@@ -62,11 +82,11 @@
 
 /* ---------- Hero about text + links ---------- */
 .profile-2026 .hero-about{
-  max-width: 46rem;
-  margin: 0 auto 1.4rem;
+  max-width: 65ch;
+  margin: 0 auto 1.2rem;
   color: rgba(255,255,255,.88);
   font-size: 1.02rem;
-  line-height: 1.75;
+  line-height: 1.65;
 }
 
 .profile-2026 .hero-links{
@@ -173,11 +193,11 @@
 
 /* ---------- Content column ---------- */
 .profile-2026 .page{
-  max-width: 780px;
+  max-width: 70ch;
   margin: 0 auto;
   padding: 3rem 1.25rem 4rem;
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.65;
   color: #2b2b2b;
   text-align: center;
 }
@@ -283,7 +303,7 @@
 
 .profile-2026 .dates{
   font-size: .88rem;
-  color: #777;
+  color: #6b6b6b;
   white-space: nowrap;
 }
 
@@ -321,7 +341,7 @@
 .profile-2026 .research-status{
   font-size: .85rem;
   font-style: italic;
-  color: #777;
+  color: #6b6b6b;
   margin: 0 0 .7rem;
 }
 
@@ -344,6 +364,14 @@
   text-decoration: none !important;
 }
 
+/* ---------- Keyboard focus ---------- */
+.profile-2026 a:focus-visible,
+.profile-2026 button:focus-visible{
+  outline: 2px solid #b98a2f;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 /* ---------- Footer spacing ---------- */
 .profile-2026 .footer{ margin-top: 0; }
 .profile-2026 .footer-inner{
@@ -352,9 +380,20 @@
   text-align: center;
 }
 
+.profile-2026 .footer-links a{
+  transition: color 160ms ease;
+}
+
+.profile-2026 .footer-links a:hover{
+  text-decoration: underline;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 640px){
   .profile-2026 .hero-inner{ padding: 2.5rem 1.25rem 4rem; }
+  .profile-2026 .page h2{ letter-spacing: .14em; font-size: 1.1rem; }
+  .profile-2026 .dates{ white-space: normal; }
+  .profile-2026 .hero-tagline{ font-size: 1.15rem; }
   .profile-2026 .hero-jump a{
     padding: .6rem 1rem;
     letter-spacing: .16em;
