@@ -181,6 +181,14 @@
   font-size: 1rem;
   line-height: 1.7;
   color: #2b2b2b;
+  text-align: center;
+}
+
+/* Centered lists: markers sit with the centered text */
+.profile-2026 .page ul,
+.profile-2026 .page ol{
+  list-style-position: inside;
+  padding-left: 0;
 }
 
 .profile-2026 .page section{
@@ -307,7 +315,7 @@
   font-size: 1.15rem;
   color: #1a1a1a;
   margin: 0 0 .2rem;
-  text-align: left;
+  text-align: center;
 }
 
 .profile-2026 .research-block h3::after{ display: none; }
@@ -340,6 +348,11 @@
 
 /* ---------- Footer spacing ---------- */
 .profile-2026 .footer{ margin-top: 0; }
+.profile-2026 .footer-inner{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 /* ---------- Responsive ---------- */
 @media (max-width: 640px){
