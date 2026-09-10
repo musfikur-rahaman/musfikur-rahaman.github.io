@@ -62,6 +62,34 @@
   margin: 0 auto 2.2rem;
 }
 
+/* ---------- Hero about text + links ---------- */
+.profile-2026 .hero-about{
+  max-width: 46rem;
+  margin: 0 auto 1.4rem;
+  color: rgba(255,255,255,.88);
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.profile-2026 .hero-links{
+  margin: 0 0 2.2rem;
+  font-size: .9rem;
+  letter-spacing: .06em;
+  color: rgba(255,255,255,.55);
+}
+
+.profile-2026 .hero-links a{
+  color: rgba(255,255,255,.92);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,.35);
+  padding-bottom: 1px;
+}
+
+.profile-2026 .hero-links a:hover{
+  border-bottom-color: #fff;
+  text-decoration: none;
+}
+
 .profile-2026 .hero-jump{
   display: flex;
   flex-wrap: wrap;
