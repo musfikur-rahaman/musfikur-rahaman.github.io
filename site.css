@@ -76,6 +76,8 @@ h1,h2,h3,h4{ color: var(--ink); line-height: 1.2; margin: 0; }
 h1,h2{ font-family: var(--font-serif); font-weight: 600; letter-spacing: -.01em; }
 h3{ font-size: 1.1rem; font-weight: 600; letter-spacing: -.005em; }
 p{ margin: 0 0 1em; }
+/* Justified paragraphs on wider screens; phones keep ragged-right text to avoid large word gaps. */
+@media (min-width: 700px){ p{ text-align: justify; hyphens: auto; -webkit-hyphens: auto; } }
 p:last-child{ margin-bottom: 0; }
 img{ max-width: 100%; display: block; }
 
@@ -183,7 +185,7 @@ a:hover{ text-decoration: underline; }
 .hero-meta svg{ width: 15px; height: 15px; }
 
 .portrait{
-  position: relative; width: 168px; aspect-ratio: 1; border-radius: 50%; overflow: hidden;
+  position: relative; width: 220px; aspect-ratio: 1; border-radius: 50%; overflow: hidden;
   background: var(--bg-soft);
   border: 4px solid var(--surface);
   box-shadow: 0 0 0 1px var(--line), var(--shadow);
@@ -193,7 +195,7 @@ a:hover{ text-decoration: underline; }
 @media (max-width: 860px){
   .hero{ padding: 40px 0 40px; }
   .hero-grid{ grid-template-columns: 1fr; gap: 24px; }
-  .portrait{ width: 112px; order: -1; }
+  .portrait{ width: 144px; order: -1; }
 }
 
 /* ---------- Sections ---------- */
