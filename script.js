@@ -1,101 +1,38 @@
 (function () {
-  // Load the softer, lower-glare academic color layer across every page.
-  if (!document.querySelector('link[data-comfort-theme]')) {
-    const comfortTheme = document.createElement('link');
-    comfortTheme.rel = 'stylesheet';
-    comfortTheme.href = 'comfort-theme.css?v=20260819-featured-publications';
-    comfortTheme.setAttribute('data-comfort-theme', 'true');
-    document.head.appendChild(comfortTheme);
-  }
+  var root = document.documentElement;
 
-  const navToggle = document.getElementById("navToggle");
-  const mobilePanel = document.getElementById("mobilePanel");
-
-  // Add Resume link consistently across every page.
-  const desktopNav = document.querySelector(".nav-links");
-  if (desktopNav && !desktopNav.querySelector('a[href="resume.html"]')) {
-    const resumeLink = document.createElement("a");
-    resumeLink.href = "resume.html";
-    resumeLink.textContent = "Resume";
-    resumeLink.setAttribute("data-nav", "");
-    const contactLink = desktopNav.querySelector('a[href="contact.html"]');
-    desktopNav.insertBefore(resumeLink, contactLink || null);
-  }
-
-  if (mobilePanel && !mobilePanel.querySelector('a[href="resume.html"]')) {
-    const mobileResumeLink = document.createElement("a");
-    mobileResumeLink.href = "resume.html";
-    mobileResumeLink.textContent = "Resume";
-    mobileResumeLink.setAttribute("data-nav", "");
-    const mobileContactLink = mobilePanel.querySelector('a[href="contact.html"]');
-    mobilePanel.insertBefore(mobileResumeLink, mobileContactLink || null);
-  }
-
-  const footerLinks = document.querySelector(".footer-links");
-  if (footerLinks && !footerLinks.querySelector('a[href="resume.html"]')) {
-    const footerResumeLink = document.createElement("a");
-    footerResumeLink.href = "resume.html";
-    footerResumeLink.textContent = "Resume";
-    footerLinks.prepend(footerResumeLink);
-  }
-
-  const path = window.location.pathname.split("/").pop() || "index.html";
-
-  // Load the dedicated Zoho contact-form styling only on the Contact page.
-  if (path === "contact.html" && !document.querySelector('link[data-contact-form-theme]')) {
-    const contactFormTheme = document.createElement("link");
-    contactFormTheme.rel = "stylesheet";
-    contactFormTheme.href = "contact-form.css?v=20260820-zoho";
-    contactFormTheme.setAttribute("data-contact-form-theme", "true");
-    document.head.appendChild(contactFormTheme);
-  }
-
-  // On the Resume page, link the original uploaded PDF.
-  if (path === "resume.html") {
-    const resumeCard = document.querySelector("main .card");
-    const contactLine = resumeCard ? resumeCard.querySelector("h1 + p") : null;
-    if (contactLine && !document.querySelector(".resume-pdf-actions")) {
-      const actions = document.createElement("div");
-      actions.className = "buttons resume-pdf-actions";
-
-      const viewPdf = document.createElement("a");
-      viewPdf.className = "btn primary";
-      viewPdf.href = "Resume_Musfikur_Rahaman_PhD_Research.pdf";
-      viewPdf.target = "_blank";
-      viewPdf.rel = "noopener";
-      viewPdf.textContent = "View Resume PDF";
-
-      const downloadPdf = document.createElement("a");
-      downloadPdf.className = "btn";
-      downloadPdf.href = "Resume_Musfikur_Rahaman_PhD_Research.pdf";
-      downloadPdf.setAttribute("download", "Musfikur_Rahaman_Resume.pdf");
-      downloadPdf.textContent = "Download PDF";
-
-      actions.append(viewPdf, downloadPdf);
-      contactLine.insertAdjacentElement("afterend", actions);
-    }
-  }
-
-  // Mobile menu toggle
-  if (navToggle && mobilePanel) {
-    navToggle.addEventListener("click", () => {
-      const isOpen = mobilePanel.classList.toggle("open");
-      navToggle.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    // Close mobile menu after click
-    mobilePanel.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => {
-        mobilePanel.classList.remove("open");
-        navToggle.setAttribute("aria-expanded", "false");
-      });
+  // Theme toggle: remembers an explicit choice, otherwise follows the OS.
+  var themeToggle = document.getElementById("themeToggle");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      var current = root.dataset.theme ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      var next = current === "dark" ? "light" : "dark";
+      root.dataset.theme = next;
+      try { localStorage.setItem("theme", next); } catch (e) {}
     });
   }
 
-  // Active link by current page
-  const allLinks = document.querySelectorAll('a[data-nav]');
-  allLinks.forEach(link => {
-    const href = link.getAttribute("href");
-    if (href === path) link.classList.add("active");
-  });
+  // Mobile menu
+  var menuToggle = document.getElementById("menuToggle");
+  var navLinks = document.getElementById("navLinks");
+  if (menuToggle && navLinks) {
+    var setOpen = function (open) {
+      navLinks.classList.toggle("open", open);
+      menuToggle.setAttribute("aria-expanded", String(open));
+      menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    };
+    menuToggle.addEventListener("click", function () {
+      setOpen(!navLinks.classList.contains("open"));
+    });
+    navLinks.addEventListener("click", function (e) {
+      if (e.target.closest("a")) setOpen(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") setOpen(false);
+    });
+  }
+
+  var year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
 })();
