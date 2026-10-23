@@ -56,38 +56,7 @@
     <div class="callout">
       <span class="badge">Dissertation · Proposal, Oct 2026</span>
       <h2>Detecting Temporal Change in Language Model Representations: A Topological Study of Mamba and Transformers</h2>
-      <p>Language models are trained once and used for years while the facts they learned keep changing, so a model can give an outdated answer with full confidence. This study looks inside frozen models to see how the <em>superseded</em> and <em>latest</em> versions of a changed fact (for example, “In 2008, Gordon Brown was the UK Prime Minister” versus “In 2012, David Cameron was”) are organized relative to each other, and whether that depends on architecture: a Transformer that can attend to every earlier word, or Mamba, which compresses the past into a fixed-size running memory.</p>
-      <p class="muted" style="font-size:.92rem">Advisor: Dr. Mihail Eduard Tudoreanu · Co-advisor: Dr. Abdelrahman Elfikky</p>
-    </div>
-
-    <div class="grid grid-3" style="margin-top:20px">
-      <article class="card">
-        <span class="badge badge-muted">RQ1 · Core</span>
-        <h3 style="margin-top:.75rem">Transformer vs. Mamba</h3>
-        <p>Do Transformers and Mamba store the superseded and latest versions of facts differently across their layers?</p>
-      </article>
-      <article class="card">
-        <span class="badge badge-muted">RQ2 · Extension</span>
-        <h3 style="margin-top:.75rem">Hybrid models</h3>
-        <p>In hybrid models that mix Mamba and attention layers, which parts carry the temporal signal?</p>
-      </article>
-      <article class="card">
-        <span class="badge badge-muted">RQ3 · Core</span>
-        <h3 style="margin-top:.75rem">Does topology add information?</h3>
-        <p>Does topological data analysis reveal structure beyond a linear probe, cosine similarity, CKA, and MMD?</p>
-      </article>
-    </div>
-
-    <div class="grid grid-2" style="margin-top:20px">
-      <article class="card">
-        <h3>Approach</h3>
-        <p>Changed facts come from Wikidata and FreshQA, limited to changes the models could have seen in the Pile. For each version of a fact, 60–100 paraphrases are fed to matched Pile-trained models (Pythia and Mamba), and the last-token hidden states at every layer form a point cloud. Persistent homology then measures how the old and new clouds separate or fragment.</p>
-        <div class="tags"><span class="tag">Pythia</span><span class="tag">Mamba</span><span class="tag">Persistent homology</span><span class="tag">Wikidata</span><span class="tag">The Pile</span></div>
-      </article>
-      <article class="card">
-        <h3>Rigor &amp; scope</h3>
-        <p>A difference only counts as temporal if it exceeds four baselines on stable facts (rewording, name swap, year swap, double swap) and survives controls for how often each version appears in the Pile, with permutation tests and bootstrap intervals. The study only detects and describes: it does not train or edit models, and a null result will be reported as a finding.</p>
-      </article>
+      <p>Language models are trained once, but the facts they learned keep changing, so a model can give an outdated answer with full confidence. My dissertation looks inside frozen Transformer and Mamba models to see how they store the superseded and latest versions of a changed fact, and tests whether topological data analysis reveals differences that standard similarity measures miss.</p>
     </div>
   </div>
 </section>
@@ -247,3 +216,4 @@
 <script src="script.js?v=2026-10" defer></script>
 </body>
 </html>
+
