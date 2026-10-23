@@ -4,12 +4,12 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Musfikur Rahaman — PhD Researcher, Information Science</title>
-  <meta name="description" content="Musfikur Rahaman is a PhD researcher in Information Science at the University of Arkansas at Little Rock, studying temporal change in knowledge-grounded AI, explainable AI, and computer vision."/>
+  <meta name="description" content="Musfikur Rahaman is a PhD researcher in Information Science at the University of Arkansas at Little Rock, studying how language models represent facts that change over time, using topological data analysis to compare Transformers and Mamba."/>
   <meta name="author" content="Musfikur Rahaman"/>
   <link rel="canonical" href="https://musfikur-rahaman.github.io/"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Musfikur Rahaman — PhD Researcher, Information Science"/>
-  <meta property="og:description" content="Musfikur Rahaman is a PhD researcher in Information Science at the University of Arkansas at Little Rock, studying temporal change in knowledge-grounded AI, explainable AI, and computer vision."/>
+  <meta property="og:description" content="Musfikur Rahaman is a PhD researcher in Information Science at the University of Arkansas at Little Rock, studying how language models represent facts that change over time, using topological data analysis to compare Transformers and Mamba."/>
   <meta property="og:url" content="https://musfikur-rahaman.github.io/"/>
   <meta property="og:image" content="https://musfikur-rahaman.github.io/img/profile.jpg"/>
   <meta name="twitter:card" content="summary"/>
@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,400&amp;display=swap"/>
-  <link rel="stylesheet" href="site.css?v=2026-10"/>
+  <link rel="stylesheet" href="site.css?v=2026-10b"/>
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
 </head>
 <body>
@@ -49,7 +49,7 @@
       <p class="eyebrow">PhD Researcher · Information Science</p>
       <h1>Musfikur Rahaman</h1>
       <p class="hero-tagline">Studying when AI’s knowledge stops being trustworthy.</p>
-      <p class="hero-lede">I study temporal change in knowledge-grounded AI: how systems can tell whether the information they rely on is still <em>appropriate</em> to use now, not merely whether it is relevant. My broader work spans explainable AI, medical vision-language systems, computer vision, and multimodal learning.</p>
+      <p class="hero-lede">Language models learn facts once, but the world keeps changing. My dissertation looks inside frozen language models to see how they store the old and new versions of a changed fact, comparing Transformers with Mamba state-space models using topological data analysis. My broader work spans explainable AI, medical vision-language systems, and computer vision.</p>
       <div class="btn-row">
         <a class="btn btn-primary" href="research.html">Explore my research</a>
         <a class="btn" href="Resume_Musfikur_Rahaman_PhD_Research.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download CV</a>
@@ -71,25 +71,25 @@
     <div class="section-head">
       <div>
         <h2>Research focus</h2>
-        <p>One central question, supported by work on explainability and visual understanding.</p>
+        <p>How language models represent facts that change over time, building on earlier work in explainability and vision.</p>
       </div>
       <a class="link-arrow" href="research.html">All research</a>
     </div>
     <div class="grid grid-3">
       <article class="card focus-card is-primary">
         <div class="focus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <h3>Temporal reliability of knowledge</h3>
-        <p>My dissertation: characterizing temporal change so knowledge-grounded AI can judge whether retrieved information is still appropriate to use, treating timeliness as distinct from recency.</p>
+        <h3>Temporal change in language models</h3>
+        <p>My dissertation: how frozen models internally represent superseded and latest versions of the same fact, and whether Transformers and Mamba state-space models store them differently.</p>
+      </article>
+      <article class="card focus-card">
+        <div class="focus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.3 8.2 10.8 16M15.7 8.2 13.2 16M8.5 7h7"/></svg></div>
+        <h3>Topology of model representations</h3>
+        <p>Using persistent homology to measure the shape of hidden-state point clouds, and testing whether it reveals structure that linear probes, CKA, and MMD miss.</p>
       </article>
       <article class="card focus-card">
         <div class="focus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
-        <h3>Explainable &amp; trustworthy AI</h3>
-        <p>Faithful explanations for medical report generation, auditable forgery detection with Grad-CAM, and fake-news classification that explains every verdict.</p>
-      </article>
-      <article class="card focus-card">
-        <div class="focus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg></div>
-        <h3>Vision &amp; multimodal learning</h3>
-        <p>Transformer-based video understanding for soccer actions, CNN disease detection for aquaculture, and medical vision-language systems.</p>
+        <h3>Explainable AI &amp; vision</h3>
+        <p>Faithful explanations for medical report generation, auditable forgery detection, and transformer-based video understanding.</p>
       </article>
     </div>
   </div>
@@ -137,6 +137,7 @@
   <div class="container">
     <div class="section-head"><div><h2>News</h2></div></div>
     <ul class="news">
+      <li><time>Oct 2026</time><span>New dissertation direction: <em>Detecting Temporal Change in Language Model Representations: A Topological Study of Mamba and Transformers</em> (proposal).</span></li>
       <li><time>Aug 2026</time><span>Survey <em>Beyond the Output: Faithful XAI for Medical Image Report Generation</em> posted on <a href="https://www.preprints.org/manuscript/202608.1496" target="_blank" rel="noopener">Preprints.org</a>.</span></li>
       <li><time>2026</time><span>TimeSformer soccer action detection paper published in the <a href="https://dl.acm.org/doi/10.5555/3820620.3820634" target="_blank" rel="noopener"><em>Journal of Computing Sciences in Colleges</em></a>.</span></li>
       <li><time>Aug 2024</time><span>Started my PhD in Information Science at the University of Arkansas at Little Rock.</span></li>
@@ -152,7 +153,7 @@
     <div class="cta">
       <div>
         <h2>Let’s work together</h2>
-        <p>I’m open to research collaborations on temporal reliability in AI, explainability, and multimodal learning.</p>
+        <p>I’m open to research collaborations on temporal knowledge in language models, interpretability, and topological data analysis.</p>
       </div>
       <div class="btn-row">
         <a class="btn" href="mailto:shuvo.musfikur@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Get in touch</a>

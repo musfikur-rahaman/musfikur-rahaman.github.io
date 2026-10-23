@@ -4,12 +4,12 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Research — Musfikur Rahaman</title>
-  <meta name="description" content="Research by Musfikur Rahaman: temporal change in knowledge-grounded AI, explainable AI, medical vision-language models, and computer vision."/>
+  <meta name="description" content="Research by Musfikur Rahaman: detecting temporal change in language model representations with topological data analysis, plus explainable AI, medical vision-language models, and computer vision."/>
   <meta name="author" content="Musfikur Rahaman"/>
   <link rel="canonical" href="https://musfikur-rahaman.github.io/research.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Research — Musfikur Rahaman"/>
-  <meta property="og:description" content="Research by Musfikur Rahaman: temporal change in knowledge-grounded AI, explainable AI, medical vision-language models, and computer vision."/>
+  <meta property="og:description" content="Research by Musfikur Rahaman: detecting temporal change in language model representations with topological data analysis, plus explainable AI, medical vision-language models, and computer vision."/>
   <meta property="og:url" content="https://musfikur-rahaman.github.io/research.html"/>
   <meta property="og:image" content="https://musfikur-rahaman.github.io/img/profile.jpg"/>
   <meta name="twitter:card" content="summary"/>
@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,400&amp;display=swap"/>
-  <link rel="stylesheet" href="site.css?v=2026-10"/>
+  <link rel="stylesheet" href="site.css?v=2026-10b"/>
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
 </head>
 <body>
@@ -46,17 +46,48 @@
 <section class="page-header">
   <div class="container">
     <p class="eyebrow">Research</p>
-    <h1>How can AI tell whether information is still appropriate to use now?</h1>
-    <p>My dissertation develops a framework for this question, supported by work in explainable AI, medical vision-language systems, and video understanding.</p>
+    <h1>How do language models store facts that have changed?</h1>
+    <p>My dissertation compares how Transformers and Mamba state-space models represent old and new versions of the same fact, using topological data analysis. Earlier work spans explainable AI, medical vision-language systems, and video understanding.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
     <div class="callout">
-      <span class="badge">Dissertation · in progress</span>
-      <h2>Characterizing Temporal Change for Reliable Knowledge-Grounded AI</h2>
-      <p>Knowledge-grounded systems usually ask whether retrieved information is <em>relevant</em> or <em>recent</em>. My dissertation asks whether it is still <em>appropriate</em> to use now. Timeliness is treated as distinct from recency: older information may remain useful, and the newest information is not always the most appropriate.</p>
+      <span class="badge">Dissertation · Proposal, Oct 2026</span>
+      <h2>Detecting Temporal Change in Language Model Representations: A Topological Study of Mamba and Transformers</h2>
+      <p>Language models are trained once and used for years while the facts they learned keep changing, so a model can give an outdated answer with full confidence. This study looks inside frozen models to see how the <em>superseded</em> and <em>latest</em> versions of a changed fact (for example, “In 2008, Gordon Brown was the UK Prime Minister” versus “In 2012, David Cameron was”) are organized relative to each other, and whether that depends on architecture: a Transformer that can attend to every earlier word, or Mamba, which compresses the past into a fixed-size running memory.</p>
+      <p class="muted" style="font-size:.92rem">Advisor: Dr. Mihail Eduard Tudoreanu · Co-advisor: Dr. Abdelrahman Elfikky</p>
+    </div>
+
+    <div class="grid grid-3" style="margin-top:20px">
+      <article class="card">
+        <span class="badge badge-muted">RQ1 · Core</span>
+        <h3 style="margin-top:.75rem">Transformer vs. Mamba</h3>
+        <p>Do Transformers and Mamba store the superseded and latest versions of facts differently across their layers?</p>
+      </article>
+      <article class="card">
+        <span class="badge badge-muted">RQ2 · Extension</span>
+        <h3 style="margin-top:.75rem">Hybrid models</h3>
+        <p>In hybrid models that mix Mamba and attention layers, which parts carry the temporal signal?</p>
+      </article>
+      <article class="card">
+        <span class="badge badge-muted">RQ3 · Core</span>
+        <h3 style="margin-top:.75rem">Does topology add information?</h3>
+        <p>Does topological data analysis reveal structure beyond a linear probe, cosine similarity, CKA, and MMD?</p>
+      </article>
+    </div>
+
+    <div class="grid grid-2" style="margin-top:20px">
+      <article class="card">
+        <h3>Approach</h3>
+        <p>Changed facts come from Wikidata and FreshQA, limited to changes the models could have seen in the Pile. For each version of a fact, 60–100 paraphrases are fed to matched Pile-trained models (Pythia and Mamba), and the last-token hidden states at every layer form a point cloud. Persistent homology then measures how the old and new clouds separate or fragment.</p>
+        <div class="tags"><span class="tag">Pythia</span><span class="tag">Mamba</span><span class="tag">Persistent homology</span><span class="tag">Wikidata</span><span class="tag">The Pile</span></div>
+      </article>
+      <article class="card">
+        <h3>Rigor &amp; scope</h3>
+        <p>A difference only counts as temporal if it exceeds four baselines on stable facts (rewording, name swap, year swap, double swap) and survives controls for how often each version appears in the Pile, with permutation tests and bootstrap intervals. The study only detects and describes: it does not train or edit models, and a null result will be reported as a finding.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -141,7 +172,7 @@
       <div class="entry-body">
         <div class="entry-meta"><span class="badge badge-warm">Early stage</span></div>
         <h3>RAG over Soccer Video-Understanding Literature</h3>
-        <p>A retrieval-augmented generation testbed over a 10-paper corpus on soccer action recognition and video summarization. The ingestion layer (LangChain, PyMuPDF, rich per-document metadata) is built; chunking, embeddings, retrieval, and a citation-backed QA loop are next. It doubles as a testbed for the dissertation question of whether retrieved knowledge stays appropriate over time.</p>
+        <p>A retrieval-augmented generation testbed over a 10-paper corpus on soccer action recognition and video summarization. The ingestion layer (LangChain, PyMuPDF, rich per-document metadata) is built; chunking, embeddings, retrieval, and a citation-backed QA loop are next. It also serves as a testbed for whether retrieved knowledge stays appropriate over time.</p>
         <div class="tags"><span class="tag">RAG</span><span class="tag">LangChain</span></div><div class="pub-links" style="margin-top:1rem"><a href="https://github.com/musfikur-rahaman/RAG" target="_blank" rel="noopener">Code</a></div>
       </div>
     </article>
