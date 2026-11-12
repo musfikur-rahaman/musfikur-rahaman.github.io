@@ -36,12 +36,12 @@
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
-  // Dots-and-lines constellation (subtle, all pages).
+  // Dots-and-lines constellation (maroon, darker and denser, all pages).
   // A fixed canvas sits behind the page content. Dots drift slowly,
   // link to nearby dots, and lean in / glow / draw a line to the
   // cursor (or touch point) when it is near. No extra UI, no counter.
   // Respects prefers-reduced-motion (static faint dots only) and
-  // follows the site's light/dark theme via --accent.
+  // uses UALR maroon #6E2639 in light mode, lighter rose-maroon in dark.
   (function () {
     var reduceMotion = false;
     try {
@@ -59,7 +59,7 @@
     var pointer = { x: -9999, y: -9999, active: false, lastMove: 0 };
     var rafId = null;
     var running = false;
-    var accent = { r: 15, g: 118, b: 110 };
+    var accent = { r: 110, g: 38, b: 57 };
     var isDark = false;
 
     function parseHex(hex) {
@@ -71,12 +71,12 @@
       return { r: (n >> 16) & 255, g: (n >> 8) & 255, b: n & 255 };
     }
     function readTheme() {
-      var cs = null;
-      try { cs = window.getComputedStyle(root); } catch (e) {}
-      var parsed = cs ? parseHex(cs.getPropertyValue("--accent")) : null;
-      accent = parsed || { r: 15, g: 118, b: 110 };
+      // Maroon constellation, independent of the site's teal accent:
+      // UALR maroon #6E2639 in light mode, a lighter rose-maroon in dark
+      // mode so it stays visible on the dark background.
       isDark = root.dataset.theme === "dark" ||
         (!root.dataset.theme && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      accent = isDark ? { r: 212, g: 138, b: 156 } : { r: 110, g: 38, b: 57 };
     }
     function rgba(c, a) {
       return "rgba(" + c.r + "," + c.g + "," + c.b + "," + a + ")";
@@ -93,7 +93,7 @@
     }
     function buildDots() {
       var w = window.innerWidth, h = window.innerHeight;
-      var count = Math.max(40, Math.min(90, Math.round((w * h) / 16000)));
+      var count = Math.max(50, Math.min(120, Math.round((w * h) / 12000)));
       dots = [];
       for (var i = 0; i < count; i++) {
         dots.push({
@@ -101,7 +101,7 @@
           y: Math.random() * h,
           vx: (Math.random() - 0.5) * 0.28,
           vy: (Math.random() - 0.5) * 0.28,
-          r: 1.4 + Math.random() * 1.0,
+          r: 1.6 + Math.random() * 1.1,
           phase: Math.random() * Math.PI * 2,
           speed: 0.4 + Math.random() * 0.8
         });
@@ -110,10 +110,10 @@
     function draw(time) {
       var w = window.innerWidth, h = window.innerHeight;
       ctx.clearRect(0, 0, w, h);
-      var dotA = isDark ? 0.65 : 0.55;
-      var lineA = isDark ? 0.26 : 0.20;
-      var cursorA = isDark ? 0.55 : 0.45;
-      var linkDist = 130, cursorDist = 160;
+      var dotA = isDark ? 0.75 : 0.70;
+      var lineA = isDark ? 0.35 : 0.30;
+      var cursorA = isDark ? 0.65 : 0.60;
+      var linkDist = 150, cursorDist = 180;
       var now = time || 0;
       var pointerFresh = pointer.active && (Date.now() - pointer.lastMove < 3000);
       var i, j, d;
