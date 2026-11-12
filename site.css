@@ -412,3 +412,11 @@ a:hover{ text-decoration: underline; }
 .muted{ color: var(--muted); }
 .mt-0{ margin-top: 0; }
 .visually-hidden{ position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- Dots-and-lines constellation (all pages) ---------- */
+/* Fixed canvas behind the page content; created by script.js. */
+.constellation-canvas{
+  position: fixed; inset: 0; z-index: 0;
+  pointer-events: none;
+}
+main, .site-footer{ position: relative; z-index: 1; }
