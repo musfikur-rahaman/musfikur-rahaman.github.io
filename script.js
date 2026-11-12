@@ -93,7 +93,7 @@
     }
     function buildDots() {
       var w = window.innerWidth, h = window.innerHeight;
-      var count = Math.max(24, Math.min(64, Math.round((w * h) / 24000)));
+      var count = Math.max(40, Math.min(90, Math.round((w * h) / 16000)));
       dots = [];
       for (var i = 0; i < count; i++) {
         dots.push({
@@ -101,7 +101,7 @@
           y: Math.random() * h,
           vx: (Math.random() - 0.5) * 0.28,
           vy: (Math.random() - 0.5) * 0.28,
-          r: 1.1 + Math.random() * 0.9,
+          r: 1.4 + Math.random() * 1.0,
           phase: Math.random() * Math.PI * 2,
           speed: 0.4 + Math.random() * 0.8
         });
@@ -110,10 +110,10 @@
     function draw(time) {
       var w = window.innerWidth, h = window.innerHeight;
       ctx.clearRect(0, 0, w, h);
-      var dotA = isDark ? 0.45 : 0.32;
-      var lineA = isDark ? 0.14 : 0.10;
-      var cursorA = isDark ? 0.35 : 0.28;
-      var linkDist = 110, cursorDist = 140;
+      var dotA = isDark ? 0.65 : 0.55;
+      var lineA = isDark ? 0.26 : 0.20;
+      var cursorA = isDark ? 0.55 : 0.45;
+      var linkDist = 130, cursorDist = 160;
       var now = time || 0;
       var pointerFresh = pointer.active && (Date.now() - pointer.lastMove < 3000);
       var i, j, d;
