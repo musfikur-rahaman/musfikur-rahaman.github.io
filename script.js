@@ -100,8 +100,8 @@
       for (var i = 0; i < count; i++) {
         // Mixed shapes: mostly dots, with stars, circles, triangles.
         var roll = Math.random();
-        var shape = roll < 0.62 ? "dot" : roll < 0.78 ? "star" :
-          roll < 0.89 ? "circle" : "triangle";
+        var shape = roll < 0.50 ? "dot" : roll < 0.70 ? "star" :
+          roll < 0.85 ? "circle" : "triangle";
         dots.push({
           x: Math.random() * w,
           y: Math.random() * h,
@@ -165,7 +165,7 @@
           // 4-point sparkle star.
           ctx.fillStyle = rgba(accent, alpha);
           ctx.beginPath();
-          var outer = rr * 2.2, inner = rr * 0.45;
+          var outer = rr * 3.2, inner = rr * 0.6;
           for (var k = 0; k < 8; k++) {
             var ang = k * Math.PI / 4 - Math.PI / 2;
             var rad = k % 2 === 0 ? outer : inner;
@@ -178,15 +178,15 @@
           ctx.strokeStyle = rgba(accent, alpha);
           ctx.lineWidth = 1;
           ctx.beginPath();
-          ctx.arc(px, py, rr + 1.2, 0, Math.PI * 2);
+          ctx.arc(px, py, rr + 2.0, 0, Math.PI * 2);
           ctx.stroke();
         } else if (d.shape === "triangle") {
           ctx.strokeStyle = rgba(accent, alpha);
           ctx.lineWidth = 1;
           ctx.beginPath();
-          ctx.moveTo(px, py - rr * 1.6);
-          ctx.lineTo(px + rr * 1.6, py + rr * 1.2);
-          ctx.lineTo(px - rr * 1.6, py + rr * 1.2);
+          ctx.moveTo(px, py - rr * 2.4);
+          ctx.lineTo(px + rr * 2.4, py + rr * 1.8);
+          ctx.lineTo(px - rr * 2.4, py + rr * 1.8);
           ctx.closePath();
           ctx.stroke();
         } else {
