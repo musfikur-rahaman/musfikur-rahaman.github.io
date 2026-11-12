@@ -37,10 +37,12 @@
   if (year) year.textContent = new Date().getFullYear();
 
   // Dots-and-lines constellation (teal, moderately stronger, all pages).
-  // A fixed canvas sits behind the page content. Dots drift slowly,
-  // link to nearby dots, and lean in / glow / draw a line to the
-  // cursor (or touch point) when it is near. No extra UI, no counter.
-  // Respects prefers-reduced-motion (static faint dots only) and
+  // A fixed canvas sits behind the page content. Most particles are
+  // dots, with a few stars, outline circles and outline triangles
+  // mixed in. They drift slowly, link to nearby particles with
+  // lines, and lean in / glow / draw a line to the cursor (or touch
+  // point) when it is near. No extra UI, no counter.
+  // Respects prefers-reduced-motion (static faint shapes only) and
   // follows the site's light/dark theme via --accent.
   (function () {
     var reduceMotion = false;
@@ -96,12 +98,17 @@
       var count = Math.max(40, Math.min(90, Math.round((w * h) / 16000)));
       dots = [];
       for (var i = 0; i < count; i++) {
+        // Mixed shapes: mostly dots, with stars, circles, triangles.
+        var roll = Math.random();
+        var shape = roll < 0.62 ? "dot" : roll < 0.78 ? "star" :
+          roll < 0.89 ? "circle" : "triangle";
         dots.push({
           x: Math.random() * w,
           y: Math.random() * h,
           vx: (Math.random() - 0.5) * 0.28,
           vy: (Math.random() - 0.5) * 0.28,
           r: 1.4 + Math.random() * 1.0,
+          shape: shape,
           phase: Math.random() * Math.PI * 2,
           speed: 0.4 + Math.random() * 0.8
         });
@@ -152,10 +159,42 @@
           }
         }
         var twinkle = 0.75 + 0.25 * Math.sin(now / 900 * d.speed + d.phase);
-        ctx.fillStyle = rgba(accent, Math.min(1, dotA * twinkle + near * 0.45));
-        ctx.beginPath();
-        ctx.arc(px, py, d.r * (1 + near * 0.6), 0, Math.PI * 2);
-        ctx.fill();
+        var alpha = Math.min(1, dotA * twinkle + near * 0.45);
+        var rr = d.r * (1 + near * 0.6);
+        if (d.shape === "star") {
+          // 4-point sparkle star.
+          ctx.fillStyle = rgba(accent, alpha);
+          ctx.beginPath();
+          var outer = rr * 2.2, inner = rr * 0.45;
+          for (var k = 0; k < 8; k++) {
+            var ang = k * Math.PI / 4 - Math.PI / 2;
+            var rad = k % 2 === 0 ? outer : inner;
+            var sx = px + Math.cos(ang) * rad, sy = py + Math.sin(ang) * rad;
+            if (k === 0) ctx.moveTo(sx, sy); else ctx.lineTo(sx, sy);
+          }
+          ctx.closePath();
+          ctx.fill();
+        } else if (d.shape === "circle") {
+          ctx.strokeStyle = rgba(accent, alpha);
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.arc(px, py, rr + 1.2, 0, Math.PI * 2);
+          ctx.stroke();
+        } else if (d.shape === "triangle") {
+          ctx.strokeStyle = rgba(accent, alpha);
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(px, py - rr * 1.6);
+          ctx.lineTo(px + rr * 1.6, py + rr * 1.2);
+          ctx.lineTo(px - rr * 1.6, py + rr * 1.2);
+          ctx.closePath();
+          ctx.stroke();
+        } else {
+          ctx.fillStyle = rgba(accent, alpha);
+          ctx.beginPath();
+          ctx.arc(px, py, rr, 0, Math.PI * 2);
+          ctx.fill();
+        }
         d._px = px; d._py = py;
       }
     }
